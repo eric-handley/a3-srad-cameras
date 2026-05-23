@@ -1,0 +1,6 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "a3-srad-camera-v2") (type "KiCad") (uri "${KIPRJMOD}/a3-srad-camera-v2.pretty") (options "") (descr ""))
+	(lib (name "a3-srad-camera-v2") (type "KiCad") (uri "${KIPRJMOD}/a3-srad-camera-v2.pretty") (options "") (descr ""))
+	(lib (name "srad-camera-footprints") (type "KiCad") (uri "/home/erichandley/Development/uvr/kicad-repo/kicad/srad-camera-footprints.pretty") (options "") (descr ""))
+)
