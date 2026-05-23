@@ -1,0 +1,7 @@
+kicad/a3-srad-camera-v2-backups
+kicad/subsheets/_autosave*
+kicad/_autosave*
+kicad/*.lck
+kicad/*.bak
+
+.ignore/
