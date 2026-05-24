@@ -2787,7 +2787,7 @@
 				)
 			)
 		)
-		(property "Value" "22R"
+		(property "Value" "2.2R"
 			(at 156.21 100.076 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5100,7 +5100,7 @@
 				)
 			)
 		)
-		(property "Value" "22R"
+		(property "Value" "2.2R"
 			(at 156.21 89.408 90)
 			(show_name no)
 			(do_not_autoplace no)
