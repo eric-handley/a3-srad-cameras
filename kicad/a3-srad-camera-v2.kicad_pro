@@ -1029,7 +1029,7 @@
         "uuid": "c4ff1aa6-4aa7-4de3-a597-83271e910ec4"
       }
     ],
-    "used_designators": "",
+    "used_designators": "TP1-15,SW1,SD1,#FLG1-3,IMU1,#PWR1-65,#PWR67-70,C1-76,C78-86,U1-5,D1-9,L1-3,FB1-4,JST1-2,R1-36,JP1-2,LED1,H1-4,HSE1-2,USB1,J1-3",
     "variants": []
   },
   "sheets": [
