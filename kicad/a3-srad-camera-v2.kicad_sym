@@ -3522,7 +3522,7 @@
 			(pin unspecified line
 				(at 48.26 -35.56 180)
 				(length 2.54)
-				(name "VCCIO4_3V3"
+				(name "VCCIO4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3756,7 +3756,7 @@
 			(pin unspecified line
 				(at 48.26 -8.89 180)
 				(length 2.54)
-				(name "VCCIO3_3V3"
+				(name "VCCIO3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3877,7 +3877,7 @@
 			(pin unspecified line
 				(at 59.69 -68.58 180)
 				(length 2.54)
-				(name "MIPI_AVDD1V8/VCCIO7_1V8"
+				(name "VCCIO7_1V8/MIPI_AVDD1V8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4129,7 +4129,7 @@
 			(pin unspecified line
 				(at 59.69 -8.89 180)
 				(length 2.54)
-				(name "VCCIO6_3V3"
+				(name "VCCIO6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4345,7 +4345,7 @@
 			(pin unspecified line
 				(at 59.69 29.21 180)
 				(length 2.54)
-				(name "VCCIO5_3V3"
+				(name "VCCIO5"
 					(effects
 						(font
 							(size 1.27 1.27)

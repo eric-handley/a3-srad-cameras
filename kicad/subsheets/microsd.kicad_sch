@@ -2845,7 +2845,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5032ab5d-2b7e-43c5-9b67-afb2ef0eee8c")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR039"
 			(at 208.28 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -2906,7 +2906,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "#PWR040")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -3191,7 +3191,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7c4ef4bd-f6eb-47b1-8277-a48a29fb2dff")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR040"
 			(at 115.57 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -3252,7 +3252,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "#PWR041")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -3269,7 +3269,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "92f23713-eb11-4215-ac83-6b461bd9501e")
-		(property "Reference" "C39"
+		(property "Reference" "C38"
 			(at 133.858 76.8237 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3520,7 +3520,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "C39")
+					(reference "C38")
 					(unit 1)
 				)
 			)
@@ -4069,7 +4069,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c1cc30d2-82d7-45ac-af3c-cca8412b23b8")
-		(property "Reference" "C37"
+		(property "Reference" "C36"
 			(at 127.508 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4320,7 +4320,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "C37")
+					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -4337,7 +4337,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca8ec51a-b8d0-4434-81b0-3e09e07443e1")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR038"
 			(at 129.54 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -4398,7 +4398,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "#PWR039")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -4415,7 +4415,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cbd19243-475e-437c-b98f-011b35c2cbb1")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR041"
 			(at 160.02 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -4476,7 +4476,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "#PWR042")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -4761,7 +4761,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dcb27f07-34ea-48e6-a68e-295386cde024")
-		(property "Reference" "C40"
+		(property "Reference" "C39"
 			(at 139.954 76.8237 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5012,7 +5012,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "C40")
+					(reference "C39")
 					(unit 1)
 				)
 			)
@@ -5275,7 +5275,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ea15093a-5bd5-48ab-b0d1-e12a78f665b6")
-		(property "Reference" "C41"
+		(property "Reference" "C40"
 			(at 147.32 69.8562 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5526,7 +5526,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "C41")
+					(reference "C40")
 					(unit 1)
 				)
 			)
@@ -5543,7 +5543,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eef560bf-6aac-4405-8d4a-7a4c1c71b35f")
-		(property "Reference" "C38"
+		(property "Reference" "C37"
 			(at 133.35 63.246 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5792,7 +5792,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "C38")
+					(reference "C37")
 					(unit 1)
 				)
 			)

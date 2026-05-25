@@ -2069,6 +2069,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 64.77) (xy 181.61 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cbf3986-2462-4e07-b161-7aa73795000b")
+	)
+	(wire
+		(pts
 			(xy 191.77 72.39) (xy 195.58 72.39)
 		)
 		(stroke
@@ -2420,6 +2430,17 @@
 		)
 		(uuid "60f29866-7d18-4a96-9976-0c9f3712937d")
 	)
+	(hierarchical_label "VBUS_DET"
+		(shape output)
+		(at 198.12 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "afeb9b5a-1dbf-4048-b02c-c3d8b9bba62c")
+	)
 	(symbol
 		(lib_id "a3-srad-camera-v2:GND")
 		(at 148.59 109.22 0)
@@ -2432,7 +2453,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0017c042-0572-4ac7-900a-bc58281d75b9")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR036"
 			(at 148.59 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -2493,7 +2514,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
-					(reference "#PWR037")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -3313,7 +3334,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3279f8a2-f5db-45b3-b9c2-aa5f1c492b10")
-		(property "Reference" "C36"
+		(property "Reference" "C35"
 			(at 197.9041 80.0614 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3564,7 +3585,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
-					(reference "C36")
+					(reference "C35")
 					(unit 1)
 				)
 			)
@@ -4466,7 +4487,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b5f03f5-3dac-4f03-adbf-9b9c1f656e28")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR037"
 			(at 130.81 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -4527,7 +4548,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
-					(reference "#PWR038")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -4546,7 +4567,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6be55d24-a28b-440e-8366-2326a9620087")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR032"
 			(at 185.42 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -4606,7 +4627,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
-					(reference "#PWR033")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -4624,7 +4645,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "72adf626-bf00-4ca3-ad2c-631451ca264f")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR034"
 			(at 161.29 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -4684,7 +4705,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
-					(reference "#PWR035")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -5013,7 +5034,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8239fa97-534b-4443-bbd0-18c4a57e7cdd")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR035"
 			(at 191.77 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -5073,7 +5094,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
-					(reference "#PWR036")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -5356,7 +5377,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88d13cc8-d7d6-4c31-9c5e-ce515a69648a")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR033"
 			(at 142.24 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -5416,7 +5437,86 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
-					(reference "#PWR034")
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 181.61 64.77 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a6cfd7d7-d64d-44ea-9988-76bb59115c32")
+		(property "Reference" "#PWR068"
+			(at 185.42 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VBUS_5V"
+			(at 174.2417 64.77 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 181.61 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "78c928a5-0fc5-4316-8f6e-0f3cf8fe9391")
+		)
+		(instances
+			(project "a3-srad-camera-v2"
+				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -5702,7 +5802,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bcda3112-2ddd-418b-a61e-909ce443acc9")
-		(property "Reference" "C35"
+		(property "Reference" "C34"
 			(at 189.738 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5953,7 +6053,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/8a49aa55-9ab2-4128-b069-6e62671c968c"
-					(reference "C35")
+					(reference "C34")
 					(unit 1)
 				)
 			)

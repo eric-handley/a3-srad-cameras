@@ -2117,121 +2117,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(text "VDDA/VBAT unused"
 		(exclude_from_sim no)
@@ -2374,12 +2259,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a88a1c7f-fba4-461c-b91c-d8d6c53b6b8d")
-	)
-	(junction
-		(at 127 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d312d160-b2e2-4068-b71c-81b0c6cd9393")
 	)
 	(junction
 		(at 149.86 49.53)
@@ -2656,23 +2535,13 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 49.53) (xy 127 49.53)
+			(xy 121.92 49.53) (xy 134.62 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "135b45b4-5fe2-4e6f-9523-c287d7d0e345")
-	)
-	(wire
-		(pts
-			(xy 127 48.26) (xy 127 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1460c83c-b4ed-46e2-aa8f-bceba047d480")
 	)
 	(wire
 		(pts
@@ -2723,16 +2592,6 @@
 			(type default)
 		)
 		(uuid "309371e1-ea06-4ad1-95a1-ab3391014874")
-	)
-	(wire
-		(pts
-			(xy 127 49.53) (xy 134.62 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "325d8352-b454-4ce8-a076-633021604156")
 	)
 	(wire
 		(pts
@@ -4137,84 +3996,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 127 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1ca56a15-9e7c-4ef9-b26d-fd2bb4aaf7e0")
-		(property "Reference" "#FLG03"
-			(at 127 46.355 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 127 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 127 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dfbfbcf5-62e3-455e-9a76-ade17a0380ef")
-		)
-		(instances
-			(project "a3-srad-camera-v2"
-				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/f270ac7c-6fb9-4f92-b42e-3a719cd8dbad"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 144.78 45.72 0)
 		(unit 1)
@@ -4494,7 +4275,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ad86318-0e0a-4155-af5e-0f28ad4a69b3")
-		(property "Reference" "U5"
+		(property "Reference" "U3"
 			(at 149.4633 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4755,7 +4536,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/f270ac7c-6fb9-4f92-b42e-3a719cd8dbad"
-					(reference "U5")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -4772,7 +4553,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "70db4f9e-33b4-4f39-bb7b-0f2c9af97308")
-		(property "Reference" "#PWR067"
+		(property "Reference" "#PWR030"
 			(at 93.98 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -4833,7 +4614,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/f270ac7c-6fb9-4f92-b42e-3a719cd8dbad"
-					(reference "#PWR067")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -5653,7 +5434,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b30a5264-9efe-4020-a7e3-7e9a0e3cc3ae")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR031"
 			(at 146.05 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -5714,7 +5495,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/f270ac7c-6fb9-4f92-b42e-3a719cd8dbad"
-					(reference "#PWR069")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -5999,7 +5780,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bb0055ba-d967-4b0c-87fc-32287a67c78b")
-		(property "Reference" "#PWR070"
+		(property "Reference" "#PWR029"
 			(at 157.48 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6060,7 +5841,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/f270ac7c-6fb9-4f92-b42e-3a719cd8dbad"
-					(reference "#PWR070")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
