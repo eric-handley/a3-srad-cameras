@@ -5647,12 +5647,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1a3cd0e6-e1f7-4681-a784-98b19704895e")
-		(property "Reference" "C21"
+		(property "Reference" "C12"
 			(at 130.81 101.346 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5894,6 +5894,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 130.81 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 130.81 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e3387549-11ed-4fb6-80c5-4a784d93e036")
 		)
@@ -5903,7 +5925,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C21")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -5915,7 +5937,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6128,6 +6150,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 156.21 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 156.21 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "8"
 			(uuid "07b1b5db-80fc-4aea-ae07-eb86b57b5737")
 		)
@@ -6242,7 +6286,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6489,6 +6533,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 185.42 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 185.42 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2c96c090-132d-4d81-a6cf-a78acd569826")
 		)
@@ -6511,7 +6577,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6758,6 +6824,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "78abce88-045e-4483-b9d3-5f89e24f9ca2")
 		)
@@ -6779,7 +6867,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -7026,6 +7114,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 193.04 100.33 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 193.04 100.33 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e95d9c73-5ef8-4921-a356-f618322d8190")
 		)
@@ -7048,12 +7158,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4078ce36-a2fd-40fa-a493-392f4f57959e")
-		(property "Reference" "C14"
+		(property "Reference" "C17"
 			(at 188.976 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7295,6 +7405,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 52.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 52.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "fabc1f65-3a20-47dd-84aa-a818223970f8")
 		)
@@ -7304,7 +7436,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C14")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -7316,12 +7448,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4dea03ad-0e90-40f8-b796-c7905014e295")
-		(property "Reference" "C18"
+		(property "Reference" "C21"
 			(at 199.136 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7563,6 +7695,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 193.04 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 193.04 83.82 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "f2463474-f584-4d9f-826f-1236c4c0c735")
 		)
@@ -7572,7 +7726,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C18")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -7584,7 +7738,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -7784,6 +7938,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 97.79 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 97.79 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "333df35a-6baa-4826-90a7-9b552388ab7a")
 		)
@@ -7810,7 +7986,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5d34d6b1-c5e6-4d8c-a183-9063b20e28d6")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR024"
 			(at 187.96 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -7872,7 +8048,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "#PWR023")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -7884,7 +8060,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -8131,6 +8307,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 193.04 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 193.04 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bbaeb400-17cb-4d27-a432-96039793be97")
 		)
@@ -8153,12 +8351,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "69afbb78-35e4-4626-974e-a30eee975059")
-		(property "Reference" "C9"
+		(property "Reference" "C10"
 			(at 123.444 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8410,6 +8608,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 129.54 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 129.54 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "88152a5d-247a-4b76-8067-f34ac8eaf423")
 		)
@@ -8419,7 +8639,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C9")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -8436,7 +8656,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6df3487f-5d66-4b71-86c6-2aa6ba68b38c")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR023"
 			(at 124.46 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -8498,7 +8718,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "#PWR022")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -8510,12 +8730,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8565c53b-ab5d-4edf-ad30-0478051e64cf")
-		(property "Reference" "C22"
+		(property "Reference" "C13"
 			(at 134.62 101.346 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8757,6 +8977,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 134.62 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 134.62 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7fd750f1-87d7-46c7-bf49-def49ed88c8e")
 		)
@@ -8766,7 +9008,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C22")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -8779,12 +9021,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "89b8eb2f-cee1-4a3a-aad5-43201371da91")
-		(property "Reference" "C15"
+		(property "Reference" "C18"
 			(at 188.976 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9026,6 +9268,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 54.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 54.61 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e18d6251-bda1-415a-9500-afbba57be5f9")
 		)
@@ -9035,7 +9299,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C15")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -9048,12 +9312,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d0764f2-056c-4652-b305-341e6407c1c2")
-		(property "Reference" "C12"
+		(property "Reference" "C11"
 			(at 123.444 48.26 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9295,6 +9559,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 129.54 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 129.54 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9fe81bf7-7a89-4c9b-8524-a6fe8b7d4836")
 		)
@@ -9304,7 +9590,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C12")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -9317,12 +9603,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "905f9a3c-03a3-4ff0-ae86-b63649c293d3")
-		(property "Reference" "C11"
+		(property "Reference" "C15"
 			(at 188.976 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9564,6 +9850,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5d01d313-42cd-4b7b-a3b4-25d777ff1b1e")
 		)
@@ -9573,7 +9881,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C11")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -9585,12 +9893,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a2f7e430-d139-4055-929f-83c7db20286c")
-		(property "Reference" "C20"
+		(property "Reference" "C9"
 			(at 127 101.346 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9832,6 +10140,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 127 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 127 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "bd101e80-939e-4794-9f91-edc6f2583441")
 		)
@@ -9841,7 +10171,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C20")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -9854,12 +10184,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a3c4ad28-58d7-4a30-b369-1799d5603902")
-		(property "Reference" "C16"
+		(property "Reference" "C19"
 			(at 188.976 57.15 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10101,6 +10431,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "89378422-513c-4a81-a6dc-1f9ad632bf90")
 		)
@@ -10110,7 +10462,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C16")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -10123,12 +10475,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bf1fe68a-fe22-4249-9c16-39ad0940b375")
-		(property "Reference" "C13"
+		(property "Reference" "C16"
 			(at 188.976 49.53 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10370,6 +10722,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "47232a81-e638-4de0-acaa-60be60d6e515")
 		)
@@ -10379,7 +10753,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C13")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -10391,7 +10765,7 @@
 		(unit 3)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -10604,6 +10978,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 156.21 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 156.21 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "8"
 			(uuid "07b1b5db-80fc-4aea-ae07-eb86b57b5738")
 		)
@@ -10718,7 +11114,7 @@
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -10931,6 +11327,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 156.21 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 156.21 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "8"
 			(uuid "07b1b5db-80fc-4aea-ae07-eb86b57b5739")
 		)
@@ -11046,12 +11464,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d3584500-dff8-4650-a4a6-ad8caf47d6f1")
-		(property "Reference" "C10"
+		(property "Reference" "C14"
 			(at 188.976 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11293,6 +11711,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d1c7c988-8a14-42cf-aa6e-97f9a651a622")
 		)
@@ -11302,7 +11742,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C10")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -11314,12 +11754,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d54fa3dd-3492-4758-bc24-6fdfe9f7b75c")
-		(property "Reference" "C19"
+		(property "Reference" "C22"
 			(at 199.136 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11561,6 +12001,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 193.04 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 193.04 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "250eeedb-92d2-40b3-847d-b843d00b72b0")
 		)
@@ -11570,7 +12032,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C19")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -11661,7 +12123,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -11871,6 +12333,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 78.74 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 78.74 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "26e4bdb2-f123-4e1b-ab38-f5ba405c2344")
 		)
@@ -11892,7 +12376,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -12092,6 +12576,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 88.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 88.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "57ee807a-49df-487b-93d3-bb40fc19ec54")
 		)
@@ -12114,12 +12620,12 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f11d9ed4-5b4d-4ce1-883a-951c4ec701e6")
-		(property "Reference" "C17"
+		(property "Reference" "C20"
 			(at 188.976 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12361,6 +12867,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 182.88 59.69 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 182.88 59.69 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9a463b61-11f8-4e21-9a48-d5ab282f9c83")
 		)
@@ -12370,7 +12898,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "C17")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -12387,7 +12915,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "faf9eb04-f9c5-4fe2-ab7c-3a5de06d0643")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR022"
 			(at 116.84 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -12449,7 +12977,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/e6d23902-96be-4a9c-9080-f666d7244302"
-					(reference "#PWR024")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)

@@ -2037,7 +2037,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -2064,7 +2064,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123F"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 120.65 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2274,6 +2274,28 @@
 			)
 		)
 		(property "SYMBOL" ""
+			(at 120.65 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 120.65 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
 			(at 120.65 106.68 90)
 			(hide yes)
 			(show_name no)
@@ -2305,7 +2327,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -2332,7 +2354,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123F"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 140.97 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2542,6 +2564,28 @@
 			)
 		)
 		(property "SYMBOL" ""
+			(at 140.97 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 140.97 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
 			(at 140.97 106.68 90)
 			(hide yes)
 			(show_name no)
@@ -2573,7 +2617,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -2599,7 +2643,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123F"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 156.21 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2809,6 +2853,28 @@
 			)
 		)
 		(property "SYMBOL" ""
+			(at 156.21 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 156.21 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
 			(at 156.21 106.68 90)
 			(hide yes)
 			(show_name no)
@@ -2845,7 +2911,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5032ab5d-2b7e-43c5-9b67-afb2ef0eee8c")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR042"
 			(at 208.28 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -2906,7 +2972,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "#PWR039")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -2918,7 +2984,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -2945,7 +3011,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123F"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 125.73 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -3165,6 +3231,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 125.73 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 125.73 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "72610e36-748f-4069-91d5-9a95d87447d5")
 		)
@@ -3191,7 +3279,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7c4ef4bd-f6eb-47b1-8277-a48a29fb2dff")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR039"
 			(at 115.57 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -3252,7 +3340,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "#PWR040")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -3264,7 +3352,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -3511,6 +3599,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 137.16 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 137.16 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c69102b8-698b-4ed3-9071-5de9147728cb")
 		)
@@ -3532,7 +3642,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -3777,6 +3887,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 115.57 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 115.57 95.25 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "80714bf4-7106-4bb6-a036-c111019cae43")
 		)
@@ -3798,7 +3930,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -3823,7 +3955,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123F"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 146.05 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -4043,6 +4175,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 146.05 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 146.05 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a1caeba7-1cd8-43cf-a47e-a01f75c96339")
 		)
@@ -4064,7 +4218,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4311,6 +4465,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 129.54 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 129.54 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7d3f15c6-6dc9-467c-9398-07dfc4aba38b")
 		)
@@ -4337,7 +4513,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca8ec51a-b8d0-4434-81b0-3e09e07443e1")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR040"
 			(at 129.54 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -4398,7 +4574,7 @@
 		(instances
 			(project "a3-srad-camera-v2"
 				(path "/c4ff1aa6-4aa7-4de3-a597-83271e910ec4/d9e1ba0c-1ec7-4d74-a36d-515b72a3de59"
-					(reference "#PWR038")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -4488,7 +4664,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4515,7 +4691,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123F"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 130.81 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -4735,6 +4911,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 130.81 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 130.81 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c8714033-595b-4968-a3f6-821ea363a84e")
 		)
@@ -4756,7 +4954,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5003,6 +5201,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 140.97 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 140.97 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "aa66b750-d0ae-4dee-bd6c-78ee03466089")
 		)
@@ -5024,7 +5244,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5226,6 +5446,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 185.42 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 185.42 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "d0eafd2e-6fa5-447b-8403-97db3e432ba8")
 		)
@@ -5269,7 +5511,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5517,6 +5759,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 144.78 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 144.78 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "804ddff1-2fca-4042-b422-0193300f9618")
 		)
@@ -5538,7 +5802,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5783,6 +6047,28 @@
 				)
 			)
 		)
+		(property "KLC_S3.3" ""
+			(at 133.35 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
+			(at 133.35 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "33eb5ed2-a089-4462-b24a-c2d07bf7fdda")
 		)
@@ -5804,7 +6090,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5831,7 +6117,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123F"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 135.89 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -6041,6 +6327,28 @@
 			)
 		)
 		(property "SYMBOL" ""
+			(at 135.89 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S3.3" ""
+			(at 135.89 106.68 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S5.1" ""
 			(at 135.89 106.68 90)
 			(hide yes)
 			(show_name no)

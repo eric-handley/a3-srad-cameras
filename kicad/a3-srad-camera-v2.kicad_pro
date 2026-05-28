@@ -726,7 +726,7 @@
     "annotate_start_num": 0,
     "annotation": {
       "method": 0,
-      "sort_order": 1
+      "sort_order": 0
     },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
@@ -745,12 +745,6 @@
       "fields_ordered": [
         {
           "group_by": false,
-          "label": "Qty",
-          "name": "${QUANTITY}",
-          "show": true
-        },
-        {
-          "group_by": false,
           "label": "Reference",
           "name": "Reference",
           "show": true
@@ -762,7 +756,19 @@
           "show": true
         },
         {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
           "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
           "show": true
@@ -777,12 +783,6 @@
           "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "Footprint",
-          "name": "Footprint",
           "show": true
         },
         {
@@ -964,9 +964,21 @@
           "label": "DC Rating",
           "name": "DC Rating",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "KLC_S5.1",
+          "name": "KLC_S5.1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "KLC_S3.3",
+          "name": "KLC_S3.3",
+          "show": false
         }
       ],
-      "filter_string": "R",
+      "filter_string": "D",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
@@ -1038,7 +1050,7 @@
         "uuid": "c4ff1aa6-4aa7-4de3-a597-83271e910ec4"
       }
     ],
-    "used_designators": "",
+    "used_designators": "SW1,R1-39,SD1,MIC1,Q1,TP1-17,JP1-2,#FLG1,IMU1,#PWR1-71,C1-85,U1-4,D1-9,L1-3,FB1-4,JST1-2,LED1,H1-4,HSE1-2,USB1,J1-3",
     "variants": []
   },
   "sheets": [
