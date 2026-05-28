@@ -1372,247 +1372,247 @@
 		)
 	)
 	(junction
-		(at 96.52 134.62)
+		(at 182.88 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "026dce73-ff24-4467-a626-a9e66b0d58de")
 	)
 	(junction
-		(at 100.33 85.09)
+		(at 187.96 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0a7bc36b-2ca7-466e-82d5-29e5bd05d9e2")
 	)
 	(junction
-		(at 99.06 132.08)
+		(at 185.42 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0fd34058-1e6a-422e-99a3-bb61f161f48e")
 	)
 	(junction
-		(at 91.44 44.45)
+		(at 187.96 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "27cf1134-fdde-4361-8466-4c8797985167")
 	)
 	(junction
-		(at 81.28 36.83)
+		(at 177.8 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2b281ccb-5d72-4d1c-b6af-0bfab55b4786")
 	)
 	(junction
-		(at 81.28 34.29)
+		(at 177.8 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2da7a411-99e1-42fc-a80d-ec47db749218")
 	)
 	(junction
-		(at 81.28 39.37)
+		(at 177.8 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "558c125d-b006-483c-8d8a-84d646be6c63")
 	)
 	(junction
-		(at 27.94 41.91)
+		(at 124.46 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "575213df-3f62-45ca-a5ce-a45dacf58af2")
 	)
 	(junction
-		(at 91.44 41.91)
+		(at 187.96 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5a79073a-5eba-4169-852f-91748101cf80")
 	)
 	(junction
-		(at 106.68 128.27)
+		(at 193.04 127)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5d2406fc-e54e-4f49-a21e-0c07a8a053f5")
 	)
 	(junction
-		(at 27.94 33.02)
+		(at 124.46 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "60593bc0-40a1-488b-ad5d-3d400b0379ca")
 	)
 	(junction
-		(at 46.99 66.04)
+		(at 134.62 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "63d1d4e7-880d-43e1-b5cc-802456d075a7")
 	)
 	(junction
-		(at 38.1 29.21)
+		(at 134.62 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "65c7d62d-b855-4def-bcd7-575c4c1c408c")
 	)
 	(junction
-		(at 81.28 41.91)
+		(at 177.8 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "71019dae-f30b-476b-9e61-f7a05878f839")
 	)
 	(junction
-		(at 39.37 73.66)
+		(at 127 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "74cb926a-62b4-448f-8814-4d0e596016be")
 	)
 	(junction
-		(at 81.28 31.75)
+		(at 177.8 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7dd53061-8595-4c36-b8a4-ee13bc69fac6")
 	)
 	(junction
-		(at 106.68 120.65)
+		(at 193.04 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "80d67e87-516d-4af1-a74e-5bb53b68defa")
 	)
 	(junction
-		(at 100.33 71.12)
+		(at 187.96 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "847a19fe-9c99-45e5-839b-b8f97456c0d7")
 	)
 	(junction
-		(at 100.33 87.63)
+		(at 187.96 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "92efdd53-dbd6-40e7-9226-2458543e4309")
 	)
 	(junction
-		(at 100.33 66.04)
+		(at 187.96 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9e1bdd99-0b00-4c62-9a49-be4110d9aca5")
 	)
 	(junction
-		(at 90.17 66.04)
+		(at 177.8 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9eab0ad6-c84a-45a6-b8a1-143eea7815f5")
 	)
 	(junction
-		(at 81.28 29.21)
+		(at 177.8 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a34c2465-30a8-44ce-bd85-96239bafe6ad")
 	)
 	(junction
-		(at 110.49 78.74)
+		(at 198.12 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a63515a0-9948-4261-9a5e-5b33a8164803")
 	)
 	(junction
-		(at 91.44 36.83)
+		(at 187.96 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a7cc09cf-716d-4af1-b1f0-051a4b40dbf2")
 	)
 	(junction
-		(at 39.37 87.63)
+		(at 127 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a8bcd0d0-5be4-4c0d-b97e-d8434580e755")
 	)
 	(junction
-		(at 81.28 44.45)
+		(at 177.8 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aa24e559-6147-4af6-99d8-c27a4dc3acb1")
 	)
 	(junction
-		(at 100.33 76.2)
+		(at 187.96 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b8a4d634-0a1e-4da9-80f9-7ffa610afd24")
 	)
 	(junction
-		(at 100.33 78.74)
+		(at 187.96 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bceeb0d7-a1b4-486d-a860-cf7d7ba3aff6")
 	)
 	(junction
-		(at 43.18 69.85)
+		(at 130.81 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c4937714-119f-46f8-b2ad-2699892fa259")
 	)
 	(junction
-		(at 110.49 87.63)
+		(at 198.12 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c6b7952a-8d90-48a4-882d-e736c6640f80")
 	)
 	(junction
-		(at 91.44 31.75)
+		(at 187.96 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d66e62d0-9292-4eaa-966c-a581da5c9c2c")
 	)
 	(junction
-		(at 99.06 120.65)
+		(at 185.42 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e717deac-9d29-4a80-b95e-6cac99549014")
 	)
 	(junction
-		(at 43.18 87.63)
+		(at 130.81 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f081756c-8f57-480b-8f3a-e5b57c67438d")
 	)
 	(junction
-		(at 27.94 44.45)
+		(at 124.46 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f60376e6-717d-4c41-923a-6be1baeb4b14")
 	)
 	(junction
-		(at 91.44 34.29)
+		(at 187.96 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f7a03da9-18c5-4b01-8898-d4e9126af317")
 	)
 	(junction
-		(at 91.44 39.37)
+		(at 187.96 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fc3064d3-2386-4451-beb1-e57b51bb5909")
 	)
 	(no_connect
-		(at 88.9 142.24)
+		(at 175.26 140.97)
 		(uuid "09455df2-34e0-4fcd-a28b-2788b245d4df")
 	)
 	(no_connect
-		(at 88.9 125.73)
+		(at 175.26 124.46)
 		(uuid "308395b6-8f30-48ec-839e-3d238af34ee7")
 	)
 	(no_connect
-		(at 49.53 77.47)
+		(at 137.16 90.17)
 		(uuid "9d409309-1a05-4ebb-a6ea-28c0cc7aceb1")
 	)
 	(no_connect
-		(at 88.9 139.7)
+		(at 175.26 138.43)
 		(uuid "a1464e50-9020-437b-8aed-6776df833abc")
 	)
 	(no_connect
-		(at 31.75 77.47)
+		(at 119.38 90.17)
 		(uuid "c263ec9e-91ed-4c43-9fe0-0ac3416a6028")
 	)
 	(no_connect
-		(at 88.9 144.78)
+		(at 175.26 143.51)
 		(uuid "d11b761d-3496-473a-abee-94c29f628263")
 	)
 	(bus_entry
-		(at 36.83 127)
+		(at 123.19 125.73)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -1621,7 +1621,7 @@
 		(uuid "1cf36c02-95df-4348-9e95-921f15dd5cfc")
 	)
 	(bus_entry
-		(at 120.65 134.62)
+		(at 207.01 133.35)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -1630,7 +1630,7 @@
 		(uuid "2fc4b9cc-b714-4155-9edc-3e7f21f0728d")
 	)
 	(bus_entry
-		(at 123.19 130.81)
+		(at 209.55 129.54)
 		(size -2.54 -2.54)
 		(stroke
 			(width 0)
@@ -1639,7 +1639,7 @@
 		(uuid "5a0734e3-f644-4b07-9baa-7a3658a099e2")
 	)
 	(bus_entry
-		(at 120.65 128.27)
+		(at 207.01 127)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -1648,7 +1648,7 @@
 		(uuid "66be2e9c-7d3d-46f2-8c6f-22f70bf62bdc")
 	)
 	(bus_entry
-		(at 34.29 137.16)
+		(at 120.65 135.89)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -1657,7 +1657,7 @@
 		(uuid "6a3fae57-7d7c-4a13-94d5-0dcad864fbf9")
 	)
 	(bus_entry
-		(at 34.29 134.62)
+		(at 120.65 133.35)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -1666,7 +1666,7 @@
 		(uuid "7a16bc8e-c79b-44e5-82fb-e445e05e45ee")
 	)
 	(bus_entry
-		(at 120.65 132.08)
+		(at 207.01 130.81)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -1675,7 +1675,7 @@
 		(uuid "87c2741c-2d12-417c-9196-b87986766bb8")
 	)
 	(bus_entry
-		(at 36.83 132.08)
+		(at 123.19 130.81)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -1684,7 +1684,7 @@
 		(uuid "9733f03c-f9ed-47b2-9755-92190764e366")
 	)
 	(bus_entry
-		(at 36.83 139.7)
+		(at 123.19 138.43)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -1693,7 +1693,7 @@
 		(uuid "d5ba54c4-6803-44cd-9f74-c64ba2860903")
 	)
 	(bus_entry
-		(at 36.83 134.62)
+		(at 123.19 133.35)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -1703,7 +1703,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 71.12) (xy 102.87 71.12)
+			(xy 187.96 83.82) (xy 190.5 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1713,7 +1713,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 36.83) (xy 91.44 36.83)
+			(xy 185.42 52.07) (xy 187.96 52.07)
 		)
 		(stroke
 			(width 0)
@@ -1723,7 +1723,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 80.01) (xy 46.99 66.04)
+			(xy 134.62 92.71) (xy 134.62 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1733,7 +1733,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 24.13) (xy 81.28 29.21)
+			(xy 177.8 39.37) (xy 177.8 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1743,7 +1743,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 34.29) (xy 83.82 34.29)
+			(xy 177.8 49.53) (xy 180.34 49.53)
 		)
 		(stroke
 			(width 0)
@@ -1753,7 +1753,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 29.21) (xy 27.94 29.21)
+			(xy 127 44.45) (xy 124.46 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1763,7 +1763,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 24.13) (xy 81.28 24.13)
+			(xy 187.96 39.37) (xy 177.8 39.37)
 		)
 		(stroke
 			(width 0)
@@ -1773,7 +1773,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 87.63) (xy 39.37 87.63)
+			(xy 116.84 100.33) (xy 127 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1783,7 +1783,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 87.63) (xy 100.33 87.63)
+			(xy 175.26 100.33) (xy 187.96 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1793,7 +1793,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 44.45) (xy 83.82 44.45)
+			(xy 177.8 59.69) (xy 180.34 59.69)
 		)
 		(stroke
 			(width 0)
@@ -1803,7 +1803,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 31.75) (xy 91.44 31.75)
+			(xy 185.42 46.99) (xy 187.96 46.99)
 		)
 		(stroke
 			(width 0)
@@ -1813,7 +1813,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 66.04) (xy 87.63 66.04)
+			(xy 177.8 78.74) (xy 175.26 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1823,7 +1823,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 87.63) (xy 46.99 87.63)
+			(xy 130.81 100.33) (xy 134.62 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1833,7 +1833,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 132.08) (xy 99.06 132.08)
+			(xy 175.26 130.81) (xy 185.42 130.81)
 		)
 		(stroke
 			(width 0)
@@ -1843,7 +1843,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 41.91) (xy 27.94 44.45)
+			(xy 124.46 57.15) (xy 124.46 59.69)
 		)
 		(stroke
 			(width 0)
@@ -1853,7 +1853,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 85.09) (xy 100.33 85.09)
+			(xy 208.28 97.79) (xy 187.96 97.79)
 		)
 		(stroke
 			(width 0)
@@ -1863,7 +1863,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 39.37) (xy 81.28 41.91)
+			(xy 177.8 54.61) (xy 177.8 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1873,7 +1873,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 31.75) (xy 83.82 31.75)
+			(xy 177.8 46.99) (xy 180.34 46.99)
 		)
 		(stroke
 			(width 0)
@@ -1883,7 +1883,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 36.83) (xy 81.28 39.37)
+			(xy 177.8 52.07) (xy 177.8 54.61)
 		)
 		(stroke
 			(width 0)
@@ -1893,7 +1893,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 71.12) (xy 100.33 71.12)
+			(xy 175.26 83.82) (xy 187.96 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1903,7 +1903,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 134.62) (xy 50.8 134.62)
+			(xy 123.19 133.35) (xy 137.16 133.35)
 		)
 		(stroke
 			(width 0)
@@ -1913,7 +1913,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 68.58) (xy 87.63 68.58)
+			(xy 177.8 81.28) (xy 175.26 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1923,7 +1923,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 120.65) (xy 99.06 120.65)
+			(xy 182.88 119.38) (xy 185.42 119.38)
 		)
 		(stroke
 			(width 0)
@@ -1933,7 +1933,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 29.21) (xy 81.28 31.75)
+			(xy 177.8 44.45) (xy 177.8 46.99)
 		)
 		(stroke
 			(width 0)
@@ -1943,7 +1943,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 68.58) (xy 90.17 66.04)
+			(xy 177.8 81.28) (xy 177.8 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1953,7 +1953,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 44.45) (xy 91.44 44.45)
+			(xy 185.42 59.69) (xy 187.96 59.69)
 		)
 		(stroke
 			(width 0)
@@ -1963,7 +1963,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 69.85) (xy 43.18 80.01)
+			(xy 130.81 82.55) (xy 130.81 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1973,7 +1973,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 87.63) (xy 107.95 87.63)
+			(xy 198.12 100.33) (xy 195.58 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1983,7 +1983,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 134.62) (xy 96.52 134.62)
+			(xy 207.01 133.35) (xy 182.88 133.35)
 		)
 		(stroke
 			(width 0)
@@ -1993,7 +1993,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 78.74) (xy 102.87 78.74)
+			(xy 187.96 91.44) (xy 190.5 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2003,7 +2003,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 78.74) (xy 107.95 78.74)
+			(xy 198.12 91.44) (xy 195.58 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2013,7 +2013,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 76.2) (xy 97.79 76.2)
+			(xy 187.96 88.9) (xy 185.42 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2023,7 +2023,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 41.91) (xy 83.82 41.91)
+			(xy 177.8 57.15) (xy 180.34 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2033,7 +2033,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 29.21) (xy 27.94 33.02)
+			(xy 124.46 44.45) (xy 124.46 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2043,7 +2043,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 29.21) (xy 38.1 29.21)
+			(xy 132.08 44.45) (xy 134.62 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2053,7 +2053,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 78.74) (xy 110.49 87.63)
+			(xy 198.12 91.44) (xy 198.12 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2063,7 +2063,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 39.37) (xy 83.82 39.37)
+			(xy 177.8 54.61) (xy 180.34 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2073,7 +2073,7 @@
 	)
 	(bus
 		(pts
-			(xy 34.29 129.54) (xy 34.29 152.4)
+			(xy 120.65 128.27) (xy 120.65 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2083,7 +2083,7 @@
 	)
 	(bus
 		(pts
-			(xy 123.19 130.81) (xy 123.19 152.4)
+			(xy 209.55 129.54) (xy 209.55 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2093,7 +2093,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 85.09) (xy 39.37 87.63)
+			(xy 127 97.79) (xy 127 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2103,7 +2103,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 34.29) (xy 91.44 34.29)
+			(xy 185.42 49.53) (xy 187.96 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2113,7 +2113,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 132.08) (xy 99.06 132.08)
+			(xy 207.01 130.81) (xy 185.42 130.81)
 		)
 		(stroke
 			(width 0)
@@ -2123,7 +2123,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 134.62) (xy 96.52 134.62)
+			(xy 175.26 133.35) (xy 182.88 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2133,7 +2133,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 66.04) (xy 120.65 66.04)
+			(xy 187.96 78.74) (xy 208.28 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2143,7 +2143,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 85.09) (xy 43.18 87.63)
+			(xy 130.81 97.79) (xy 130.81 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2153,7 +2153,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 87.63) (xy 43.18 87.63)
+			(xy 127 100.33) (xy 130.81 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2163,7 +2163,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 66.04) (xy 97.79 66.04)
+			(xy 187.96 78.74) (xy 185.42 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2173,7 +2173,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 139.7) (xy 50.8 139.7)
+			(xy 123.19 138.43) (xy 137.16 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2183,7 +2183,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 34.29) (xy 81.28 36.83)
+			(xy 177.8 49.53) (xy 177.8 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2193,7 +2193,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 36.83) (xy 83.82 36.83)
+			(xy 177.8 52.07) (xy 180.34 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2203,7 +2203,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 69.85) (xy 49.53 69.85)
+			(xy 130.81 82.55) (xy 137.16 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2213,7 +2213,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 120.65) (xy 106.68 121.92)
+			(xy 193.04 119.38) (xy 193.04 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2223,7 +2223,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 31.75) (xy 81.28 31.75)
+			(xy 175.26 46.99) (xy 177.8 46.99)
 		)
 		(stroke
 			(width 0)
@@ -2233,7 +2233,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 73.66) (xy 39.37 80.01)
+			(xy 127 86.36) (xy 127 92.71)
 		)
 		(stroke
 			(width 0)
@@ -2243,7 +2243,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 44.45) (xy 81.28 44.45)
+			(xy 175.26 59.69) (xy 177.8 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2253,7 +2253,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 41.91) (xy 81.28 41.91)
+			(xy 175.26 57.15) (xy 177.8 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2263,7 +2263,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 87.63) (xy 29.21 90.17)
+			(xy 116.84 100.33) (xy 116.84 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2273,7 +2273,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 76.2) (xy 100.33 76.2)
+			(xy 208.28 88.9) (xy 187.96 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2283,7 +2283,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 29.21) (xy 81.28 29.21)
+			(xy 175.26 44.45) (xy 177.8 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2293,7 +2293,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 66.04) (xy 90.17 66.04)
+			(xy 180.34 78.74) (xy 177.8 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2303,7 +2303,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 85.09) (xy 92.71 85.09)
+			(xy 175.26 97.79) (xy 180.34 97.79)
 		)
 		(stroke
 			(width 0)
@@ -2313,7 +2313,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 85.09) (xy 97.79 85.09)
+			(xy 187.96 97.79) (xy 185.42 97.79)
 		)
 		(stroke
 			(width 0)
@@ -2323,7 +2323,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 127) (xy 106.68 128.27)
+			(xy 193.04 125.73) (xy 193.04 127)
 		)
 		(stroke
 			(width 0)
@@ -2333,7 +2333,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 127) (xy 99.06 132.08)
+			(xy 185.42 125.73) (xy 185.42 130.81)
 		)
 		(stroke
 			(width 0)
@@ -2343,7 +2343,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 24.13) (xy 38.1 29.21)
+			(xy 134.62 39.37) (xy 134.62 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2353,7 +2353,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 39.37) (xy 81.28 39.37)
+			(xy 175.26 54.61) (xy 177.8 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2363,7 +2363,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 29.21) (xy 83.82 29.21)
+			(xy 177.8 44.45) (xy 180.34 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2373,7 +2373,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 76.2) (xy 92.71 76.2)
+			(xy 175.26 88.9) (xy 180.34 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2383,7 +2383,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 78.74) (xy 100.33 78.74)
+			(xy 175.26 91.44) (xy 187.96 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2393,7 +2393,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 120.65) (xy 106.68 120.65)
+			(xy 185.42 119.38) (xy 193.04 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2403,7 +2403,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 33.02) (xy 40.64 33.02)
+			(xy 132.08 48.26) (xy 137.16 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2413,7 +2413,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 71.12) (xy 107.95 71.12)
+			(xy 198.12 83.82) (xy 195.58 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2423,7 +2423,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 132.08) (xy 50.8 132.08)
+			(xy 123.19 130.81) (xy 137.16 130.81)
 		)
 		(stroke
 			(width 0)
@@ -2433,7 +2433,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 41.91) (xy 40.64 41.91)
+			(xy 124.46 57.15) (xy 137.16 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2443,7 +2443,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 41.91) (xy 91.44 41.91)
+			(xy 185.42 57.15) (xy 187.96 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2453,7 +2453,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 31.75) (xy 91.44 34.29)
+			(xy 187.96 46.99) (xy 187.96 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2463,7 +2463,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 36.83) (xy 81.28 36.83)
+			(xy 175.26 52.07) (xy 177.8 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2473,7 +2473,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 36.83) (xy 91.44 39.37)
+			(xy 187.96 52.07) (xy 187.96 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2483,7 +2483,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 29.21) (xy 91.44 29.21)
+			(xy 185.42 44.45) (xy 187.96 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2493,7 +2493,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 34.29) (xy 81.28 34.29)
+			(xy 175.26 49.53) (xy 177.8 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2503,7 +2503,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 87.63) (xy 102.87 87.63)
+			(xy 187.96 100.33) (xy 190.5 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2513,7 +2513,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 87.63) (xy 110.49 90.17)
+			(xy 198.12 100.33) (xy 198.12 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2523,7 +2523,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 121.92) (xy 96.52 120.65)
+			(xy 182.88 120.65) (xy 182.88 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2533,7 +2533,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 73.66) (xy 49.53 73.66)
+			(xy 127 86.36) (xy 137.16 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2543,7 +2543,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 39.37) (xy 91.44 41.91)
+			(xy 187.96 54.61) (xy 187.96 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2553,7 +2553,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 71.12) (xy 100.33 66.04)
+			(xy 187.96 83.82) (xy 187.96 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2563,7 +2563,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 29.21) (xy 91.44 31.75)
+			(xy 187.96 44.45) (xy 187.96 46.99)
 		)
 		(stroke
 			(width 0)
@@ -2573,7 +2573,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 66.04) (xy 46.99 66.04)
+			(xy 119.38 78.74) (xy 134.62 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2583,7 +2583,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 78.74) (xy 100.33 76.2)
+			(xy 187.96 91.44) (xy 187.96 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2593,7 +2593,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 120.65) (xy 110.49 120.65)
+			(xy 193.04 119.38) (xy 196.85 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2603,7 +2603,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 85.09) (xy 46.99 87.63)
+			(xy 134.62 97.79) (xy 134.62 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2613,7 +2613,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 41.91) (xy 81.28 44.45)
+			(xy 177.8 57.15) (xy 177.8 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2623,7 +2623,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 120.65) (xy 99.06 121.92)
+			(xy 185.42 119.38) (xy 185.42 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2633,7 +2633,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 128.27) (xy 120.65 128.27)
+			(xy 193.04 127) (xy 207.01 127)
 		)
 		(stroke
 			(width 0)
@@ -2643,7 +2643,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 44.45) (xy 40.64 44.45)
+			(xy 124.46 59.69) (xy 137.16 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2653,7 +2653,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 34.29) (xy 91.44 36.83)
+			(xy 187.96 49.53) (xy 187.96 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2663,7 +2663,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 71.12) (xy 110.49 78.74)
+			(xy 198.12 83.82) (xy 198.12 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2673,7 +2673,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 29.21) (xy 40.64 29.21)
+			(xy 134.62 44.45) (xy 137.16 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2683,7 +2683,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 24.13) (xy 38.1 24.13)
+			(xy 124.46 39.37) (xy 134.62 39.37)
 		)
 		(stroke
 			(width 0)
@@ -2693,7 +2693,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 69.85) (xy 43.18 69.85)
+			(xy 119.38 82.55) (xy 130.81 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2703,7 +2703,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 33.02) (xy 27.94 41.91)
+			(xy 124.46 48.26) (xy 124.46 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2713,7 +2713,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 87.63) (xy 100.33 85.09)
+			(xy 187.96 100.33) (xy 187.96 97.79)
 		)
 		(stroke
 			(width 0)
@@ -2723,7 +2723,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 127) (xy 50.8 127)
+			(xy 123.19 125.73) (xy 137.16 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2733,7 +2733,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 41.91) (xy 91.44 44.45)
+			(xy 187.96 57.15) (xy 187.96 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2743,7 +2743,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 33.02) (xy 30.48 33.02)
+			(xy 124.46 48.26) (xy 127 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2753,7 +2753,7 @@
 	)
 	(bus
 		(pts
-			(xy 123.19 152.4) (xy 34.29 152.4)
+			(xy 209.55 151.13) (xy 120.65 151.13)
 		)
 		(stroke
 			(width 0)
@@ -2763,7 +2763,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 73.66) (xy 39.37 73.66)
+			(xy 119.38 86.36) (xy 127 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2773,7 +2773,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 39.37) (xy 91.44 39.37)
+			(xy 185.42 54.61) (xy 187.96 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2783,7 +2783,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 66.04) (xy 49.53 66.04)
+			(xy 134.62 78.74) (xy 137.16 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2793,7 +2793,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 127) (xy 96.52 134.62)
+			(xy 182.88 125.73) (xy 182.88 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2803,7 +2803,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 44.45) (xy 91.44 46.99)
+			(xy 187.96 59.69) (xy 187.96 62.23)
 		)
 		(stroke
 			(width 0)
@@ -2813,7 +2813,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 128.27) (xy 106.68 128.27)
+			(xy 175.26 127) (xy 193.04 127)
 		)
 		(stroke
 			(width 0)
@@ -2823,7 +2823,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 31.75) (xy 81.28 34.29)
+			(xy 177.8 46.99) (xy 177.8 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2833,7 +2833,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 45.72) (xy 27.94 44.45)
+			(xy 124.46 60.96) (xy 124.46 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2842,7 +2842,7 @@
 		(uuid "fd9df8b3-12dd-4910-b1c3-2b352d5df2ee")
 	)
 	(image
-		(at -96.52 100.33)
+		(at -96.52 102.87)
 		(scale 2.44941)
 		(uuid "314e4c38-18c2-426b-b635-7e97b1a73aaf")
 		(data "iVBORw0KGgoAAAANSUhEUgAAA2AAAAOECAIAAABIJcVnAAAAA3NCSVQICAjb4U/gAAAgAElEQVR4"
@@ -5407,7 +5407,7 @@
 		)
 	)
 	(label "VSEL"
-		(at 36.83 139.7 0)
+		(at 123.19 138.43 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5417,7 +5417,7 @@
 		(uuid "16425473-0e82-459a-b66e-34c042d266b8")
 	)
 	(label "LX_B1_2"
-		(at 90.17 68.58 180)
+		(at 177.8 81.28 180)
 		(effects
 			(font
 				(size 0.5 0.5)
@@ -5428,7 +5428,7 @@
 		(uuid "23ce2d02-548e-4996-b948-e529471f0bb1")
 	)
 	(label "LX_B2"
-		(at 90.17 76.2 180)
+		(at 177.8 88.9 180)
 		(effects
 			(font
 				(size 0.5 0.5)
@@ -5439,7 +5439,7 @@
 		(uuid "33319b40-d756-416a-8869-043eb5b2f29f")
 	)
 	(label "SCL"
-		(at 120.65 132.08 180)
+		(at 207.01 130.81 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5449,7 +5449,7 @@
 		(uuid "3fcd2926-5a80-40fe-a86d-73da1e9a3bf6")
 	)
 	(label "LX_B1_1"
-		(at 90.17 66.04 180)
+		(at 177.8 78.74 180)
 		(effects
 			(font
 				(size 0.5 0.5)
@@ -5460,7 +5460,7 @@
 		(uuid "462b9ab8-4a26-4941-8dc0-9ff25199f02f")
 	)
 	(label "MODE_STBY"
-		(at 36.83 134.62 0)
+		(at 123.19 133.35 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5470,7 +5470,7 @@
 		(uuid "713871f9-2d59-45b1-84e9-dc0d4fbef12b")
 	)
 	(label "LX_B3"
-		(at 90.17 85.09 180)
+		(at 177.8 97.79 180)
 		(effects
 			(font
 				(size 0.5 0.5)
@@ -5481,7 +5481,7 @@
 		(uuid "73ee6deb-5334-4777-aea1-f716c58c8405")
 	)
 	(label "EN"
-		(at 36.83 127 0)
+		(at 123.19 125.73 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5491,7 +5491,7 @@
 		(uuid "79c32cf2-fdff-45fa-b101-f188b20fc586")
 	)
 	(label "nRESET_OUT"
-		(at 120.65 128.27 180)
+		(at 207.01 127 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5501,7 +5501,7 @@
 		(uuid "8b82bc7f-c5f1-4cd8-b13e-62fdb5a30fc1")
 	)
 	(label "SDA"
-		(at 120.65 134.62 180)
+		(at 207.01 133.35 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5511,7 +5511,7 @@
 		(uuid "8fd9bd9d-0b28-4495-a4d4-71989d980f80")
 	)
 	(label "MODE_RESET"
-		(at 36.83 132.08 0)
+		(at 123.19 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5522,7 +5522,7 @@
 	)
 	(hierarchical_label "VSYS"
 		(shape input)
-		(at 91.44 24.13 0)
+		(at 187.96 39.37 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5533,7 +5533,7 @@
 	)
 	(hierarchical_label "VLDO4"
 		(shape output)
-		(at 31.75 77.47 180)
+		(at 119.38 90.17 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5544,7 +5544,7 @@
 	)
 	(hierarchical_label "VIO"
 		(shape input)
-		(at 110.49 120.65 0)
+		(at 196.85 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5555,7 +5555,7 @@
 	)
 	(hierarchical_label "VLDO1"
 		(shape output)
-		(at 31.75 66.04 180)
+		(at 119.38 78.74 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5566,7 +5566,7 @@
 	)
 	(hierarchical_label "VLDO2"
 		(shape output)
-		(at 31.75 69.85 180)
+		(at 119.38 82.55 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5577,7 +5577,7 @@
 	)
 	(hierarchical_label "VLDO3"
 		(shape output)
-		(at 31.75 73.66 180)
+		(at 119.38 86.36 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5588,7 +5588,7 @@
 	)
 	(hierarchical_label "VBUCK2"
 		(shape output)
-		(at 120.65 76.2 0)
+		(at 208.28 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5599,7 +5599,7 @@
 	)
 	(hierarchical_label "VSYS"
 		(shape input)
-		(at 27.94 24.13 180)
+		(at 124.46 39.37 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5610,7 +5610,7 @@
 	)
 	(hierarchical_label "VBUCK3"
 		(shape output)
-		(at 120.65 85.09 0)
+		(at 208.28 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5621,7 +5621,7 @@
 	)
 	(hierarchical_label "{PMIC_BUS}"
 		(shape input)
-		(at 34.29 152.4 180)
+		(at 120.65 151.13 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5632,7 +5632,7 @@
 	)
 	(hierarchical_label "VBUCK1"
 		(shape output)
-		(at 120.65 66.04 0)
+		(at 208.28 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5643,7 +5643,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 43.18 82.55 0)
+		(at 130.81 95.25 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5653,7 +5653,7 @@
 		(dnp no)
 		(uuid "1a3cd0e6-e1f7-4681-a784-98b19704895e")
 		(property "Reference" "C21"
-			(at 43.18 88.646 90)
+			(at 130.81 101.346 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5664,7 +5664,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 43.18 93.218 90)
+			(at 130.81 105.918 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5675,7 +5675,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 43.18 82.55 0)
+			(at 130.81 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5686,7 +5686,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 82.55 0)
+			(at 130.81 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5697,7 +5697,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 43.18 82.55 0)
+			(at 130.81 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5708,7 +5708,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5719,7 +5719,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5730,7 +5730,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5741,7 +5741,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5752,7 +5752,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5763,7 +5763,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 43.18 82.55 0)
+			(at 130.81 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5774,7 +5774,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 43.18 82.55 0)
+			(at 130.81 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5785,7 +5785,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5796,7 +5796,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5807,7 +5807,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5818,7 +5818,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5829,7 +5829,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5840,7 +5840,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5851,7 +5851,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5862,7 +5862,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5873,7 +5873,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5884,7 +5884,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 43.18 82.55 90)
+			(at 130.81 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5911,7 +5911,7 @@
 	)
 	(symbol
 		(lib_id "a3-srad-camera-v2:TPS6521905RHBR")
-		(at 59.69 38.1 0)
+		(at 156.21 53.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5922,7 +5922,7 @@
 		(fields_autoplaced yes)
 		(uuid "214a059f-da4a-4554-a73f-806720b8d688")
 		(property "Reference" "U2"
-			(at 59.69 21.59 0)
+			(at 156.21 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5932,7 +5932,7 @@
 			)
 		)
 		(property "Value" "TPS6521905RHBR"
-			(at 59.69 24.13 0)
+			(at 156.21 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5942,7 +5942,7 @@
 			)
 		)
 		(property "Footprint" "a3-srad-camera-v2:TQFN-32_L5.0-W5.0-P0.50-TL-EP3.7"
-			(at 59.69 78.74 0)
+			(at 156.21 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5953,7 +5953,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C19379192.pdf"
-			(at 59.69 81.28 0)
+			(at 156.21 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5964,7 +5964,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5975,7 +5975,7 @@
 			)
 		)
 		(property "MANUFACTURER" "TI(德州仪器)"
-			(at 59.69 83.82 0)
+			(at 156.21 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5986,7 +5986,7 @@
 			)
 		)
 		(property "MPN" "TPS6521905RHBR"
-			(at 59.69 86.36 0)
+			(at 156.21 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5997,7 +5997,7 @@
 			)
 		)
 		(property "LCSC Part" "C19379192"
-			(at 59.69 88.9 0)
+			(at 156.21 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6008,7 +6008,7 @@
 			)
 		)
 		(property "Manufacturer" "TI(德州仪器)"
-			(at 60.198 64.008 0)
+			(at 156.718 79.248 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6019,7 +6019,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6030,7 +6030,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6041,7 +6041,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6052,7 +6052,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6063,7 +6063,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6074,7 +6074,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6085,7 +6085,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6096,7 +6096,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6107,7 +6107,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6118,7 +6118,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 59.69 38.1 0)
+			(at 156.21 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6238,7 +6238,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 99.06 124.46 0)
+		(at 185.42 123.19 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6248,7 +6248,7 @@
 		(dnp no)
 		(uuid "277be103-6588-4af7-a6c4-bdb2559b3997")
 		(property "Reference" "R6"
-			(at 100.584 123.698 0)
+			(at 186.944 122.428 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6259,7 +6259,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 100.6094 125.4181 0)
+			(at 186.9694 124.1481 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6270,7 +6270,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6281,7 +6281,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6292,7 +6292,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6303,7 +6303,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 99.06 124.46 90)
+			(at 185.42 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6314,7 +6314,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 99.06 124.46 90)
+			(at 185.42 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6325,7 +6325,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 99.06 124.46 90)
+			(at 185.42 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6336,7 +6336,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 99.06 124.46 90)
+			(at 185.42 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6347,7 +6347,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 99.06 124.46 90)
+			(at 185.42 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6358,7 +6358,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C2906860"
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6369,7 +6369,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6380,7 +6380,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6391,7 +6391,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6402,7 +6402,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6413,7 +6413,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6424,7 +6424,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6435,7 +6435,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6446,7 +6446,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6457,7 +6457,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6468,7 +6468,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6479,7 +6479,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 99.06 124.46 0)
+			(at 185.42 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6506,7 +6506,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 96.52 124.46 0)
+		(at 182.88 123.19 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -6517,7 +6517,7 @@
 		(dnp no)
 		(uuid "35451f53-1d08-4ba7-8387-31bc5c27e286")
 		(property "Reference" "R5"
-			(at 94.996 123.698 0)
+			(at 181.356 122.428 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6528,7 +6528,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 94.9706 125.4181 0)
+			(at 181.3306 124.1481 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6539,7 +6539,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6550,7 +6550,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6561,7 +6561,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6572,7 +6572,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 96.52 124.46 90)
+			(at 182.88 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6583,7 +6583,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 96.52 124.46 90)
+			(at 182.88 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6594,7 +6594,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 96.52 124.46 90)
+			(at 182.88 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6605,7 +6605,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 96.52 124.46 90)
+			(at 182.88 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6616,7 +6616,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 96.52 124.46 90)
+			(at 182.88 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6627,7 +6627,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C2906860"
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6638,7 +6638,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6649,7 +6649,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6660,7 +6660,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6671,7 +6671,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6682,7 +6682,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6693,7 +6693,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6704,7 +6704,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6715,7 +6715,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6726,7 +6726,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6737,7 +6737,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6748,7 +6748,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 96.52 124.46 0)
+			(at 182.88 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6775,7 +6775,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 105.41 87.63 90)
+		(at 193.04 100.33 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6785,7 +6785,7 @@
 		(dnp no)
 		(uuid "38d2ab1f-2f5a-4a38-bf39-ef584ffa728b")
 		(property "Reference" "C23"
-			(at 111.506 87.63 90)
+			(at 199.136 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6796,7 +6796,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 116.078 87.63 90)
+			(at 203.708 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6807,7 +6807,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 105.41 87.63 0)
+			(at 193.04 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6818,7 +6818,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 87.63 0)
+			(at 193.04 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6829,7 +6829,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 105.41 87.63 0)
+			(at 193.04 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6840,7 +6840,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6851,7 +6851,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6862,7 +6862,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6873,7 +6873,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6884,7 +6884,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6895,7 +6895,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 105.41 87.63 0)
+			(at 193.04 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6906,7 +6906,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 105.41 87.63 0)
+			(at 193.04 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6917,7 +6917,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6928,7 +6928,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6939,7 +6939,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6950,7 +6950,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6961,7 +6961,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6972,7 +6972,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6983,7 +6983,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6994,7 +6994,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7005,7 +7005,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7016,7 +7016,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 105.41 87.63 90)
+			(at 193.04 100.33 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7043,7 +7043,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 86.36 36.83 90)
+		(at 182.88 52.07 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -7054,7 +7054,7 @@
 		(dnp no)
 		(uuid "4078ce36-a2fd-40fa-a493-392f4f57959e")
 		(property "Reference" "C14"
-			(at 92.456 36.83 90)
+			(at 188.976 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7065,7 +7065,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 97.028 36.83 90)
+			(at 193.548 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7076,7 +7076,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 86.36 36.83 0)
+			(at 182.88 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7087,7 +7087,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 36.83 0)
+			(at 182.88 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7098,7 +7098,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 86.36 36.83 0)
+			(at 182.88 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7109,7 +7109,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7120,7 +7120,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7131,7 +7131,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7142,7 +7142,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7153,7 +7153,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7164,7 +7164,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 86.36 36.83 0)
+			(at 182.88 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7175,7 +7175,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 86.36 36.83 0)
+			(at 182.88 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7186,7 +7186,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7197,7 +7197,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7208,7 +7208,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7219,7 +7219,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7230,7 +7230,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7241,7 +7241,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7252,7 +7252,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7263,7 +7263,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7274,7 +7274,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7285,7 +7285,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 86.36 36.83 90)
+			(at 182.88 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7312,7 +7312,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 105.41 71.12 90)
+		(at 193.04 83.82 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7322,7 +7322,7 @@
 		(dnp no)
 		(uuid "4dea03ad-0e90-40f8-b796-c7905014e295")
 		(property "Reference" "C18"
-			(at 111.506 71.12 90)
+			(at 199.136 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7333,7 +7333,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 116.078 71.12 90)
+			(at 203.708 83.82 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7344,7 +7344,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 105.41 71.12 0)
+			(at 193.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7355,7 +7355,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 71.12 0)
+			(at 193.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7366,7 +7366,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 105.41 71.12 0)
+			(at 193.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7377,7 +7377,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7388,7 +7388,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7399,7 +7399,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7410,7 +7410,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7421,7 +7421,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7432,7 +7432,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 105.41 71.12 0)
+			(at 193.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7443,7 +7443,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 105.41 71.12 0)
+			(at 193.04 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7454,7 +7454,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7465,7 +7465,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7476,7 +7476,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7487,7 +7487,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7498,7 +7498,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7509,7 +7509,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7520,7 +7520,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7531,7 +7531,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7542,7 +7542,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7553,7 +7553,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 105.41 71.12 90)
+			(at 193.04 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7580,7 +7580,7 @@
 	)
 	(symbol
 		(lib_id "Device:L_Small")
-		(at 95.25 85.09 90)
+		(at 182.88 97.79 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7590,7 +7590,7 @@
 		(dnp no)
 		(uuid "532e429d-e98b-4c2a-8baa-f23ab91ebf40")
 		(property "Reference" "L3"
-			(at 95.25 81.788 90)
+			(at 182.88 94.488 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7600,7 +7600,7 @@
 			)
 		)
 		(property "Value" "470nH"
-			(at 95.25 83.566 90)
+			(at 182.88 96.266 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7610,7 +7610,7 @@
 			)
 		)
 		(property "Footprint" "a3-srad-camera-v2:L_0806"
-			(at 95.25 85.09 0)
+			(at 182.88 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7621,7 +7621,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7632,7 +7632,7 @@
 			)
 		)
 		(property "Description" "Inductor, small symbol"
-			(at 95.25 85.09 0)
+			(at 182.88 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7643,7 +7643,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C89446"
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7654,7 +7654,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7665,7 +7665,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" ""
-			(at 16.51 247.65 0)
+			(at 104.14 260.35 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7675,7 +7675,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7686,7 +7686,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7697,7 +7697,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7708,7 +7708,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7719,7 +7719,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7730,7 +7730,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7741,7 +7741,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7752,7 +7752,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7763,7 +7763,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7774,7 +7774,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 95.25 85.09 90)
+			(at 182.88 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7801,7 +7801,7 @@
 	)
 	(symbol
 		(lib_id "a3-srad-camera-v2:GND")
-		(at 91.44 46.99 0)
+		(at 187.96 62.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7811,7 +7811,7 @@
 		(dnp no)
 		(uuid "5d34d6b1-c5e6-4d8c-a183-9063b20e28d6")
 		(property "Reference" "#PWR023"
-			(at 91.44 53.34 0)
+			(at 187.96 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7822,7 +7822,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.964 50.546 0)
+			(at 189.484 65.786 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7834,7 +7834,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 46.99 0)
+			(at 187.96 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7845,7 +7845,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 46.99 0)
+			(at 187.96 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7856,7 +7856,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 91.44 46.99 0)
+			(at 187.96 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7880,7 +7880,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 106.68 124.46 0)
+		(at 193.04 123.19 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7890,7 +7890,7 @@
 		(dnp no)
 		(uuid "5e4591fc-3389-4657-a0cb-0e03b595e501")
 		(property "Reference" "R7"
-			(at 108.204 123.698 0)
+			(at 194.564 122.428 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7901,7 +7901,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 108.2294 125.4181 0)
+			(at 194.5894 124.1481 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7912,7 +7912,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7923,7 +7923,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7934,7 +7934,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7945,7 +7945,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 106.68 124.46 90)
+			(at 193.04 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7956,7 +7956,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 106.68 124.46 90)
+			(at 193.04 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7967,7 +7967,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 106.68 124.46 90)
+			(at 193.04 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7978,7 +7978,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 106.68 124.46 90)
+			(at 193.04 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7989,7 +7989,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 106.68 124.46 90)
+			(at 193.04 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8000,7 +8000,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C2906860"
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8011,7 +8011,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8022,7 +8022,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8033,7 +8033,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8044,7 +8044,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8055,7 +8055,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8066,7 +8066,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8077,7 +8077,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8088,7 +8088,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8099,7 +8099,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8110,7 +8110,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8121,7 +8121,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 106.68 124.46 0)
+			(at 193.04 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8148,7 +8148,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 33.02 29.21 270)
+		(at 129.54 44.45 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -8159,7 +8159,7 @@
 		(dnp no)
 		(uuid "69afbb78-35e4-4626-974e-a30eee975059")
 		(property "Reference" "C9"
-			(at 26.924 29.21 90)
+			(at 123.444 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8170,7 +8170,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 22.352 29.21 90)
+			(at 118.872 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8181,7 +8181,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 33.02 29.21 0)
+			(at 129.54 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8192,7 +8192,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 29.21 0)
+			(at 129.54 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8203,7 +8203,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 33.02 29.21 0)
+			(at 129.54 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8214,7 +8214,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8225,7 +8225,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8236,7 +8236,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8247,7 +8247,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8258,7 +8258,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8269,7 +8269,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 33.02 29.21 0)
+			(at 129.54 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8280,7 +8280,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 33.02 29.21 0)
+			(at 129.54 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8291,7 +8291,7 @@
 			)
 		)
 		(property "DC Rating" "10V"
-			(at 14.478 29.21 90)
+			(at 110.998 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8301,7 +8301,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8312,7 +8312,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8323,7 +8323,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8334,7 +8334,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8345,7 +8345,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8356,7 +8356,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8367,7 +8367,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8378,7 +8378,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8389,7 +8389,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8400,7 +8400,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 33.02 29.21 90)
+			(at 129.54 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8427,7 +8427,7 @@
 	)
 	(symbol
 		(lib_id "a3-srad-camera-v2:GND")
-		(at 27.94 45.72 0)
+		(at 124.46 60.96 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8437,7 +8437,7 @@
 		(dnp no)
 		(uuid "6df3487f-5d66-4b71-86c6-2aa6ba68b38c")
 		(property "Reference" "#PWR022"
-			(at 27.94 52.07 0)
+			(at 124.46 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8448,7 +8448,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 29.464 49.276 0)
+			(at 125.984 64.516 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8460,7 +8460,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 27.94 45.72 0)
+			(at 124.46 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8471,7 +8471,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 45.72 0)
+			(at 124.46 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8482,7 +8482,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 27.94 45.72 0)
+			(at 124.46 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8506,7 +8506,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 46.99 82.55 0)
+		(at 134.62 95.25 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8516,7 +8516,7 @@
 		(dnp no)
 		(uuid "8565c53b-ab5d-4edf-ad30-0478051e64cf")
 		(property "Reference" "C22"
-			(at 46.99 88.646 90)
+			(at 134.62 101.346 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8527,7 +8527,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 46.99 93.218 90)
+			(at 134.62 105.918 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8538,7 +8538,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 46.99 82.55 0)
+			(at 134.62 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8549,7 +8549,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 46.99 82.55 0)
+			(at 134.62 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8560,7 +8560,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 46.99 82.55 0)
+			(at 134.62 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8571,7 +8571,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8582,7 +8582,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8593,7 +8593,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8604,7 +8604,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8615,7 +8615,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8626,7 +8626,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 46.99 82.55 0)
+			(at 134.62 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8637,7 +8637,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 46.99 82.55 0)
+			(at 134.62 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8648,7 +8648,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8659,7 +8659,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8670,7 +8670,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8681,7 +8681,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8692,7 +8692,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8703,7 +8703,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8714,7 +8714,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8725,7 +8725,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8736,7 +8736,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8747,7 +8747,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 46.99 82.55 90)
+			(at 134.62 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8774,7 +8774,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 86.36 39.37 90)
+		(at 182.88 54.61 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -8785,7 +8785,7 @@
 		(dnp no)
 		(uuid "89b8eb2f-cee1-4a3a-aad5-43201371da91")
 		(property "Reference" "C15"
-			(at 92.456 39.37 90)
+			(at 188.976 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8796,7 +8796,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 97.028 39.37 90)
+			(at 193.548 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8807,7 +8807,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 86.36 39.37 0)
+			(at 182.88 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8818,7 +8818,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 39.37 0)
+			(at 182.88 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8829,7 +8829,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 86.36 39.37 0)
+			(at 182.88 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8840,7 +8840,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8851,7 +8851,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8862,7 +8862,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8873,7 +8873,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8884,7 +8884,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8895,7 +8895,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 86.36 39.37 0)
+			(at 182.88 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8906,7 +8906,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 86.36 39.37 0)
+			(at 182.88 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8917,7 +8917,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8928,7 +8928,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8939,7 +8939,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8950,7 +8950,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8961,7 +8961,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8972,7 +8972,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8983,7 +8983,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8994,7 +8994,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9005,7 +9005,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9016,7 +9016,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 86.36 39.37 90)
+			(at 182.88 54.61 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9043,7 +9043,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 33.02 33.02 270)
+		(at 129.54 48.26 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -9054,7 +9054,7 @@
 		(dnp no)
 		(uuid "8d0764f2-056c-4652-b305-341e6407c1c2")
 		(property "Reference" "C12"
-			(at 26.924 33.02 90)
+			(at 123.444 48.26 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9065,7 +9065,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 22.352 33.02 90)
+			(at 118.872 48.26 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9076,7 +9076,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 33.02 33.02 0)
+			(at 129.54 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9087,7 +9087,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 33.02 0)
+			(at 129.54 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9098,7 +9098,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 33.02 33.02 0)
+			(at 129.54 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9109,7 +9109,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9120,7 +9120,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9131,7 +9131,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9142,7 +9142,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9153,7 +9153,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9164,7 +9164,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 33.02 33.02 0)
+			(at 129.54 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9175,7 +9175,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 33.02 33.02 0)
+			(at 129.54 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9186,7 +9186,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9197,7 +9197,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9208,7 +9208,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9219,7 +9219,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9230,7 +9230,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9241,7 +9241,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9252,7 +9252,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9263,7 +9263,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9274,7 +9274,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9285,7 +9285,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 33.02 33.02 90)
+			(at 129.54 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9312,7 +9312,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 86.36 31.75 90)
+		(at 182.88 46.99 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -9323,7 +9323,7 @@
 		(dnp no)
 		(uuid "905f9a3c-03a3-4ff0-ae86-b63649c293d3")
 		(property "Reference" "C11"
-			(at 92.456 31.75 90)
+			(at 188.976 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9334,7 +9334,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 97.028 31.75 90)
+			(at 193.548 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9345,7 +9345,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 86.36 31.75 0)
+			(at 182.88 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9356,7 +9356,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 31.75 0)
+			(at 182.88 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9367,7 +9367,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 86.36 31.75 0)
+			(at 182.88 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9378,7 +9378,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9389,7 +9389,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9400,7 +9400,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9411,7 +9411,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9422,7 +9422,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9433,7 +9433,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 86.36 31.75 0)
+			(at 182.88 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9444,7 +9444,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 86.36 31.75 0)
+			(at 182.88 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9455,7 +9455,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9466,7 +9466,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9477,7 +9477,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9488,7 +9488,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9499,7 +9499,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9510,7 +9510,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9521,7 +9521,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9532,7 +9532,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9543,7 +9543,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9554,7 +9554,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 86.36 31.75 90)
+			(at 182.88 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9581,7 +9581,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 39.37 82.55 0)
+		(at 127 95.25 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9591,7 +9591,7 @@
 		(dnp no)
 		(uuid "a2f7e430-d139-4055-929f-83c7db20286c")
 		(property "Reference" "C20"
-			(at 39.37 88.646 90)
+			(at 127 101.346 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9602,7 +9602,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 39.37 93.218 90)
+			(at 127 105.918 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9613,7 +9613,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 39.37 82.55 0)
+			(at 127 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9624,7 +9624,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 82.55 0)
+			(at 127 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9635,7 +9635,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 39.37 82.55 0)
+			(at 127 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9646,7 +9646,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9657,7 +9657,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9668,7 +9668,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9679,7 +9679,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9690,7 +9690,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9701,7 +9701,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 39.37 82.55 0)
+			(at 127 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9712,7 +9712,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 39.37 82.55 0)
+			(at 127 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9723,7 +9723,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9734,7 +9734,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9745,7 +9745,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9756,7 +9756,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9767,7 +9767,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9778,7 +9778,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9789,7 +9789,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9800,7 +9800,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9811,7 +9811,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9822,7 +9822,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 39.37 82.55 90)
+			(at 127 95.25 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9849,7 +9849,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 86.36 41.91 90)
+		(at 182.88 57.15 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -9860,7 +9860,7 @@
 		(dnp no)
 		(uuid "a3c4ad28-58d7-4a30-b369-1799d5603902")
 		(property "Reference" "C16"
-			(at 92.456 41.91 90)
+			(at 188.976 57.15 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9871,7 +9871,7 @@
 			)
 		)
 		(property "Value" "2.2uF"
-			(at 97.028 41.91 90)
+			(at 193.548 57.15 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9882,7 +9882,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 86.36 41.91 0)
+			(at 182.88 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9893,7 +9893,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 41.91 0)
+			(at 182.88 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9904,7 +9904,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 86.36 41.91 0)
+			(at 182.88 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9915,7 +9915,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9926,7 +9926,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9937,7 +9937,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9948,7 +9948,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9959,7 +9959,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9970,7 +9970,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 86.36 41.91 0)
+			(at 182.88 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9981,7 +9981,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 86.36 41.91 0)
+			(at 182.88 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9992,7 +9992,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10003,7 +10003,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10014,7 +10014,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10025,7 +10025,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10036,7 +10036,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10047,7 +10047,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10058,7 +10058,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10069,7 +10069,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10080,7 +10080,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10091,7 +10091,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 86.36 41.91 90)
+			(at 182.88 57.15 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10118,7 +10118,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 86.36 34.29 90)
+		(at 182.88 49.53 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -10129,7 +10129,7 @@
 		(dnp no)
 		(uuid "bf1fe68a-fe22-4249-9c16-39ad0940b375")
 		(property "Reference" "C13"
-			(at 92.456 34.29 90)
+			(at 188.976 49.53 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10140,7 +10140,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 97.028 34.29 90)
+			(at 193.548 49.53 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10151,7 +10151,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 86.36 34.29 0)
+			(at 182.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10162,7 +10162,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 34.29 0)
+			(at 182.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10173,7 +10173,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 86.36 34.29 0)
+			(at 182.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10184,7 +10184,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10195,7 +10195,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10206,7 +10206,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10217,7 +10217,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10228,7 +10228,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10239,7 +10239,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 86.36 34.29 0)
+			(at 182.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10250,7 +10250,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 86.36 34.29 0)
+			(at 182.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10261,7 +10261,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10272,7 +10272,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10283,7 +10283,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10294,7 +10294,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10305,7 +10305,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10316,7 +10316,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10327,7 +10327,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10338,7 +10338,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10349,7 +10349,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10360,7 +10360,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 86.36 34.29 90)
+			(at 182.88 49.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10387,7 +10387,7 @@
 	)
 	(symbol
 		(lib_id "a3-srad-camera-v2:TPS6521905RHBR")
-		(at 69.85 135.89 0)
+		(at 156.21 134.62 0)
 		(unit 3)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10398,7 +10398,7 @@
 		(fields_autoplaced yes)
 		(uuid "c88436d6-bc5d-4a28-be06-8aea9080fa89")
 		(property "Reference" "U2"
-			(at 69.85 118.11 0)
+			(at 156.21 116.84 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10408,7 +10408,7 @@
 			)
 		)
 		(property "Value" "TPS6521905RHBR"
-			(at 69.85 120.65 0)
+			(at 156.21 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10418,7 +10418,7 @@
 			)
 		)
 		(property "Footprint" "a3-srad-camera-v2:TQFN-32_L5.0-W5.0-P0.50-TL-EP3.7"
-			(at 69.85 176.53 0)
+			(at 156.21 175.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10429,7 +10429,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C19379192.pdf"
-			(at 69.85 179.07 0)
+			(at 156.21 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10440,7 +10440,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10451,7 +10451,7 @@
 			)
 		)
 		(property "MANUFACTURER" "TI(德州仪器)"
-			(at 69.85 181.61 0)
+			(at 156.21 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10462,7 +10462,7 @@
 			)
 		)
 		(property "MPN" "TPS6521905RHBR"
-			(at 69.85 184.15 0)
+			(at 156.21 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10473,7 +10473,7 @@
 			)
 		)
 		(property "LCSC Part" "C19379192"
-			(at 69.85 186.69 0)
+			(at 156.21 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10484,7 +10484,7 @@
 			)
 		)
 		(property "Manufacturer" "TI(德州仪器)"
-			(at 70.358 161.798 0)
+			(at 156.718 160.528 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10495,7 +10495,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10506,7 +10506,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10517,7 +10517,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10528,7 +10528,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10539,7 +10539,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10550,7 +10550,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10561,7 +10561,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10572,7 +10572,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10583,7 +10583,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10594,7 +10594,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 69.85 135.89 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10714,7 +10714,7 @@
 	)
 	(symbol
 		(lib_id "a3-srad-camera-v2:TPS6521905RHBR")
-		(at 68.58 76.2 0)
+		(at 156.21 88.9 0)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10725,7 +10725,7 @@
 		(fields_autoplaced yes)
 		(uuid "c88436d6-bc5d-4a28-be06-8aea9080fa8a")
 		(property "Reference" "U2"
-			(at 68.58 59.69 0)
+			(at 156.21 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10735,7 +10735,7 @@
 			)
 		)
 		(property "Value" "TPS6521905RHBR"
-			(at 68.58 62.23 0)
+			(at 156.21 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10745,7 +10745,7 @@
 			)
 		)
 		(property "Footprint" "a3-srad-camera-v2:TQFN-32_L5.0-W5.0-P0.50-TL-EP3.7"
-			(at 68.58 116.84 0)
+			(at 156.21 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10756,7 +10756,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C19379192.pdf"
-			(at 68.58 119.38 0)
+			(at 156.21 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10767,7 +10767,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10778,7 +10778,7 @@
 			)
 		)
 		(property "MANUFACTURER" "TI(德州仪器)"
-			(at 68.58 121.92 0)
+			(at 156.21 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10789,7 +10789,7 @@
 			)
 		)
 		(property "MPN" "TPS6521905RHBR"
-			(at 68.58 124.46 0)
+			(at 156.21 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10800,7 +10800,7 @@
 			)
 		)
 		(property "LCSC Part" "C19379192"
-			(at 68.58 127 0)
+			(at 156.21 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10811,7 +10811,7 @@
 			)
 		)
 		(property "Manufacturer" "TI(德州仪器)"
-			(at 69.088 102.108 0)
+			(at 156.718 114.808 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10822,7 +10822,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10833,7 +10833,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10844,7 +10844,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10855,7 +10855,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10866,7 +10866,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10877,7 +10877,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10888,7 +10888,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10899,7 +10899,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10910,7 +10910,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10921,7 +10921,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 68.58 76.2 0)
+			(at 156.21 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11041,7 +11041,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 86.36 29.21 90)
+		(at 182.88 44.45 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -11052,7 +11052,7 @@
 		(dnp no)
 		(uuid "d3584500-dff8-4650-a4a6-ad8caf47d6f1")
 		(property "Reference" "C10"
-			(at 92.456 29.21 90)
+			(at 188.976 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11063,7 +11063,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 97.028 29.21 90)
+			(at 193.548 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11074,7 +11074,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 86.36 29.21 0)
+			(at 182.88 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11085,7 +11085,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 29.21 0)
+			(at 182.88 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11096,7 +11096,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 86.36 29.21 0)
+			(at 182.88 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11107,7 +11107,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11118,7 +11118,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11129,7 +11129,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11140,7 +11140,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11151,7 +11151,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11162,7 +11162,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 86.36 29.21 0)
+			(at 182.88 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11173,7 +11173,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 86.36 29.21 0)
+			(at 182.88 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11184,7 +11184,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11195,7 +11195,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11206,7 +11206,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11217,7 +11217,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11228,7 +11228,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11239,7 +11239,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11250,7 +11250,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11261,7 +11261,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11272,7 +11272,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11283,7 +11283,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 86.36 29.21 90)
+			(at 182.88 44.45 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11310,7 +11310,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 105.41 78.74 90)
+		(at 193.04 91.44 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11320,7 +11320,7 @@
 		(dnp no)
 		(uuid "d54fa3dd-3492-4758-bc24-6fdfe9f7b75c")
 		(property "Reference" "C19"
-			(at 111.506 78.74 90)
+			(at 199.136 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11331,7 +11331,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 116.078 78.74 90)
+			(at 203.708 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11342,7 +11342,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 105.41 78.74 0)
+			(at 193.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11353,7 +11353,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 78.74 0)
+			(at 193.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11364,7 +11364,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 105.41 78.74 0)
+			(at 193.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11375,7 +11375,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11386,7 +11386,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11397,7 +11397,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11408,7 +11408,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11419,7 +11419,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11430,7 +11430,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 105.41 78.74 0)
+			(at 193.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11441,7 +11441,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 105.41 78.74 0)
+			(at 193.04 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11452,7 +11452,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11463,7 +11463,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11474,7 +11474,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11485,7 +11485,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11496,7 +11496,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11507,7 +11507,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11518,7 +11518,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11529,7 +11529,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11540,7 +11540,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11551,7 +11551,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 105.41 78.74 90)
+			(at 193.04 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11578,7 +11578,7 @@
 	)
 	(symbol
 		(lib_id "a3-srad-camera-v2:GND")
-		(at 110.49 90.17 0)
+		(at 198.12 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11588,7 +11588,7 @@
 		(dnp no)
 		(uuid "e0ef548d-75d6-4536-898a-4c7311c94c81")
 		(property "Reference" "#PWR025"
-			(at 110.49 96.52 0)
+			(at 198.12 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11599,7 +11599,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 112.014 93.726 0)
+			(at 199.644 106.426 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11611,7 +11611,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 110.49 90.17 0)
+			(at 198.12 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11622,7 +11622,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 90.17 0)
+			(at 198.12 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11633,7 +11633,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 110.49 90.17 0)
+			(at 198.12 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11657,7 +11657,7 @@
 	)
 	(symbol
 		(lib_id "Device:L_Small")
-		(at 95.25 66.04 90)
+		(at 182.88 78.74 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11667,7 +11667,7 @@
 		(dnp no)
 		(uuid "e5172408-205e-44b2-bc5c-383bafbd1816")
 		(property "Reference" "L1"
-			(at 95.25 62.738 90)
+			(at 182.88 75.438 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11677,7 +11677,7 @@
 			)
 		)
 		(property "Value" "470nH"
-			(at 95.25 64.516 90)
+			(at 182.88 77.216 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11687,7 +11687,7 @@
 			)
 		)
 		(property "Footprint" "a3-srad-camera-v2:L_0806"
-			(at 95.25 66.04 0)
+			(at 182.88 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11698,7 +11698,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11709,7 +11709,7 @@
 			)
 		)
 		(property "Description" "Inductor, small symbol"
-			(at 95.25 66.04 0)
+			(at 182.88 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11720,7 +11720,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C89446"
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11731,7 +11731,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11742,7 +11742,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" ""
-			(at 16.51 228.6 0)
+			(at 104.14 241.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11752,7 +11752,7 @@
 			)
 		)
 		(property "I_{sat}" "7.4A"
-			(at 95.25 59.944 90)
+			(at 182.88 72.644 90)
 			(show_name yes)
 			(do_not_autoplace no)
 			(effects
@@ -11762,7 +11762,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11773,7 +11773,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11784,7 +11784,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11795,7 +11795,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11806,7 +11806,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11817,7 +11817,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11828,7 +11828,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11839,7 +11839,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11850,7 +11850,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11861,7 +11861,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 95.25 66.04 90)
+			(at 182.88 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11888,7 +11888,7 @@
 	)
 	(symbol
 		(lib_id "Device:L_Small")
-		(at 95.25 76.2 90)
+		(at 182.88 88.9 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11898,7 +11898,7 @@
 		(dnp no)
 		(uuid "e841bbe6-bf58-475d-937f-dd3a5ee60bfc")
 		(property "Reference" "L2"
-			(at 95.25 72.898 90)
+			(at 182.88 85.598 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11908,7 +11908,7 @@
 			)
 		)
 		(property "Value" "470nH"
-			(at 95.25 74.676 90)
+			(at 182.88 87.376 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11918,7 +11918,7 @@
 			)
 		)
 		(property "Footprint" "a3-srad-camera-v2:L_0806"
-			(at 95.25 76.2 0)
+			(at 182.88 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11929,7 +11929,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11940,7 +11940,7 @@
 			)
 		)
 		(property "Description" "Inductor, small symbol"
-			(at 95.25 76.2 0)
+			(at 182.88 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11951,7 +11951,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C89446"
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11962,7 +11962,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11973,7 +11973,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" ""
-			(at 16.51 238.76 0)
+			(at 104.14 251.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11983,7 +11983,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11994,7 +11994,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12005,7 +12005,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12016,7 +12016,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12027,7 +12027,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12038,7 +12038,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12049,7 +12049,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12060,7 +12060,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12071,7 +12071,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12082,7 +12082,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 95.25 76.2 90)
+			(at 182.88 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12109,7 +12109,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 86.36 44.45 90)
+		(at 182.88 59.69 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -12120,7 +12120,7 @@
 		(dnp no)
 		(uuid "f11d9ed4-5b4d-4ce1-883a-951c4ec701e6")
 		(property "Reference" "C17"
-			(at 92.456 44.45 90)
+			(at 188.976 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12131,7 +12131,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 97.028 44.45 90)
+			(at 193.548 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12142,7 +12142,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 86.36 44.45 0)
+			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12153,7 +12153,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 44.45 0)
+			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12164,7 +12164,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 86.36 44.45 0)
+			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12175,7 +12175,7 @@
 			)
 		)
 		(property "ADDITIONAL CARD DETECTION PINS" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12186,7 +12186,7 @@
 			)
 		)
 		(property "CARD CONNECTION MODE" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12197,7 +12197,7 @@
 			)
 		)
 		(property "CARD TYPE" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12208,7 +12208,7 @@
 			)
 		)
 		(property "CONNECTOR TYPE" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12219,7 +12219,7 @@
 			)
 		)
 		(property "SUPPLEMENTARY FEATURES" "Front"
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12230,7 +12230,7 @@
 			)
 		)
 		(property "LCSC PART NAME" "C15850"
-			(at 86.36 44.45 0)
+			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12241,7 +12241,7 @@
 			)
 		)
 		(property "DIGIKEY PART" ""
-			(at 86.36 44.45 0)
+			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12252,7 +12252,7 @@
 			)
 		)
 		(property "ADD INTO BOM" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12263,7 +12263,7 @@
 			)
 		)
 		(property "CONVERT TO PCB" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12274,7 +12274,7 @@
 			)
 		)
 		(property "DCR" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12285,7 +12285,7 @@
 			)
 		)
 		(property "DEVICE" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12296,7 +12296,7 @@
 			)
 		)
 		(property "JLCPCB PART CLASS" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12307,7 +12307,7 @@
 			)
 		)
 		(property "MANUFACTURER PART" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12318,7 +12318,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12329,7 +12329,7 @@
 			)
 		)
 		(property "SUPPLIER FOOTPRINT" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12340,7 +12340,7 @@
 			)
 		)
 		(property "SUPPLIER PART" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12351,7 +12351,7 @@
 			)
 		)
 		(property "SYMBOL" ""
-			(at 86.36 44.45 90)
+			(at 182.88 59.69 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12378,7 +12378,7 @@
 	)
 	(symbol
 		(lib_id "a3-srad-camera-v2:GND")
-		(at 29.21 90.17 0)
+		(at 116.84 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12388,7 +12388,7 @@
 		(dnp no)
 		(uuid "faf9eb04-f9c5-4fe2-ab7c-3a5de06d0643")
 		(property "Reference" "#PWR024"
-			(at 29.21 96.52 0)
+			(at 116.84 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12399,7 +12399,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 30.734 93.726 0)
+			(at 118.364 106.426 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12411,7 +12411,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 29.21 90.17 0)
+			(at 116.84 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12422,7 +12422,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 29.21 90.17 0)
+			(at 116.84 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12433,7 +12433,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 29.21 90.17 0)
+			(at 116.84 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
