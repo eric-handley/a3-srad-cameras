@@ -6630,20 +6630,6 @@
 		(path "/e6d23902-96be-4a9c-9080-f666d7244302/c88436d6-bc5d-4a28-be06-8aea9080fa8a")
 		(sheetname "/TPS65219x/")
 		(sheetfile "subsheets/pmic.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "13" "14" "33" "15" "4" "5" "30" "26" "6" "20" "22")
-			)
-			(unit
-				(name "B")
-				(pins "7" "19" "21" "23" "2" "3" "1" "29" "32" "27" "24")
-			)
-			(unit
-				(name "C")
-				(pins "25" "28" "31" "12" "11" "18" "10" "9" "16" "8" "17")
-			)
-		)
 		(attr smd exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6770,6 +6756,105 @@
 			(fill yes)
 			(layer "F.SilkS")
 			(uuid "30365873-95de-4df7-b4f4-5720abc68c3b")
+		)
+		(fp_rect
+			(start -1.557101 0.842899)
+			(end -0.842899 1.557101)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "5dcd6e45-bba6-49ed-a0fe-86dd853c064f")
+		)
+		(fp_rect
+			(start -0.357101 0.842899)
+			(end 0.357101 1.557101)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "e8a968bf-ba55-4a6c-af29-0818af3c3524")
+		)
+		(fp_rect
+			(start 0.842899 0.842899)
+			(end 1.557101 1.557101)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "d8e1a1e8-5197-4845-a4b5-4b62cba987f8")
+		)
+		(fp_rect
+			(start -1.557101 -0.357101)
+			(end -0.842899 0.357101)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "cf68e33b-29c4-4fb2-8c24-26f68905a618")
+		)
+		(fp_rect
+			(start -0.357101 -0.357101)
+			(end 0.357101 0.357101)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "aa092039-6a83-47e5-8b34-1123cb7a8536")
+		)
+		(fp_rect
+			(start 0.842899 -0.357101)
+			(end 1.557101 0.357101)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "08218a90-37bd-4306-aac3-38a26af5e01e")
+		)
+		(fp_rect
+			(start -1.557101 -1.557101)
+			(end -0.842899 -0.842899)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "7ac35cdc-c0a7-4be2-8bb2-f2c611f1eb72")
+		)
+		(fp_rect
+			(start -0.357101 -1.557101)
+			(end 0.357101 -0.842899)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "4ed1f69f-76b7-43bc-ad44-e5b405163d19")
+		)
+		(fp_rect
+			(start 0.842899 -1.557101)
+			(end 1.557101 -0.842899)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "8ccf2d87-179e-4090-89fd-7a155734dd48")
 		)
 		(fp_circle
 			(center -2.67 -1.9)
@@ -7124,7 +7209,7 @@
 		(pad "33" smd rect
 			(at 0 0 270)
 			(size 3.7 3.7)
-			(layers "F.Cu" "F.Mask" "F.Paste")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
 			(pinfunction "GND_33")
 			(pintype "unspecified")
@@ -29082,36 +29167,6 @@
 		(path "/627e2109-d733-4d04-a59e-0e68e5f29b9d/2ff24945-cb87-4f0e-8ba0-1225794ca0df")
 		(sheetname "/RV1106G2 SoC/")
 		(sheetfile "subsheets/rv1106.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "115" "10" "51" "54" "55" "82" "103" "116" "71" "49" "50" "56"
-					"53" "52" "129" "101" "97" "98" "99" "100" "102" "29" "30" "32" "33"
-					"34" "35" "36" "31" "37" "27" "26" "25" "24" "28"
-				)
-			)
-			(unit
-				(name "B")
-				(pins "69" "68" "70" "96" "20" "21" "19" "66" "57" "58" "59" "60" "62"
-					"63" "64" "65" "67" "61" "72" "73" "74" "75" "76" "77" "78" "79" "80"
-					"81"
-				)
-			)
-			(unit
-				(name "C")
-				(pins "23" "22" "46" "45" "44" "42" "41" "40" "39" "38" "47" "48" "43"
-					"11" "12" "14" "15" "16" "17" "18" "13"
-				)
-			)
-			(unit
-				(name "D")
-				(pins "109" "110" "111" "112" "113" "114" "107" "106" "105" "104" "108"
-					"95" "94" "93" "92" "91" "90" "83" "84" "89" "87" "86" "85" "88" "117"
-					"118" "119" "120" "121" "122" "123" "124" "125" "126" "127" "128" "2"
-					"3" "4" "5" "7" "6" "8" "9" "1"
-				)
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -29215,6 +29270,105 @@
 			(fill no)
 			(layer "F.SilkS")
 			(uuid "74afe7b3-a36a-4678-9567-0010e0117597")
+		)
+		(fp_rect
+			(start 1.45 1.45)
+			(end 2.95 2.95)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "e9939cb5-6817-4330-b0fc-2882098d8006")
+		)
+		(fp_rect
+			(start 1.45 -0.75)
+			(end 2.95 0.75)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "e29a612a-9c8e-454c-90d4-f4ad525b3766")
+		)
+		(fp_rect
+			(start 1.45 -2.95)
+			(end 2.95 -1.45)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "99bc23e0-0d8e-4dce-a0e4-5bc08a19e575")
+		)
+		(fp_rect
+			(start -0.75 1.45)
+			(end 0.75 2.95)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "234e3896-69f2-468d-afc7-dbdf00a8d632")
+		)
+		(fp_rect
+			(start -0.75 -0.75)
+			(end 0.75 0.75)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "fbe3c725-7fa5-4613-8426-790e854aae83")
+		)
+		(fp_rect
+			(start -0.75 -2.95)
+			(end 0.75 -1.45)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "0aa74c2a-4483-4755-a597-b8278f3633c8")
+		)
+		(fp_rect
+			(start -2.95 1.45)
+			(end -1.45 2.95)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "f3ad441d-a557-4a80-be67-07cbffaffef8")
+		)
+		(fp_rect
+			(start -2.95 -0.75)
+			(end -1.45 0.75)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "7bb6019e-b301-443d-afdc-c5f75164e37b")
+		)
+		(fp_rect
+			(start -2.95 -2.95)
+			(end -1.45 -1.45)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "8aeb61db-f629-4957-8a98-debc9299041e")
 		)
 		(fp_line
 			(start 6.15 6.15)
@@ -30580,7 +30734,7 @@
 		(pad "129" smd rect
 			(at 0 0 180)
 			(size 7 7)
-			(layers "F.Cu" "F.Mask" "F.Paste")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
 			(pinfunction "VSS_129")
 			(pintype "unspecified")
