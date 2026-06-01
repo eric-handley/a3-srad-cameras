@@ -978,7 +978,7 @@
           "show": false
         }
       ],
-      "filter_string": "D",
+      "filter_string": "C",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
@@ -1050,7 +1050,7 @@
         "uuid": "c4ff1aa6-4aa7-4de3-a597-83271e910ec4"
       }
     ],
-    "used_designators": "SW1,R1-39,SD1,MIC1,Q1,TP1-17,JP1-2,#FLG1,IMU1,#PWR1-71,C1-85,U1-4,D1-9,L1-3,FB1-4,JST1-2,LED1,H1-4,HSE1-2,USB1,J1-3",
+    "used_designators": "NT1",
     "variants": []
   },
   "sheets": [
@@ -1060,7 +1060,7 @@
     ],
     [
       "e6d23902-96be-4a9c-9080-f666d7244302",
-      "TPS6521905RHBR"
+      "TPS65219x"
     ],
     [
       "1e166fbb-82f8-45ac-ae24-8d2fc1672423",
@@ -1068,7 +1068,7 @@
     ],
     [
       "f270ac7c-6fb9-4f92-b42e-3a719cd8dbad",
-      "STM32U575RGT6"
+      "STM32U073x"
     ],
     [
       "8a49aa55-9ab2-4128-b069-6e62671c968c",

@@ -19065,7 +19065,7 @@
 			(color 255 255 194 1)
 		)
 		(uuid "e6d23902-96be-4a9c-9080-f666d7244302")
-		(property "Sheetname" "TPS6521905RHBR"
+		(property "Sheetname" "TPS65219x"
 			(at 54.356 125.222 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19210,7 +19210,7 @@
 			(color 255 255 194 1)
 		)
 		(uuid "f270ac7c-6fb9-4f92-b42e-3a719cd8dbad")
-		(property "Sheetname" "STM32U575RGT6"
+		(property "Sheetname" "STM32U073x"
 			(at 132.08 78.232 0)
 			(show_name no)
 			(do_not_autoplace no)
