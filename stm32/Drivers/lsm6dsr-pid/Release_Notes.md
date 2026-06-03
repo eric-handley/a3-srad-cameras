@@ -1,0 +1,214 @@
+---
+pagetitle: Release Notes for LSM6DSR Component
+lang: en
+header-includes: <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+---
+
+::: {.row}
+::: {.col-sm-12 .col-lg-4}
+
+<center>
+# Release Notes for LSM6DSR Component Driver
+Copyright &copy; 2021 STMicroelectronics\
+
+[![ST logo](_htmresc/st_logo_2020.png)](https://www.st.com){.logo}
+</center>
+
+# License
+
+This software component is licensed by ST under BSD 3-Clause license, the "License".
+You may not use this component except in compliance with the License. You may obtain a copy of the License at:
+
+[BSD 3-Clause license](https://opensource.org/licenses/BSD-3-Clause)
+
+# Purpose
+
+This directory contains the LSM6DSR component drivers.
+:::
+
+::: {.col-sm-12 .col-lg-8}
+# Update history
+
+::: {.collapse}
+<input type="checkbox" id="collapse-section10" checked aria-hidden="true">
+<label for="collapse-section10" aria-hidden="true">V4.0.0 / 18-Mar-2026</label>
+<div>
+
+## Main changes
+
+- Fix some MISRA issues
+- Add parameter names to stmdev callbacks to fix a MISRA issue
+- Add const qualifier to mag_soft_iron_set API
+- Remove declaration of unimplemented ln_pg_read API
+- Fix hp_slope_xl_en_t LP_ODR_DIV_4 hex value
+- Remove outdated incorrect comment
+- Update sh_read_data_raw_get API to use a raw uint8_t buffer
+- Update fsm_out_get API to read raw uint8_t buffer.
+- Fix xl_hp_path_on_out_set/get API and hp_slope_xl_en_t enum
+- Change switch cases to use hex values
+- Re-order update history with most updated on top
+- Fix style
+- Fix ois_pu_dis_t values
+- Change s4s_tph_val_set/get, express value as number of samples
+- Change shub_odr_t variant 13Hz to 12.5Hz
+- Improve pedo_step_detect_get API
+- Rename GY_BATCHED_6Hz5 to GY_BATCHED_AT_6Hz5
+- Rename odr_ts_batch in dec_ts_batch for FIFO_CTRL4
+- Fix tap_axis_priority_get API
+- Fix ln_pg_write_byte, set read length to 1 byte
+- Fix den_xl_g_t values
+- Fix emb_fsm_en_get, remove useless write
+- Fix mag_soft_iron_set/get APIs
+- Fix den_mark_axis_x_set/get APIs
+- Add odr_cal_reg_set API, change freq_fine type from uint8 to int8
+- Change type of xl_usr_offset_x/y/z_set/get APIs uint8 to int8
+- Fix xl/gy_data_rate_set APIs
+
+##
+
+</div>
+<input type="checkbox" id="collapse-section9" aria-hidden="true">
+<label for="collapse-section9" aria-hidden="true">V3.0.0 / 15-Jan-2026</label>
+<div>
+
+## Main changes
+
+- Fix values for odr_t_batch_t enum
+- Fix typo in bdr_xl_t enum
+- Change shub_pu_en_t definition
+- Fix enums variants for ftype_ois and filter_xl_conf_ois
+- Fix ois_on_t enum, add missing OFF variant
+
+##
+
+</div>
+<input type="checkbox" id="collapse-section8" aria-hidden="true">
+<label for="collapse-section8" aria-hidden="true">V2.3.0 / 07-Oct-2025</label>
+<div>
+
+## Main changes
+
+- Aligned ln_pg_write/read implementations
+- Added checks before writes and membank setting
+- Adding CODE_OF_CONDUCT.md and SECURITY.md
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section7" aria-hidden="true">
+<label for="collapse-section7" aria-hidden="true">V2.2.0 / 07-Jul-2025</label>
+<div>
+
+## Main changes
+
+- change sh_read_data_raw_get() API
+- Fix fsm_number_of_programs_set API
+- changed API name into drdy_mask_set/get
+- Fix few typos
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section6" aria-hidden="true">
+<label for="collapse-section6" aria-hidden="true">V2.1.1 / 01-Jul-2025</label>
+<div>
+
+## Main changes
+
+- Fix odr_cal_reg get/set APIs
+- Fix driver formatting options
+- Added pointer to private data in stmdev_ctx_t
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section5" aria-hidden="true">
+<label for="collapse-section5" aria-hidden="true">V2.1.0 / 18-Dec-2024</label>
+<div>
+
+## Main changes
+
+- Read always both FIFO_STATUS1 and FIFO_STATUS2 regs
+- Fixed a bug in `lsm6dsr_fifo_watermark_set`
+- align driver among ism330dhcx/lsm6dsrx/lsm6dsr
+- Fix from_lsb_to_nsec() API
+- Fix den_x <-> den_z swap
+- Faster lsm6dsr_fifo_data_level_get
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section4" aria-hidden="true">
+<label for="collapse-section4" aria-hidden="true">V2.0.1 / 20-Jun-2024</label>
+<div>
+
+## Main changes
+
+- updated README.md file with tag reference and mdelay description
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section3" aria-hidden="true">
+<label for="collapse-section3" aria-hidden="true">V2.0.0 / 20-Mar-2024</label>
+<div>
+
+## Main changes
+
+- Fixed code style (Artistic Style Version 3.4.13)
+- Add "const" to ctx arg for all APIs
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section2" aria-hidden="true">
+<label for="collapse-section2" aria-hidden="true">V1.1.0 / 01-June-2023</label>
+<div>
+
+## Main changes
+
+- Add __weak directive to read/write registers routines
+- Extend stmdev_ctx_t structure with mdelay callback
+- repo name changed adding '-pid' extension
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section1" aria-hidden="true">
+<label for="collapse-section1" aria-hidden="true">V1.0.0 / 18-June-2021</label>
+<div>
+
+## Main changes
+
+### First release
+
+- First official release [ref. DS v2.0]
+
+##
+
+</div>
+
+:::
+
+:::
+:::
+
+<footer class="sticky">
+::: {.columns}
+::: {.column width="95%"}
+For complete documentation on LSM6DSR,
+visit:
+[LSM6DSR](https://www.st.com/content/st_com/en/products/mems-and-sensors/inemo-inertial-modules/lsm6dsr.html)
+:::
+::: {.column width="5%"}
+<abbr title="Based on template cx566953 version 2.0">Info</abbr>
+:::
+:::
+</footer>
