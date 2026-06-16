@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "common.h"
+#include "pmic.h"
 
 /* USER CODE END Includes */
 
@@ -103,6 +104,8 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
+  PMIC_print_info();
 
   /* USER CODE END 2 */
 
