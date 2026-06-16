@@ -1,0 +1,16 @@
+{
+    "cSpell.enabled": false,
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/Debug/compile_commands.json",
+    "C_Cpp.default.compilerPath": "/usr/bin/arm-none-eabi-gcc",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm",
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c"
+    },
+    "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cortex-debug.openocdPath": "openocd",
+    "cortex-debug.gdbPath": "arm-none-eabi-gdb",
+    "cortex-debug.armToolchainPath": "/usr/bin"
+}

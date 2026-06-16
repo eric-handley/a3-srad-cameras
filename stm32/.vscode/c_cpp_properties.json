@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Drivers/STM32U0xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/RTT/RTT",
+                "${workspaceFolder}/Drivers/STM32U0xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32U0xx/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/Middlewares/ST/threadx/common/inc",
+                "${workspaceFolder}/Middlewares/ST/threadx/ports/cortex_m0/gnu/inc",
+                "${workspaceFolder}/Drivers/LSM6DSR"
+            ],
+            "defines": [
+                "USE_HAL_DRIVER",
+                "STM32U073xx"
+            ],
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

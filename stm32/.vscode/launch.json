@@ -1,0 +1,57 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (Standard)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/Debug/a3-cameras-v2.elf",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32u0x.cfg"
+            ],
+            "openOCDPreConfigLaunchCommands": [
+                "adapter speed 100",
+                "set CHIPNAME stm32u0x",
+                "set CONNECT_UNDER_RESET 1"
+            ],
+            "preLaunchTask": "flash-then-debug",
+            "postDebugTask": "kill-serial-monitor",
+            "showDevDebugOutput": "raw",
+            "overrideLaunchCommands": [
+                "monitor reset halt",
+                "load"
+            ]
+        },
+        {
+            "name": "Debug (RTT)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/Debug/a3-cameras-v2.elf",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32u0x.cfg"
+            ],
+            "preLaunchTask": "flash-then-debug-rtt",
+            "showDevDebugOutput": "raw",
+            "overrideLaunchCommands": [
+                "monitor reset halt",
+                "load"
+            ],
+            "rttConfig": {
+                "enabled": true,
+                "address": "auto",
+                "decoders": [
+                    {
+                        "port": 0,
+                        "type": "console"
+                    }
+                ]
+            }
+        }
+    ]
+}

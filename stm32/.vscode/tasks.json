@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "just",
+            "args": ["build"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "just",
+            "args": ["clean"]
+        },
+        {
+            "label": "flash-then-debug",
+            "dependsOn": ["build", "flash-for-debug", "serial-monitor"],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "flash-then-debug-rtt",
+            "dependsOn": ["build", "flash-for-debug"],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "serial-monitor",
+            "type": "shell",
+            "command": "sh",
+            "args": ["-c", "stty -F /dev/ttyACM0 115200 raw -echo && echo SerialMonitorReady && cat /dev/ttyACM0"],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "serial"
+            },
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "^$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "^SerialMonitorReady$"
+                }
+            }
+        },
+        {
+            "label": "flash-for-debug",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", "interface/cmsis-dap.cfg",
+                "-f", "target/stm32u0x.cfg",
+                "-c", "program build/Debug/a3-cameras-v2.elf verify reset exit"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "kill-serial-monitor",
+            "type": "shell",
+            "command": "pkill",
+            "args": ["-f", "cat /dev/ttyACM0"],
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
