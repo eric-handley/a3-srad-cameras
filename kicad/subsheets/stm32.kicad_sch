@@ -3466,7 +3466,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -3735,6 +3735,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 142.24 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "503d1ff1-b0fa-4e81-951b-efc48746a5eb")
 		)
@@ -3757,7 +3768,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4024,6 +4035,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" ""
+			(at 120.65 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d7663825-1d31-40f9-8c22-c07cf0fc6ca0")
 		)
@@ -4045,7 +4067,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4314,6 +4336,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 144.78 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c19d1f2a-ec22-4a59-9373-236ba91a925a")
 		)
@@ -4335,7 +4368,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4409,6 +4442,17 @@
 			)
 		)
 		(property "KLC_S5.1" ""
+			(at 144.78 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "BOARD_SIDE" "Front"
 			(at 144.78 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -4714,7 +4758,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4983,6 +5027,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" ""
+			(at 134.62 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "cebc47e6-398e-4520-af81-7522c26ae793")
 		)
@@ -5004,7 +5059,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5273,6 +5328,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 152.4 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "2ea9ebe2-dba0-4993-8f9e-10bdf62408a6")
 		)
@@ -5295,7 +5361,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5562,6 +5628,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 104.14 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0ec598c9-feac-40f3-b500-6ec7ba1d0237")
 		)
@@ -5661,7 +5738,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -5930,6 +6007,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 149.86 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5b032833-e5f6-4d8d-917f-ff656eb1d6cc")
 		)
@@ -6029,7 +6117,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6298,6 +6386,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 147.32 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "f326aa4c-c442-42ae-9791-6b4d22b1cfd6")
 		)
@@ -6320,7 +6419,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6589,6 +6688,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 121.92 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f44d16fa-f9db-4603-a895-5794109fbc61")
 		)
@@ -6610,7 +6720,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -6869,6 +6979,17 @@
 			)
 		)
 		(property "KLC_S5.1" ""
+			(at 139.7 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "BOARD_SIDE" "Front"
 			(at 139.7 45.72 90)
 			(hide yes)
 			(show_name no)

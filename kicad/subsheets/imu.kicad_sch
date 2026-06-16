@@ -1568,7 +1568,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -1835,6 +1835,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 156.21 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6a8bdaf1-484f-42e0-917a-071878e00a02")
 		)
@@ -1856,7 +1867,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -2124,6 +2135,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 149.86 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "7"
 			(uuid "12a53b08-5b8a-413c-a26a-1898e8f7516e")
 		)
@@ -2184,7 +2206,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -2453,6 +2475,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 167.64 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "16159ccd-ab14-46f7-9baf-d5c4cc010999")
 		)
@@ -2475,7 +2508,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -2744,6 +2777,17 @@
 				)
 			)
 		)
+		(property "BOARD_SIDE" "Front"
+			(at 147.32 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "545c2191-0ea0-4702-aab4-482f716fc16f")
 		)
@@ -2765,7 +2809,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -3022,6 +3066,17 @@
 			)
 		)
 		(property "KLC_S5.1" ""
+			(at 156.21 77.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "BOARD_SIDE" "Front"
 			(at 156.21 77.47 90)
 			(hide yes)
 			(show_name no)
