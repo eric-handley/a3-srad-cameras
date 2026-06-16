@@ -4,11 +4,13 @@
 
 #include "threads/imu_reader_thread.h"
 #include "threads/controller_thread.h"
+#include "threads/status_led_thread.h"
 
 #define THREAD_STACK_SIZE 1024
 
 #define IMU_PRIORITY        1
 #define CONTROLLER_PRIORITY 0
+#define STATUS_LED_PRIORITY 2
 
 /*
     @brief Initializes user defined threads

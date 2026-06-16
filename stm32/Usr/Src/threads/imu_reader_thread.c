@@ -3,7 +3,7 @@
 // LSM6DSR I2C address (SA0 pin low = 0x6A, high = 0x6B)
 #define LSM6DSR_I2C_ADDR    (0x6A << 1)
 #define I2C_TIMEOUT_MS      100
-#define IMU_INIT_ATTEMPTS    5
+#define IMU_INIT_ATTEMPTS    1
 
 // Device context
 static stmdev_ctx_t dev_ctx;
@@ -12,6 +12,9 @@ int32_t platform_write(void *handle, uint8_t reg, const uint8_t *bufp, uint16_t 
     HAL_StatusTypeDef status;
     status = HAL_I2C_Mem_Write(handle, LSM6DSR_I2C_ADDR, reg,
                                I2C_MEMADD_SIZE_8BIT, (uint8_t*)bufp, len, I2C_TIMEOUT_MS);
+    if (status != HAL_OK) {
+        debug("[IMU]\tI2C Write Error: %d (addr=0x%02X, reg=0x%02X)\r\n", status, LSM6DSR_I2C_ADDR, reg);
+    }
     return (status == HAL_OK) ? 0 : -1;
 }
 
@@ -19,6 +22,13 @@ int32_t platform_read(void *handle, uint8_t reg, uint8_t *bufp, uint16_t len) {
     HAL_StatusTypeDef status;
     status = HAL_I2C_Mem_Read(handle, LSM6DSR_I2C_ADDR, reg,
                               I2C_MEMADD_SIZE_8BIT, bufp, len, I2C_TIMEOUT_MS);
+    
+    #ifdef IMU_DEBUG
+        if (status != HAL_OK) {
+            debug("[IMU]\tI2C Read Error: %d (addr=0x%02X, reg=0x%02X)\r\n", status, LSM6DSR_I2C_ADDR, reg);
+
+        }
+    #endif
     return (status == HAL_OK) ? 0 : -1;
 }
 
@@ -30,6 +40,14 @@ bool imu_init(void) {
     uint8_t whoami;
 
     debug("[IMU]\tInitializing...\r\n");
+
+    // Scan I2C bus
+    debug("[IMU]\tScanning I2C3 bus...\r\n");
+    for (uint8_t addr = 1; addr < 128; addr++) {
+        if (HAL_I2C_IsDeviceReady(&IMU_I2C, addr << 1, 1, 10) == HAL_OK) {
+            debug("[IMU]\tDevice found at 0x%02X\r\n", addr);
+        }
+    }
 
     // Initialize device context
     dev_ctx.write_reg = platform_write;
@@ -91,7 +109,7 @@ VOID imu_reader_thread(ULONG thread_input) {
     while (! imu_init() && (init_attempts < IMU_INIT_ATTEMPTS)) {
         debug("[IMU]\tInitialization failed, retrying...\r\n");
         tx_thread_sleep(MS_TO_TICKS(1000));  // Wait 1 second before retrying
-        // init_attempts++;
+        init_attempts++;
     };
 
     imu_data_t imu_data = {0};

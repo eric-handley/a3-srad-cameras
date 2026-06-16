@@ -104,8 +104,6 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  debug("SYS INIT");
-
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();

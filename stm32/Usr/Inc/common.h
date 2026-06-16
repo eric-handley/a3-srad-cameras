@@ -1,7 +1,7 @@
 #pragma once
 
 #define EN_DEBUG_PRINT 1
-#define EN_IMU_DEBUG 1
+// #define EN_IMU_DEBUG 1
 #define EN_THREADS 1
 // #define EN_FC_COMMS 1
 
@@ -20,6 +20,7 @@ extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 extern I2C_HandleTypeDef hi2c2;
 extern I2C_HandleTypeDef hi2c3;
+// extern GPIO_TypeDef/
 
 #define SOC_UART huart1
 #define FC_UART  huart2
