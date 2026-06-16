@@ -465,7 +465,7 @@ void pmic_pwron(void) {
     PWRON_HIGH();
 
     pmic_power_state = 1;
-    debug_print("[PMIC]\tPWRON sequence complete\r\n");
+    debug("[PMIC]\tPWRON sequence complete\r\n");
 }
 
 void pmic_pwroff(void) {
@@ -476,7 +476,7 @@ void pmic_pwroff(void) {
     PWRON_HIGH();
 
     pmic_power_state = 0;
-    debug_print("[PMIC]\tPWROFF sequence complete\r\n");
+    debug("[PMIC]\tPWROFF sequence complete\r\n");
 }
 
 void pmic_toggle_power(void) {
@@ -492,29 +492,26 @@ void pmic_toggle_power(void) {
  */
 void read_all_pmic_registers(void)
 {
-    char buffer[128];
     uint8_t reg_value;
     bool status;
     uint32_t success_count = 0;
     uint32_t fail_count = 0;
 
-    debug_print("[PMIC]\tRK809-5 PMIC Register Dump (I2C3)\r\n");
+    debug("[PMIC]\tRK809-5 PMIC Register Dump (I2C3)\r\n");
 
     for (uint32_t i = 0; i < NUM_REGISTERS; i++) {
         status = read_pmic_register(pmic_registers[i].addr, &reg_value);
 
         if (status) {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\t[0x%04X] %-30s = 0x%02X\r\n",
-                     pmic_registers[i].addr,
-                     pmic_registers[i].name,
-                     reg_value);
-            debug_print(buffer);
+            debug("[PMIC]\t[0x%04X] %-30s = 0x%02X\r\n",
+                pmic_registers[i].addr,
+                pmic_registers[i].name,
+                reg_value);
             success_count++;
         } else {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\t[0x%04X] %-30s = READ FAILED\r\n",
-                     pmic_registers[i].addr,
-                     pmic_registers[i].name);
-            debug_print(buffer);
+            debug("[PMIC]\t[0x%04X] %-30s = READ FAILED\r\n",
+                pmic_registers[i].addr,
+                pmic_registers[i].name);
             fail_count++;
         }
 
@@ -522,9 +519,8 @@ void read_all_pmic_registers(void)
         HAL_Delay(1);
     }
 
-    snprintf(buffer, sizeof(buffer), "[PMIC]\tTotal: %u registers, Success: %lu, Failed: %lu\r\n",
-             NUM_REGISTERS, success_count, fail_count);
-    debug_print(buffer);
+    debug("[PMIC]\tTotal: %u registers, Success: %lu, Failed: %lu\r\n",
+        NUM_REGISTERS, success_count, fail_count);
 }
 
 /**
@@ -532,9 +528,7 @@ void read_all_pmic_registers(void)
  */
 void scan_i2c_bus(void)
 {
-    char buffer[128];
-
-    debug_print("[PMIC]\tScanning I2C bus...\r\n");
+    debug("[PMIC]\tScanning I2C bus...\r\n");
 
     uint8_t found = 0;
     for (uint8_t addr = 1; addr < 128; addr++) {
@@ -548,8 +542,7 @@ void scan_i2c_bus(void)
         i2c_stop();
 
         if (ack) {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\tDevice found at 0x%02X (7-bit)\r\n", addr);
-            debug_print(buffer);
+            debug("[PMIC]\tDevice found at 0x%02X (7-bit)\r\n", addr);
             found++;
         }
 
@@ -557,8 +550,7 @@ void scan_i2c_bus(void)
         HAL_Delay(1);
     }
 
-    snprintf(buffer, sizeof(buffer), "[PMIC]\tScan complete - found %d device(s)\r\n", found);
-    debug_print(buffer);
+    debug("[PMIC]\tScan complete - found %d device(s)\r\n", found);
 }
 
 static inline const char *byte_to_binary (int x)
@@ -596,29 +588,26 @@ void read_pmic_basic_info(void)
 
     int num_tests = sizeof(test_registers) / sizeof(test_registers[0]);
 
-    char buffer[128];
     uint8_t reg_value;
     bool status;
 
-    debug_print("[PMIC]\tRK809-5 PMIC Registers:\r\n");
+    debug("[PMIC]\tRK809-5 PMIC Registers:\r\n");
 
     for (int i = 0; i < num_tests; i++) {
         uint8_t reg_addr = get_register_by_name(test_registers[i]);
         status = read_pmic_register(reg_addr, &reg_value);
 
         if (status) {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\t%-20s (0x%02X): 0x%02X (0b%s)\r\n",
-                     test_registers[i], reg_addr, reg_value, byte_to_binary(reg_value));
+            debug("[PMIC]\t%-20s (0x%02X): 0x%02X (0b%s)\r\n",
+                test_registers[i], reg_addr, reg_value, byte_to_binary(reg_value));
         } else {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\t%-20s (0x%02X): READ FAILED\r\n",
-                     test_registers[i], reg_addr);
+            debug("[PMIC]\t%-20s (0x%02X): READ FAILED\r\n",
+                test_registers[i], reg_addr);
         }
-        debug_print(buffer);
     }
 }
 
 void write_register_list(pmic_register_t* register_writes, int num_writes, int delay_ms) {
-    char buffer[128];
     bool status;
 
     for (int i = 0; i < num_writes; i++) {
@@ -631,22 +620,19 @@ void write_register_list(pmic_register_t* register_writes, int num_writes, int d
             if (read_pmic_register(reg_addr, &current_val)) {
                 write_val = (current_val & ~register_writes[i].mask) | (write_val & register_writes[i].mask);
             } else {
-                snprintf(buffer, sizeof(buffer), "[PMIC]\tFailed to read %s (0x%02X) for RMW\r\n",
-                        register_writes[i].name, reg_addr);
-                debug_print(buffer);
+                debug("[PMIC]\tFailed to read %s (0x%02X) for RMW\r\n",
+                    register_writes[i].name, reg_addr);
                 continue;
             }
         }
 
         status = write_pmic_register((uint8_t)reg_addr, write_val);
         if (status) {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\tSuccessfully wrote 0x%02X to %s (0x%02X)\r\n",
-                    write_val, register_writes[i].name, reg_addr);
-            debug_print(buffer);
+            debug("[PMIC]\tSuccessfully wrote 0x%02X to %s (0x%02X)\r\n",
+                write_val, register_writes[i].name, reg_addr);
         } else {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\tFailed to write 0x%02X to %s (0x%02X)\r\n",
-                    write_val, register_writes[i].name, reg_addr);
-            debug_print(buffer);
+            debug("[PMIC]\tFailed to write 0x%02X to %s (0x%02X)\r\n",
+                write_val, register_writes[i].name, reg_addr);
         }
         if (delay_ms > 0) {
             HAL_Delay(delay_ms);
@@ -655,7 +641,6 @@ void write_register_list(pmic_register_t* register_writes, int num_writes, int d
 }
 
 void read_register_list(pmic_register_t* registers, int num_registers) {
-    char buffer[128];
     bool status;
 
     for (int i = 0; i < num_registers; i++) {
@@ -664,19 +649,17 @@ void read_register_list(pmic_register_t* registers, int num_registers) {
 
         status = read_pmic_register(reg_addr, &reg_value);
         if (status) {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\tRead 0x%02X (0b%s) from %s (0x%02X)\r\n",
-                    reg_value, byte_to_binary(reg_value), registers[i].name, reg_addr);
-            debug_print(buffer);
+            debug("[PMIC]\tRead 0x%02X (0b%s) from %s (0x%02X)\r\n",
+                reg_value, byte_to_binary(reg_value), registers[i].name, reg_addr);
         } else {
-            snprintf(buffer, sizeof(buffer), "[PMIC]\tFailed to read from %s (0x%02X)\r\n",
-                    registers[i].name, reg_addr);
-            debug_print(buffer);
+            debug("[PMIC]\tFailed to read from %s (0x%02X)\r\n",
+                registers[i].name, reg_addr);
         }
     }
 }
 
 void pmic_poweron_seq(void) {
-    debug_print("[PMIC]\tStarting power on sequence...\r\n");
+    debug("[PMIC]\tStarting power on sequence...\r\n");
 
     // Define registers that need config so lookup doesn't have to go through the full list every time
     #define PMIC_LDO1_ON_VSEL  0x00cc
@@ -721,7 +704,7 @@ void pmic_poweron_seq(void) {
     HAL_Delay(5);                                    // RESETB goes high at ~154ms after PWRON low, delay another 5ms to place PWRON high 5ms before RESETB high
     PWRON_HIGH();                                    // Sequence complete, bring PWRON back high
     
-    debug_print("[PMIC]\tPower on sequence complete!\r\n");
+    debug("[PMIC]\tPower on sequence complete!\r\n");
 
     read_register_list(register_writes_seq1, sizeof(register_writes_seq1) / sizeof(pmic_write_value_t));
 }

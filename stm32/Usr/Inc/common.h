@@ -1,8 +1,8 @@
 #pragma once
 
 #define EN_DEBUG_PRINT 1
-// #define EN_IMU_DEBUG 1
-// #define EN_THREADS 1
+#define EN_IMU_DEBUG 1
+#define EN_THREADS 1
 // #define EN_FC_COMMS 1
 
 #include "stm32u0xx_hal.h"
@@ -13,14 +13,18 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdarg.h>
+#include <string.h>
 
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 extern I2C_HandleTypeDef hi2c2;
+extern I2C_HandleTypeDef hi2c3;
 
 #define SOC_UART huart1
 #define FC_UART  huart2
-#define IMU_I2C  hi2c2
+#define PMIC_I2C hi2c2
+#define IMU_I2C  hi2c3
 
 /*
     @brief Convert milliseconds to ThreadX ticks (rounds up)
@@ -49,8 +53,18 @@ typedef struct imu_data_t {
     int16_t temp;
 } imu_data_t;
 
-static inline void debug_print(const char* msg) {
+__attribute__((format(printf, 1, 2)))
+static inline void debug(const char* fmt, ...) {
     #ifdef EN_DEBUG_PRINT
-        HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
+        char buf[256];
+        va_list args;
+        va_start(args, fmt);
+        int len = vsnprintf(buf, sizeof(buf), fmt, args);
+        va_end(args);
+        if (len > 0) {
+            HAL_UART_Transmit(&huart2, (uint8_t*)buf, (len < sizeof(buf)) ? len : sizeof(buf) - 1, HAL_MAX_DELAY);
+        }
+    #else
+        (void)fmt;  // Suppress unused parameter warning
     #endif
 }
