@@ -23,7 +23,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "queue_manager.h"
+#include "thread_manager.h"
+#include "common.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,6 +65,21 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
 
   /* USER CODE END App_ThreadX_MEM_POOL */
   /* USER CODE BEGIN App_ThreadX_Init */
+
+  #ifdef EN_THREADS
+  while(!init_queues()) {
+    debug("[TX]\tQueue init failed, retrying...\r\n");
+    tx_thread_sleep(10);  // 10 ticks delay
+  }
+  debug("[TX]\tQueues initialized successfully\r\n");
+
+  while(!init_threads()) {
+    debug("[TX]\tThread init failed, retrying...\r\n");
+    tx_thread_sleep(10);  // 10 ticks delay
+  }
+  debug("[TX]\tThreads initialized successfully\r\n");
+  #endif
+
   /* USER CODE END App_ThreadX_Init */
 
   return ret;
