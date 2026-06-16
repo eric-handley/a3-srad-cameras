@@ -43,10 +43,10 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 # Collect user sources
-file(GLOB USER_SOURCES 
-    "Usr/Src/*.c" 
-    # "Usr/Src/threads/*.c"
-    "Drivers/LSM6DSR/*.c"
+file(GLOB USER_SOURCES
+    "../Usr/Src/*.c"
+    "../Usr/Src/threads/*.c"
+    "../Drivers/LSM6DSR/*.c"
 )
 
 # Add sources to executable
@@ -58,9 +58,9 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
-    Usr/Inc
-    # Usr/Inc/threads
-    Drivers/LSM6DSR
+    ../Usr/Inc
+    ../Usr/Inc/threads
+    ../Drivers/LSM6DSR
 )
 
 # Add project symbols (macros)
