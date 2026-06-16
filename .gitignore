@@ -3,5 +3,6 @@ kicad/subsheets/_autosave*
 kicad/_autosave*
 kicad/*.lck
 kicad/*.bak
+kicad/production
 
 .ignore/
