@@ -23,6 +23,7 @@ VOID controller_thread(ULONG thread_input) {
     soc_msg_t  soc_msg;
     status_t   soc_status;
 
+    #ifdef EN_FC_COMMS
     while (true) {
         
         bool 
@@ -153,4 +154,5 @@ VOID controller_thread(ULONG thread_input) {
         // Yield to allow lower priority threads to run
         tx_thread_sleep(MS_TO_TICKS(10));
     }
+    #endif
 }

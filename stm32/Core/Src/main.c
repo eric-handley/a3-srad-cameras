@@ -52,6 +52,8 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
+LED_Status_T LED_STATUS = LED_NOMINAL;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,6 +69,7 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 
 /* USER CODE END 0 */
 
@@ -105,8 +108,33 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  PMIC_print_info();
+  soc_reset_low();
+  pmic_disable();
+  pmic_clear_interrupts();
 
+  // Float UART1 pins (connected to SoC) to prevent backfeed
+  HAL_UART_DeInit(&huart1);
+  GPIO_InitTypeDef gpio = {0};
+  gpio.Pin = GPIO_PIN_9 | GPIO_PIN_10;  // UART1 TX/RX pins (PA9/PA10)
+  gpio.Mode = GPIO_MODE_INPUT;
+  gpio.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &gpio);
+
+  // pmic_configure(false); // Already configured and saved to NVM
+
+  pmic_enable();
+  HAL_Delay(20);  // Wait for PMIC power-up sequence
+
+  // Re-initialize UART1 after PMIC powers up
+  MX_USART1_UART_Init();
+
+  soc_reset_high();
+
+  pmic_print_info();
+  if(pmic_scan_interrupts()) {
+    LED_STATUS = LED_ERROR;
+  }
+    
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();

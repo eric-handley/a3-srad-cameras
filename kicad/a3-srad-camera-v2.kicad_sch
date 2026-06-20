@@ -3951,6 +3951,30 @@
 		)
 		(uuid "6534e699-7eca-484c-8cfa-1ffa46dcd2be")
 	)
+	(text "LDO2"
+		(exclude_from_sim no)
+		(at 198.12 124.206 0)
+		(effects
+			(font
+				(size 0.5 0.5)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "69ff3f6d-4cf2-4c91-a23a-a57526fe5b02")
+	)
+	(text "LDO1"
+		(exclude_from_sim no)
+		(at 198.12 119.126 0)
+		(effects
+			(font
+				(size 0.5 0.5)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "724cc731-9585-4a06-b4d1-2e7a0b89964a")
+	)
 	(text "0.6 - 3.4V, 2.0A"
 		(exclude_from_sim no)
 		(at 77.978 134.112 0)
@@ -4001,6 +4025,18 @@
 			(justify right)
 		)
 		(uuid "88cecf7f-211a-44bb-8548-8db00f0fd427")
+	)
+	(text "LDO3"
+		(exclude_from_sim no)
+		(at 198.12 121.666 0)
+		(effects
+			(font
+				(size 0.5 0.5)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "8de5fc9a-af39-4f97-8385-d76bcfe0481a")
 	)
 	(text "Flight Computer\nUART"
 		(exclude_from_sim no)

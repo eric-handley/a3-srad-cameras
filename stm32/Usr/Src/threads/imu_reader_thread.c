@@ -3,7 +3,7 @@
 // LSM6DSR I2C address (SA0 pin low = 0x6A, high = 0x6B)
 #define LSM6DSR_I2C_ADDR    (0x6A << 1)
 #define I2C_TIMEOUT_MS      100
-#define IMU_INIT_ATTEMPTS    1
+#define IMU_INIT_RETRIES    0
 
 // Device context
 static stmdev_ctx_t dev_ctx;
@@ -42,12 +42,12 @@ bool imu_init(void) {
     debug("[IMU]\tInitializing...\r\n");
 
     // Scan I2C bus
-    debug("[IMU]\tScanning I2C3 bus...\r\n");
-    for (uint8_t addr = 1; addr < 128; addr++) {
-        if (HAL_I2C_IsDeviceReady(&IMU_I2C, addr << 1, 1, 10) == HAL_OK) {
-            debug("[IMU]\tDevice found at 0x%02X\r\n", addr);
-        }
-    }
+    // debug("[IMU]\tScanning I2C3 bus...\r\n");
+    // for (uint8_t addr = 1; addr < 128; addr++) {
+    //     if (HAL_I2C_IsDeviceReady(&IMU_I2C, addr << 1, 1, 10) == HAL_OK) {
+    //         debug("[IMU]\tDevice found at 0x%02X\r\n", addr);
+    //     }
+    // }
 
     // Initialize device context
     dev_ctx.write_reg = platform_write;
@@ -106,7 +106,7 @@ int32_t imu_read_temp(int16_t *temp) {
 VOID imu_reader_thread(ULONG thread_input) {
 
     int init_attempts = 0;
-    while (! imu_init() && (init_attempts < IMU_INIT_ATTEMPTS)) {
+    while (! imu_init() && (init_attempts < IMU_INIT_RETRIES)) {
         debug("[IMU]\tInitialization failed, retrying...\r\n");
         tx_thread_sleep(MS_TO_TICKS(1000));  // Wait 1 second before retrying
         init_attempts++;
