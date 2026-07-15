@@ -2,6 +2,22 @@
 
 #define I2C_TIMEOUT_MS  100
 
+void pmic_setup(void) 
+{
+    soc_reset_low();
+    pmic_disable();
+    pmic_clear_interrupts();
+
+    HAL_Delay(500);
+
+    // pmic_configure(false); // Already configured and saved to NVM
+
+    pmic_enable();
+    HAL_Delay(15);  // Wait for PMIC power-up sequence
+
+    soc_reset_high();
+}
+
 void pmic_enable(void)
 {
     debug("[PMIC]\tPMIC_EN pin enabled\r\n");
@@ -143,8 +159,7 @@ bool pmic_update_bits(uint8_t reg, uint8_t mask, uint8_t value)
  */
 bool pmic_scan_interrupts(void)
 {
-    uint8_t int_source, int_ldo_3_4 = 0, int_ldo_1_2 = 0, int_buck_3 = 0, int_buck_1_2 = 0;
-    uint8_t int_system = 0, int_rv = 0, int_timeout_rv_sd = 0;
+    uint8_t int_source, int_reg;
     bool errors_found = false;
 
     // Read INT_SOURCE first to see which categories have errors
@@ -153,156 +168,143 @@ bool pmic_scan_interrupts(void)
         return true;
     }
 
+    // Check power-up status
+    if (pmic_read_reg(PMIC_REG_POWER_UP_STATUS, &int_reg)) {
+        if ((int_reg & 0xE) == 0xE) {
+            errors_found = true;
+            debug("[PMIC]\tPOWER ON FAILED: Too many retries!\r\n", int_reg);
+        }
+    }
+
     if (int_source == 0) {
         debug("[PMIC]\tNo interrupts pending\r\n");
-        return false;
+        return errors_found;
     }
 
     debug("[PMIC]\tInterrupt Scan - INT_SOURCE: 0x%02X\r\n", int_source);
 
     // Check LDO 3/4 interrupts
     if (int_source & (1 << 6)) {
-        if (pmic_read_reg(PMIC_REG_INT_LDO_3_4, &int_ldo_3_4)) {
-            if (int_ldo_3_4 & 0x3F) {
+        if (pmic_read_reg(PMIC_REG_INT_LDO_3_4, &int_reg)) {
+            if (int_reg & 0x3F) {
                 errors_found = true;
-                debug("[PMIC]\t  INT_LDO_3_4: 0x%02X\r\n", int_ldo_3_4);
-                if (int_ldo_3_4 & (1 << 5)) debug("[PMIC]\t    - LDO4 Undervoltage\r\n");
-                if (int_ldo_3_4 & (1 << 4)) debug("[PMIC]\t    - LDO4 Overcurrent\r\n");
-                if (int_ldo_3_4 & (1 << 3)) debug("[PMIC]\t    - LDO4 Short Circuit to Ground\r\n");
-                if (int_ldo_3_4 & (1 << 2)) debug("[PMIC]\t    - LDO3 Undervoltage\r\n");
-                if (int_ldo_3_4 & (1 << 1)) debug("[PMIC]\t    - LDO3 Overcurrent\r\n");
-                if (int_ldo_3_4 & (1 << 0)) debug("[PMIC]\t    - LDO3 Short Circuit to Ground\r\n");
+                debug("[PMIC]\t  INT_LDO_3_4: 0x%02X\r\n", int_reg);
+                if (int_reg & (1 << 5)) debug("[PMIC]\t    - LDO4 Undervoltage\r\n");
+                if (int_reg & (1 << 4)) debug("[PMIC]\t    - LDO4 Overcurrent\r\n");
+                if (int_reg & (1 << 3)) debug("[PMIC]\t    - LDO4 Short Circuit to Ground\r\n");
+                if (int_reg & (1 << 2)) debug("[PMIC]\t    - LDO3 Undervoltage\r\n");
+                if (int_reg & (1 << 1)) debug("[PMIC]\t    - LDO3 Overcurrent\r\n");
+                if (int_reg & (1 << 0)) debug("[PMIC]\t    - LDO3 Short Circuit to Ground\r\n");
             }
         }
     }
 
     // Check LDO 1/2 interrupts
     if (int_source & (1 << 5)) {
-        if (pmic_read_reg(PMIC_REG_INT_LDO_1_2, &int_ldo_1_2)) {
-            if (int_ldo_1_2 & 0x3F) {
+        if (pmic_read_reg(PMIC_REG_INT_LDO_1_2, &int_reg)) {
+            if (int_reg & 0x3F) {
                 errors_found = true;
-                debug("[PMIC]\t  INT_LDO_1_2: 0x%02X\r\n", int_ldo_1_2);
-                if (int_ldo_1_2 & (1 << 5)) debug("[PMIC]\t    - LDO2 Undervoltage\r\n");
-                if (int_ldo_1_2 & (1 << 4)) debug("[PMIC]\t    - LDO2 Overcurrent\r\n");
-                if (int_ldo_1_2 & (1 << 3)) debug("[PMIC]\t    - LDO2 Short Circuit to Ground\r\n");
-                if (int_ldo_1_2 & (1 << 2)) debug("[PMIC]\t    - LDO1 Undervoltage\r\n");
-                if (int_ldo_1_2 & (1 << 1)) debug("[PMIC]\t    - LDO1 Overcurrent\r\n");
-                if (int_ldo_1_2 & (1 << 0)) debug("[PMIC]\t    - LDO1 Short Circuit to Ground\r\n");
+                debug("[PMIC]\t  INT_LDO_1_2: 0x%02X\r\n", int_reg);
+                if (int_reg & (1 << 5)) debug("[PMIC]\t    - LDO2 Undervoltage\r\n");
+                if (int_reg & (1 << 4)) debug("[PMIC]\t    - LDO2 Overcurrent\r\n");
+                if (int_reg & (1 << 3)) debug("[PMIC]\t    - LDO2 Short Circuit to Ground\r\n");
+                if (int_reg & (1 << 2)) debug("[PMIC]\t    - LDO1 Undervoltage\r\n");
+                if (int_reg & (1 << 1)) debug("[PMIC]\t    - LDO1 Overcurrent\r\n");
+                if (int_reg & (1 << 0)) debug("[PMIC]\t    - LDO1 Short Circuit to Ground\r\n");
             }
         }
     }
 
     // Check BUCK 3 interrupts
     if (int_source & (1 << 4)) {
-        if (pmic_read_reg(PMIC_REG_INT_BUCK_3, &int_buck_3)) {
-            if (int_buck_3 & 0x0F) {
+        if (pmic_read_reg(PMIC_REG_INT_BUCK_3, &int_reg)) {
+            if (int_reg & 0x0F) {
                 errors_found = true;
-                debug("[PMIC]\t  INT_BUCK_3: 0x%02X\r\n", int_buck_3);
-                if (int_buck_3 & (1 << 3)) debug("[PMIC]\t    - BUCK3 Undervoltage\r\n");
-                if (int_buck_3 & (1 << 2)) debug("[PMIC]\t    - BUCK3 Negative Overcurrent\r\n");
-                if (int_buck_3 & (1 << 1)) debug("[PMIC]\t    - BUCK3 Positive Overcurrent\r\n");
-                if (int_buck_3 & (1 << 0)) debug("[PMIC]\t    - BUCK3 Short Circuit to Ground\r\n");
+                debug("[PMIC]\t  INT_BUCK_3: 0x%02X\r\n", int_reg);
+                if (int_reg & (1 << 3)) debug("[PMIC]\t    - BUCK3 Undervoltage\r\n");
+                if (int_reg & (1 << 2)) debug("[PMIC]\t    - BUCK3 Negative Overcurrent\r\n");
+                if (int_reg & (1 << 1)) debug("[PMIC]\t    - BUCK3 Positive Overcurrent\r\n");
+                if (int_reg & (1 << 0)) debug("[PMIC]\t    - BUCK3 Short Circuit to Ground\r\n");
             }
         }
     }
 
     // Check BUCK 1/2 interrupts
     if (int_source & (1 << 3)) {
-        if (pmic_read_reg(PMIC_REG_INT_BUCK_1_2, &int_buck_1_2)) {
-            if (int_buck_1_2) {
+        if (pmic_read_reg(PMIC_REG_INT_BUCK_1_2, &int_reg)) {
+            if (int_reg) {
                 errors_found = true;
-                debug("[PMIC]\t  INT_BUCK_1_2: 0x%02X\r\n", int_buck_1_2);
-                if (int_buck_1_2 & (1 << 7)) debug("[PMIC]\t    - BUCK2 Undervoltage\r\n");
-                if (int_buck_1_2 & (1 << 6)) debug("[PMIC]\t    - BUCK2 Negative Overcurrent\r\n");
-                if (int_buck_1_2 & (1 << 5)) debug("[PMIC]\t    - BUCK2 Positive Overcurrent\r\n");
-                if (int_buck_1_2 & (1 << 4)) debug("[PMIC]\t    - BUCK2 Short Circuit to Ground\r\n");
-                if (int_buck_1_2 & (1 << 3)) debug("[PMIC]\t    - BUCK1 Undervoltage\r\n");
-                if (int_buck_1_2 & (1 << 2)) debug("[PMIC]\t    - BUCK1 Negative Overcurrent\r\n");
-                if (int_buck_1_2 & (1 << 1)) debug("[PMIC]\t    - BUCK1 Positive Overcurrent\r\n");
-                if (int_buck_1_2 & (1 << 0)) debug("[PMIC]\t    - BUCK1 Short Circuit to Ground\r\n");
+                debug("[PMIC]\t  INT_BUCK_1_2: 0x%02X\r\n", int_reg);
+                if (int_reg & (1 << 7)) debug("[PMIC]\t    - BUCK2 Undervoltage\r\n");
+                if (int_reg & (1 << 6)) debug("[PMIC]\t    - BUCK2 Negative Overcurrent\r\n");
+                if (int_reg & (1 << 5)) debug("[PMIC]\t    - BUCK2 Positive Overcurrent\r\n");
+                if (int_reg & (1 << 4)) debug("[PMIC]\t    - BUCK2 Short Circuit to Ground\r\n");
+                if (int_reg & (1 << 3)) debug("[PMIC]\t    - BUCK1 Undervoltage\r\n");
+                if (int_reg & (1 << 2)) debug("[PMIC]\t    - BUCK1 Negative Overcurrent\r\n");
+                if (int_reg & (1 << 1)) debug("[PMIC]\t    - BUCK1 Positive Overcurrent\r\n");
+                if (int_reg & (1 << 0)) debug("[PMIC]\t    - BUCK1 Short Circuit to Ground\r\n");
             }
         }
     }
 
     // Check SYSTEM interrupts (temperature sensors)
     if (int_source & (1 << 2)) {
-        if (pmic_read_reg(PMIC_REG_INT_SYSTEM, &int_system)) {
-            if (int_system) {
+        if (pmic_read_reg(PMIC_REG_INT_SYSTEM, &int_reg)) {
+            if (int_reg) {
                 errors_found = true;
-                debug("[PMIC]\t  INT_SYSTEM: 0x%02X\r\n", int_system);
-                if (int_system & (1 << 7)) debug("[PMIC]\t    - Sensor 0 Hot\r\n");
-                if (int_system & (1 << 6)) debug("[PMIC]\t    - Sensor 1 Hot\r\n");
-                if (int_system & (1 << 5)) debug("[PMIC]\t    - Sensor 2 Hot\r\n");
-                if (int_system & (1 << 4)) debug("[PMIC]\t    - Sensor 3 Hot\r\n");
-                if (int_system & (1 << 3)) debug("[PMIC]\t    - Sensor 0 Warm\r\n");
-                if (int_system & (1 << 2)) debug("[PMIC]\t    - Sensor 1 Warm\r\n");
-                if (int_system & (1 << 1)) debug("[PMIC]\t    - Sensor 2 Warm\r\n");
-                if (int_system & (1 << 0)) debug("[PMIC]\t    - Sensor 3 Warm\r\n");
+                debug("[PMIC]\t  INT_SYSTEM: 0x%02X\r\n", int_reg);
+                if (int_reg & (1 << 7)) debug("[PMIC]\t    - Sensor 0 Hot\r\n");
+                if (int_reg & (1 << 6)) debug("[PMIC]\t    - Sensor 1 Hot\r\n");
+                if (int_reg & (1 << 5)) debug("[PMIC]\t    - Sensor 2 Hot\r\n");
+                if (int_reg & (1 << 4)) debug("[PMIC]\t    - Sensor 3 Hot\r\n");
+                if (int_reg & (1 << 3)) debug("[PMIC]\t    - Sensor 0 Warm\r\n");
+                if (int_reg & (1 << 2)) debug("[PMIC]\t    - Sensor 1 Warm\r\n");
+                if (int_reg & (1 << 1)) debug("[PMIC]\t    - Sensor 2 Warm\r\n");
+                if (int_reg & (1 << 0)) debug("[PMIC]\t    - Sensor 3 Warm\r\n");
             }
         }
     }
 
     // Check Residual Voltage interrupts
     if (int_source & (1 << 1)) {
-        if (pmic_read_reg(PMIC_REG_INT_RV, &int_rv)) {
-            if (int_rv & 0x7F) {
+        if (pmic_read_reg(PMIC_REG_INT_RV, &int_reg)) {
+            if (int_reg & 0x7F) {
                 errors_found = true;
-                debug("[PMIC]\t  INT_RV: 0x%02X\r\n", int_rv);
-                if (int_rv & (1 << 6)) debug("[PMIC]\t    - LDO4 Residual Voltage\r\n");
-                if (int_rv & (1 << 5)) debug("[PMIC]\t    - LDO3 Residual Voltage\r\n");
-                if (int_rv & (1 << 4)) debug("[PMIC]\t    - LDO2 Residual Voltage\r\n");
-                if (int_rv & (1 << 3)) debug("[PMIC]\t    - LDO1 Residual Voltage\r\n");
-                if (int_rv & (1 << 2)) debug("[PMIC]\t    - BUCK3 Residual Voltage\r\n");
-                if (int_rv & (1 << 1)) debug("[PMIC]\t    - BUCK2 Residual Voltage\r\n");
-                if (int_rv & (1 << 0)) debug("[PMIC]\t    - BUCK1 Residual Voltage\r\n");
+                debug("[PMIC]\t  INT_RV: 0x%02X\r\n", int_reg);
+                if (int_reg & (1 << 6)) debug("[PMIC]\t    - LDO4 Residual Voltage\r\n");
+                if (int_reg & (1 << 5)) debug("[PMIC]\t    - LDO3 Residual Voltage\r\n");
+                if (int_reg & (1 << 4)) debug("[PMIC]\t    - LDO2 Residual Voltage\r\n");
+                if (int_reg & (1 << 3)) debug("[PMIC]\t    - LDO1 Residual Voltage\r\n");
+                if (int_reg & (1 << 2)) debug("[PMIC]\t    - BUCK3 Residual Voltage\r\n");
+                if (int_reg & (1 << 1)) debug("[PMIC]\t    - BUCK2 Residual Voltage\r\n");
+                if (int_reg & (1 << 0)) debug("[PMIC]\t    - BUCK1 Residual Voltage\r\n");
             }
         }
     }
 
     // Check Timeout/RV Shutdown interrupts
     if (int_source & (1 << 0)) {
-        if (pmic_read_reg(PMIC_REG_INT_TIMEOUT_RV_SD, &int_timeout_rv_sd)) {
-            if (int_timeout_rv_sd) {
+        if (pmic_read_reg(PMIC_REG_INT_TIMEOUT_RV_SD, &int_reg)) {
+            if (int_reg) {
                 errors_found = true;
-                debug("[PMIC]\t  INT_TIMEOUT_RV_SD: 0x%02X\r\n", int_timeout_rv_sd);
-                if (int_timeout_rv_sd & (1 << 7)) debug("[PMIC]\t    - Shutdown due to Timeout\r\n");
-                if (int_timeout_rv_sd & (1 << 6)) debug("[PMIC]\t    - LDO4 RV/Discharge Timeout Shutdown\r\n");
-                if (int_timeout_rv_sd & (1 << 5)) debug("[PMIC]\t    - LDO3 RV/Discharge Timeout Shutdown\r\n");
-                if (int_timeout_rv_sd & (1 << 4)) debug("[PMIC]\t    - LDO2 RV/Discharge Timeout Shutdown\r\n");
-                if (int_timeout_rv_sd & (1 << 3)) debug("[PMIC]\t    - LDO1 RV/Discharge Timeout Shutdown\r\n");
-                if (int_timeout_rv_sd & (1 << 2)) debug("[PMIC]\t    - BUCK3 RV/Discharge Timeout Shutdown\r\n");
-                if (int_timeout_rv_sd & (1 << 1)) debug("[PMIC]\t    - BUCK2 RV/Discharge Timeout Shutdown\r\n");
-                if (int_timeout_rv_sd & (1 << 0)) debug("[PMIC]\t    - BUCK1 RV/Discharge Timeout Shutdown\r\n");
+                debug("[PMIC]\t  INT_TIMEOUT_RV_SD: 0x%02X\r\n", int_reg);
+                if (int_reg & (1 << 7)) debug("[PMIC]\t    - Shutdown due to Timeout\r\n");
+                if (int_reg & (1 << 6)) debug("[PMIC]\t    - LDO4 RV/Discharge Timeout Shutdown\r\n");
+                if (int_reg & (1 << 5)) debug("[PMIC]\t    - LDO3 RV/Discharge Timeout Shutdown\r\n");
+                if (int_reg & (1 << 4)) debug("[PMIC]\t    - LDO2 RV/Discharge Timeout Shutdown\r\n");
+                if (int_reg & (1 << 3)) debug("[PMIC]\t    - LDO1 RV/Discharge Timeout Shutdown\r\n");
+                if (int_reg & (1 << 2)) debug("[PMIC]\t    - BUCK3 RV/Discharge Timeout Shutdown\r\n");
+                if (int_reg & (1 << 1)) debug("[PMIC]\t    - BUCK2 RV/Discharge Timeout Shutdown\r\n");
+                if (int_reg & (1 << 0)) debug("[PMIC]\t    - BUCK1 RV/Discharge Timeout Shutdown\r\n");
             }
         }
     }
 
     if (!errors_found) {
         debug("[PMIC]\t  No specific errors found in detail registers\r\n");
-    } 
+    }
 
-    // Clear all interrupts (R/W1C - write 1 to clear)
-    if (int_source & (1 << 6)) {
-        pmic_write_reg(PMIC_REG_INT_LDO_3_4, int_ldo_3_4);
-    }
-    if (int_source & (1 << 5)) {
-        pmic_write_reg(PMIC_REG_INT_LDO_1_2, int_ldo_1_2);
-    }
-    if (int_source & (1 << 4)) {
-        pmic_write_reg(PMIC_REG_INT_BUCK_3, int_buck_3);
-    }
-    if (int_source & (1 << 3)) {
-        pmic_write_reg(PMIC_REG_INT_BUCK_1_2, int_buck_1_2);
-    }
-    if (int_source & (1 << 2)) {
-        pmic_write_reg(PMIC_REG_INT_SYSTEM, int_system);
-    }
-    if (int_source & (1 << 1)) {
-        pmic_write_reg(PMIC_REG_INT_RV, int_rv);
-    }
-    if (int_source & (1 << 0)) {
-        pmic_write_reg(PMIC_REG_INT_TIMEOUT_RV_SD, int_timeout_rv_sd);
-    }
+    pmic_clear_interrupts();
 
     return errors_found;
 }
@@ -369,9 +371,6 @@ void pmic_print_info(void)
     if (pmic_read_reg(PMIC_REG_POWER_UP_STATUS, &buff))
         debug("[PMIC]\t  Power-Up Status: 0x%02X, %s\r\n", buff, bin8(buff));
         
-    if ((buff & 0xE) == 0xE)
-        debug("[PMIC]\t    POWER ON FAILED: Too many retries!\r\n");
-        
     if (pmic_read_reg(PMIC_MFP_CONFIG_1, &buff))
         debug("[PMIC]\t  MFP_CONFIG_1: 0x%02X, %s\r\n", buff, bin8(buff));
     if (pmic_read_reg(PMIC_MFP_CONFIG_2, &buff))
@@ -381,6 +380,11 @@ void pmic_print_info(void)
 }
 
 void pmic_clear_interrupts(void) {
-    pmic_write_reg(PMIC_REG_INT_RV, 0x7F);            // Clear all RV flags                                                      
-    pmic_write_reg(PMIC_REG_INT_TIMEOUT_RV_SD, 0xFF); // Clear all timeout flags  
+    pmic_write_reg(PMIC_REG_INT_LDO_3_4, 0xFF);
+    pmic_write_reg(PMIC_REG_INT_LDO_1_2, 0xFF);
+    pmic_write_reg(PMIC_REG_INT_BUCK_3, 0xFF);
+    pmic_write_reg(PMIC_REG_INT_BUCK_1_2, 0xFF);
+    pmic_write_reg(PMIC_REG_INT_SYSTEM, 0xFF);
+    pmic_write_reg(PMIC_REG_INT_RV, 0xFF);
+    pmic_write_reg(PMIC_REG_INT_TIMEOUT_RV_SD, 0xFF);
 }

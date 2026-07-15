@@ -77,3 +77,5 @@ void soc_reset_low(void);
 void soc_reset_high(void);
 
 void pmic_clear_interrupts(void);
+
+void pmic_setup(void);

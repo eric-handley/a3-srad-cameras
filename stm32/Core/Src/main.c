@@ -108,32 +108,32 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  soc_reset_low();
-  pmic_disable();
-  pmic_clear_interrupts();
-
-  // Float UART1 pins (connected to SoC) to prevent backfeed
+  // Drive UART1 pins low (connected to SoC) to drain residual voltage (possibly cause of PMIC instability?)
   HAL_UART_DeInit(&huart1);
   GPIO_InitTypeDef gpio = {0};
   gpio.Pin = GPIO_PIN_9 | GPIO_PIN_10;  // UART1 TX/RX pins (PA9/PA10)
-  gpio.Mode = GPIO_MODE_INPUT;
+  gpio.Mode = GPIO_MODE_OUTPUT_PP;
   gpio.Pull = GPIO_NOPULL;
+  gpio.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &gpio);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
 
-  // pmic_configure(false); // Already configured and saved to NVM
+  int retries = 5;
+  for (int i = 0; i < retries; i++) { 
+    pmic_setup();
 
-  pmic_enable();
-  HAL_Delay(20);  // Wait for PMIC power-up sequence
-
+    if(pmic_scan_interrupts()) {
+      LED_STATUS = LED_ERROR;
+    } else {
+      LED_STATUS = LED_NOMINAL;
+      break;
+    }
+  }
+  
+  pmic_print_info();
+  
   // Re-initialize UART1 after PMIC powers up
   MX_USART1_UART_Init();
-
-  soc_reset_high();
-
-  pmic_print_info();
-  if(pmic_scan_interrupts()) {
-    LED_STATUS = LED_ERROR;
-  }
     
   /* USER CODE END 2 */
 

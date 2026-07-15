@@ -68,7 +68,7 @@ typedef struct imu_data_t {
     @return Pointer to static buffer containing binary string (e.g. "1010 1100")
     @note Uses ring buffer to support up to 4 concurrent calls in single statement
 */
-static inline const char* bin8(uint8_t val) {
+static const char* bin8(uint8_t val) {
     static char bufs[4][10];  // 4 buffers: "xxxx xxxx\0"
     static uint8_t idx = 0;
 
@@ -85,7 +85,7 @@ static inline const char* bin8(uint8_t val) {
 }
 
 __attribute__((format(printf, 1, 2)))
-static inline void debug(const char* fmt, ...) {
+static void debug(const char* fmt, ...) {
     #ifdef EN_DEBUG_PRINT
         char buf[256];
         va_list args;
