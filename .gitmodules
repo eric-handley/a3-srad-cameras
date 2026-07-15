@@ -1,0 +1,3 @@
+[submodule "luckfox-sdk"]
+	path = luckfox-sdk
+	url = git@github.com:eric-handley/luckfox-sdk.git
