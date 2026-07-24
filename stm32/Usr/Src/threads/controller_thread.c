@@ -2,7 +2,7 @@
 
 typedef enum {
     SYS_IDLE,
-    SYS_WAIT,
+    SYS_BUSY,
     SYS_ERROR
 } system_state_t;
 
@@ -11,7 +11,6 @@ typedef enum {
 
 static system_state_t sys_state = SYS_IDLE;
 static status_t cached_soc_status = REPLY_STOPPED;
-static bool fc_reply_pending = false;
 static ULONG wait_start_time = 0;
 
 VOID controller_thread(ULONG thread_input) {
@@ -26,10 +25,11 @@ VOID controller_thread(ULONG thread_input) {
     #ifdef EN_FC_COMMS
     while (true) {
         
-        bool 
+        bool
             new_imu_data   = false,
             new_fc_cmd     = false,
-            new_soc_status = false;
+            new_soc_status = false,
+            send_fc_reply  = false;
 
         // Drain queue to get latest IMU sample only, even if there is multiple (shouldn't happen)
         while (tx_queue_receive(&imu_data_queue_handle, &imu_data, TX_NO_WAIT) == TX_SUCCESS) {
@@ -42,15 +42,15 @@ VOID controller_thread(ULONG thread_input) {
         /*
          * Handle state based on new data + current system state:
          *
+         * IMU samples are forwarded to the SoC in every state except ERROR, sharing a
+         * frame with any command produced this iteration.
+         *
          * IDLE:
-         * - If cached SoC status is REPLY_ERROR -> transition to ERROR, otherwise:
-         * - Send IMU data to SoC when available
          * - If FC sends GET_STATUS -> reply immediately with cached SoC status
          * - If FC sends START_CAM or STOP_CAM -> forward to SoC, mark FC reply pending, start timeout, transition to WAITING_FOR_SOC
          * - If FC command invalid (unrecognized or potentially corrupted) reply REPLY_INVALID_CMD
          *
          * WAITING_FOR_SOC:
-         * - Keep sending IMU data to SoC
          * - If timeout exceeded (>1 second) -> set cached status to REPLY_ERROR, transition to ERROR
          * - If SoC sends status before timeout:
          *   - Update cached status
@@ -68,87 +68,68 @@ VOID controller_thread(ULONG thread_input) {
          * TODO Error-type specific messages?
          */
 
+        soc_msg.flags = 0;
+
+        if (new_imu_data && sys_state != SYS_ERROR) {
+            soc_msg.imu = imu_data;
+            soc_msg.flags |= SOC_HAS_IMU;
+        }
+
         switch (sys_state) {
             case SYS_IDLE:
-                if (cached_soc_status == REPLY_ERROR) {
-                    sys_state = SYS_ERROR;
-                    break;
-                }
-
-                if (new_imu_data) {
-                    soc_msg.msg_type = IMU_DATA;
-                    soc_msg.payload.imu = imu_data;
-                    HAL_UART_Transmit(&SOC_UART, (uint8_t*)&soc_msg, sizeof(soc_msg_t), UART_TX_TIMEOUT_MS);
-                }
-
                 if (new_fc_cmd) {
                     if (fc_cmd == CMD_GET_STATUS) {
-                        HAL_UART_Transmit(&FC_UART, (uint8_t*)&cached_soc_status, sizeof(status_t), UART_TX_TIMEOUT_MS);
+                        fc_reply = cached_soc_status;
+                        send_fc_reply = true;
                     } else if (fc_cmd == CMD_START_CAM || fc_cmd == CMD_STOP_CAM) {
-                        soc_msg.msg_type = COMMAND;
-                        soc_msg.payload.cmd = fc_cmd;
-                        HAL_UART_Transmit(&SOC_UART, (uint8_t*)&soc_msg, sizeof(soc_msg_t), UART_TX_TIMEOUT_MS);
+                        soc_msg.cmd = fc_cmd;
+                        soc_msg.flags |= SOC_HAS_CMD;
 
-                        fc_reply_pending = true;
                         wait_start_time = tx_time_get();
-                        sys_state = SYS_WAIT;
+                        sys_state = SYS_BUSY;
                     } else {
-                        status_t invalid = REPLY_INVALID_CMD;
-                        HAL_UART_Transmit(&FC_UART, (uint8_t*)&invalid, sizeof(status_t), UART_TX_TIMEOUT_MS);
+                        fc_reply = REPLY_INVALID_CMD;
+                        send_fc_reply = true;
                     }
                 }
                 break;
 
-            case SYS_WAIT:
-                if (new_imu_data) {
-                    soc_msg.msg_type = IMU_DATA;
-                    soc_msg.payload.imu = imu_data;
-                    HAL_UART_Transmit(&SOC_UART, (uint8_t*)&soc_msg, sizeof(soc_msg_t), UART_TX_TIMEOUT_MS);
-                }
-
-                {
-                    ULONG elapsed = tx_time_get() - wait_start_time;
-                    if (elapsed > MS_TO_TICKS(SOC_TIMEOUT_MS)) {
-                        cached_soc_status = REPLY_ERROR;
-                        if (fc_reply_pending) {
-                            HAL_UART_Transmit(&FC_UART, (uint8_t*)&cached_soc_status, sizeof(status_t), UART_TX_TIMEOUT_MS);
-                            fc_reply_pending = false;
-                        }
-                        sys_state = SYS_ERROR;
-                        break;
-                    }
-                }
-
+            case SYS_BUSY:
                 if (new_soc_status) {
                     cached_soc_status = soc_status;
+                    fc_reply = cached_soc_status;
+                    send_fc_reply = true;
 
                     if (cached_soc_status == REPLY_ERROR) {
-                        if (fc_reply_pending) {
-                            HAL_UART_Transmit(&FC_UART, (uint8_t*)&cached_soc_status, sizeof(status_t), UART_TX_TIMEOUT_MS);
-                            fc_reply_pending = false;
-                        }
                         sys_state = SYS_ERROR;
                     } else {
-                        if (fc_reply_pending) {
-                            HAL_UART_Transmit(&FC_UART, (uint8_t*)&cached_soc_status, sizeof(status_t), UART_TX_TIMEOUT_MS);
-                            fc_reply_pending = false;
-                        }
                         sys_state = SYS_IDLE;
                     }
-                }
-
-                if (new_fc_cmd) {
-                    status_t busy = REPLY_BUSY;
-                    HAL_UART_Transmit(&FC_UART, (uint8_t*)&busy, sizeof(status_t), UART_TX_TIMEOUT_MS);
+                } else if (tx_time_get() - wait_start_time > MS_TO_TICKS(SOC_TIMEOUT_MS)) {
+                    cached_soc_status = REPLY_ERROR;
+                    fc_reply = REPLY_ERROR;
+                    send_fc_reply = true;
+                    sys_state = SYS_ERROR;
+                } else if (new_fc_cmd) {
+                    fc_reply = REPLY_BUSY;
+                    send_fc_reply = true;
                 }
                 break;
 
             case SYS_ERROR:
                 if (new_fc_cmd) {
-                    status_t error = REPLY_ERROR;
-                    HAL_UART_Transmit(&FC_UART, (uint8_t*)&error, sizeof(status_t), UART_TX_TIMEOUT_MS);
+                    fc_reply = REPLY_ERROR;
+                    send_fc_reply = true;
                 }
                 break;
+        }
+
+        if (soc_msg.flags != 0) {
+            HAL_UART_Transmit(&SOC_UART, (uint8_t*)&soc_msg, sizeof(soc_msg_t), UART_TX_TIMEOUT_MS);
+        }
+
+        if (send_fc_reply) {
+            HAL_UART_Transmit(&FC_UART, (uint8_t*)&fc_reply, sizeof(status_t), UART_TX_TIMEOUT_MS);
         }
 
         // Yield to allow lower priority threads to run
