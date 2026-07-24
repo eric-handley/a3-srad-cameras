@@ -1,9 +1,9 @@
 #pragma once
 
-#define EN_DEBUG_PRINT 1
+// #define EN_DEBUG_PRINT 1
 // #define EN_IMU_DEBUG 1
 #define EN_THREADS 1
-// #define EN_FC_COMMS 1
+#define EN_FC_COMMS 1
 
 #include "stm32u0xx_hal.h"
 #include "stm32u0xx_hal_i2c.h"
@@ -57,9 +57,9 @@ extern LED_Status_T LED_STATUS;
 extern TX_QUEUE imu_data_queue_handle;
 
 typedef struct imu_data_t {
-    int16_t accel[3];  // x, y, z
-    int16_t gyro[3];   // x, y, z
-    int16_t temp;
+    float accel[3];  // x, y, z in g
+    float gyro[3];   // x, y, z in dps
+    float temp;      // degrees C
 } imu_data_t;
 
 /*

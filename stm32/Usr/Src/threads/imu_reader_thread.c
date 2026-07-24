@@ -99,8 +99,8 @@ int32_t imu_read_gyro(int16_t *data) {
     return lsm6dsr_angular_rate_raw_get(&dev_ctx, data);
 }
 
-int32_t imu_read_temp(int16_t *temp) {
-    return lsm6dsr_temperature_raw_get(&dev_ctx, temp);
+int32_t imu_read_temp(int16_t *data) {
+    return lsm6dsr_temperature_raw_get(&dev_ctx, data);
 }
 
 VOID imu_reader_thread(ULONG thread_input) {
@@ -113,17 +113,29 @@ VOID imu_reader_thread(ULONG thread_input) {
     };
 
     imu_data_t imu_data = {0};
+    int16_t raw_accel[3], raw_gyro[3], raw_temp;
 
     while (true) {
-        imu_read_accel(imu_data.accel);
-        imu_read_gyro(imu_data.gyro);
-        imu_read_temp(&imu_data.temp);
+        imu_read_accel(raw_accel);
+        imu_read_gyro(raw_gyro);
+        imu_read_temp(&raw_temp);
+
+        // Convert raw LSBs to engineering units using the configured full scales
+        // (accel ±2g -> mg, gyro ±2000dps -> mdps); divide by 1000 for g / dps.
+        for (int i = 0; i < 3; i++) {
+            imu_data.accel[i] = lsm6dsr_from_fs2g_to_mg(raw_accel[i]) / 1000.0f;
+            imu_data.gyro[i]  = lsm6dsr_from_fs2000dps_to_mdps(raw_gyro[i]) / 1000.0f;
+        }
+        imu_data.temp = lsm6dsr_from_lsb_to_celsius(raw_temp);
 
         #ifdef EN_IMU_DEBUG
-            debug("[IMU]\tAccel: %6d %6d %6d  Gyro: %6d %6d %6d  Temp: %6d\r\n",
-                imu_data.accel[0], imu_data.accel[1], imu_data.accel[2],
-                imu_data.gyro[0], imu_data.gyro[1], imu_data.gyro[2],
-                imu_data.temp);
+            #define FP3(x) ((x) < 0 ? "-" : ""), (int)fabsf(x), (int)(fabsf(x) * 1000.0f) % 1000
+            debug("[IMU]\tAccel: %s%d.%03d %s%d.%03d %s%d.%03d g  "
+                  "Gyro: %s%d.%03d %s%d.%03d %s%d.%03d dps  Temp: %s%d.%03d C\r\n",
+                FP3(imu_data.accel[0]), FP3(imu_data.accel[1]), FP3(imu_data.accel[2]),
+                FP3(imu_data.gyro[0]), FP3(imu_data.gyro[1]), FP3(imu_data.gyro[2]),
+                FP3(imu_data.temp));
+            #undef FP3
 
             tx_thread_sleep(MS_TO_TICKS(1000));  // Slow down debug prints
         #endif
