@@ -24,7 +24,7 @@
             "dependsOrder": "sequence"
         },
         {
-            "label": "flash-then-debug-rtt",
+            "label": "flash-then-debug-no-monitor",
             "dependsOn": ["build", "flash-for-debug"],
             "dependsOrder": "sequence"
         },
