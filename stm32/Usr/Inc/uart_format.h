@@ -2,33 +2,56 @@
 
 #include "common.h"
 
+// FC -> stm32: commands from the flight computer.
 typedef enum __attribute__((packed)) {
     CMD_START_CAM  = 1,
     CMD_STOP_CAM   = 2,
-    CMD_GET_STATUS = 3
+    CMD_GET_STATUS = 3,
+    // Power the SoC up but leave it idle, e.g. to pull recordings over USB.
+    CMD_IDLE_CAM   = 4
 } command_t;
 
+// stm32 -> FC: responses to the flight computer.
 typedef enum __attribute__((packed)) {
     REPLY_STOPPED     = 0,
     REPLY_RECORDING   = 1,
     REPLY_ERROR       = 2,
     REPLY_BUSY        = 3,
-    REPLY_INVALID_CMD = 4
+    REPLY_STARTING    = 4,   // powered on, SoC still booting / not yet recording
+    REPLY_INVALID_CMD = 5
 } status_t;
 
+#define IMU_FRAME_SOF 0xAA
+
+// What the stm32 wants the SoC doing. Carried in every IMU frame, but the SoC
+// only acts on the value in the first frame it receives; if it never receives
+// one it records anyway. Values start at 1 so a stray 0x00 is never valid.
 typedef enum __attribute__((packed)) {
-    SOC_HAS_CMD = 1 << 0,
-    SOC_HAS_IMU = 1 << 1
-} soc_flags_t;
+    SOC_MODE_RECORD = 1,
+    SOC_MODE_IDLE   = 2
+} soc_mode_t;
 
-// A frame may carry a command and/or an IMU sample. At least one flag is always
-// set (empty frames are never sent), so the leading byte is never 0x00 and the
-// SoC can use it as an alignment guard.
+// stm32 -> SoC: continuous IMU stream, one frame per controller loop. The sync
+// byte lets the SoC realign to a frame boundary after any dropped byte.
 typedef struct __attribute__((packed)) {
-    uint8_t    flags;   // OR of soc_flags_t
-    command_t  cmd;     // valid iff (flags & SOC_HAS_CMD)
-    imu_data_t imu;     // valid iff (flags & SOC_HAS_IMU)
-} soc_msg_t;
+    uint8_t    sof;   // IMU_FRAME_SOF
+    uint8_t    mode;  // soc_mode_t
+    imu_data_t imu;
+} imu_frame_t;
 
-_Static_assert(sizeof(command_t) == 1, "command_t must be 1 byte");
-_Static_assert(sizeof(status_t)  == 1, "status_t must be 1 byte");
+// SoC -> stm32: periodic heartbeat reporting what the SoC is already doing. The
+// camera app auto-starts on power-up (PMIC controlled), so there are no
+// start/stop commands. Values start at 1 so a stray 0x00 is never a valid state.
+typedef enum __attribute__((packed)) {
+    SOC_INIT      = 1,
+    SOC_RECORDING = 2,
+    SOC_STOPPED   = 3,
+    SOC_ERROR     = 4,
+    // Sent once, as the SoC supervisor's last act: the recording is finished and
+    // everything is flushed to the SD card, so the rails can be cut safely.
+    SOC_COMPLETE  = 5
+} soc_status_t;
+
+_Static_assert(sizeof(command_t)    == 1, "command_t must be 1 byte");
+_Static_assert(sizeof(status_t)     == 1, "status_t must be 1 byte");
+_Static_assert(sizeof(soc_status_t) == 1, "soc_status_t must be 1 byte");

@@ -67,15 +67,14 @@ bool pmic_update_bits(uint8_t reg, uint8_t mask, uint8_t value);
 
 void pmic_print_info(void);
 bool pmic_scan_interrupts(void);
+void pmic_clear_interrupts(void);
 
 void pmic_enable(void);
 void pmic_disable(void);
 void pmic_configure(bool save_to_nvm);
 
 void soc_reset_low(void);
-
 void soc_reset_high(void);
 
-void pmic_clear_interrupts(void);
-
-void pmic_setup(void);
+void soc_enable(void);
+void soc_disable(void);

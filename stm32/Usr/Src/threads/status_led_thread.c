@@ -14,26 +14,25 @@ VOID status_led_thread(ULONG thread_input) {
     (void)thread_input;
 
     debug("[LED]\tStatus LED thread started\r\n");
-
+    
     for (int i = 0; i < 3; i++) {
         blink(200);
     }
     
     while(true) {
-        switch (LED_STATUS)
-        {
-        case LED_NOMINAL:
-            tx_thread_sleep(MS_TO_TICKS(5000));
-            blink(200);
-            break;
+        switch (LED_STATUS) {
+            case LED_NOMINAL:
+                tx_thread_sleep(MS_TO_TICKS(5000));
+                blink(200);
+                break;
+                
+            case LED_ERROR:
+                tx_thread_sleep(MS_TO_TICKS(100));
+                blink(100);
+                break;
             
-        case LED_ERROR:
-            tx_thread_sleep(MS_TO_TICKS(100));
-            blink(100);
-            break;
-        
-        default:
-            break;
+            default:
+                break;
         }
 
     }

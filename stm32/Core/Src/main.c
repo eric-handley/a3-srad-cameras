@@ -108,33 +108,6 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  // Drive UART1 pins low (connected to SoC) to drain residual voltage (possibly cause of PMIC instability?)
-  HAL_UART_DeInit(&huart1);
-  GPIO_InitTypeDef gpio = {0};
-  gpio.Pin = GPIO_PIN_9 | GPIO_PIN_10;  // UART1 TX/RX pins (PA9/PA10)
-  gpio.Mode = GPIO_MODE_OUTPUT_PP;
-  gpio.Pull = GPIO_NOPULL;
-  gpio.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &gpio);
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
-
-  int retries = 5;
-  for (int i = 0; i < retries; i++) { 
-    pmic_setup();
-
-    if(pmic_scan_interrupts()) {
-      LED_STATUS = LED_ERROR;
-    } else {
-      LED_STATUS = LED_NOMINAL;
-      break;
-    }
-  }
-  
-  pmic_print_info();
-  
-  // Re-initialize UART1 after PMIC powers up
-  MX_USART1_UART_Init();
-    
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();

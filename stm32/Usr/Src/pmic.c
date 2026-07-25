@@ -2,13 +2,13 @@
 
 #define I2C_TIMEOUT_MS  100
 
-void pmic_setup(void) 
+void soc_enable(void) 
 {
     soc_reset_low();
     pmic_disable();
     pmic_clear_interrupts();
 
-    HAL_Delay(500);
+    HAL_Delay(100);
 
     // pmic_configure(false); // Already configured and saved to NVM
 
@@ -16,6 +16,17 @@ void pmic_setup(void)
     HAL_Delay(15);  // Wait for PMIC power-up sequence
 
     soc_reset_high();
+
+    #ifdef EN_DEBUG_PRINT
+    pmic_print_info();
+    #endif
+}
+
+void soc_disable(void) 
+{
+    soc_reset_low();
+    HAL_Delay(10);
+    pmic_disable();
 }
 
 void pmic_enable(void)
@@ -30,12 +41,14 @@ void pmic_disable(void)
     HAL_GPIO_WritePin(GPIOB, PMIC_EN_PIN, 0);
 }
 
-void soc_reset_low(void) {
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
+void soc_reset_high(void) {
+    debug("[SOC]\tSOC RESETn pin enabled\r\n");
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
 }
 
-void soc_reset_high(void) {
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 1);
+void soc_reset_low(void) {
+    debug("[SOC]\tSOC RESETn pin disabled\r\n");
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
 }
 
 void pmic_configure(bool save_to_nvm)
@@ -172,7 +185,7 @@ bool pmic_scan_interrupts(void)
     if (pmic_read_reg(PMIC_REG_POWER_UP_STATUS, &int_reg)) {
         if ((int_reg & 0xE) == 0xE) {
             errors_found = true;
-            debug("[PMIC]\tPOWER ON FAILED: Too many retries!\r\n", int_reg);
+            debug("[PMIC]\tPOWER ON FAILED: Too many retries!\r\n");
         }
     }
 
@@ -353,19 +366,19 @@ void pmic_print_info(void)
     if (pmic_read_reg(PMIC_REG_LDO1_VOUT, &buff)) 
         debug("[PMIC]\t    PMIC_REG_LDO1_VOUT: 0x%02X, %s\r\n", buff, bin8(buff));
     else
-        debug("[PMIC]\t    ERROR READING PMIC_REG_LDO1_VOUT");
+        debug("[PMIC]\t    ERROR READING PMIC_REG_LDO1_VOUT\r\n");
     if (pmic_read_reg(PMIC_REG_LDO2_VOUT, &buff)) 
         debug("[PMIC]\t    PMIC_REG_LDO2_VOUT: 0x%02X, %s\r\n", buff, bin8(buff));
     else
-        debug("[PMIC]\t    ERROR READING PMIC_REG_LDO2_VOUT");
+        debug("[PMIC]\t    ERROR READING PMIC_REG_LDO2_VOUT\r\n");
     if (pmic_read_reg(PMIC_REG_LDO3_VOUT, &buff)) 
         debug("[PMIC]\t    PMIC_REG_LDO3_VOUT: 0x%02X, %s\r\n", buff, bin8(buff));
     else
-        debug("[PMIC]\t    ERROR READING PMIC_REG_LDO3_VOUT");
+        debug("[PMIC]\t    ERROR READING PMIC_REG_LDO3_VOUT\r\n");
     if (pmic_read_reg(PMIC_REG_LDO4_VOUT, &buff)) 
         debug("[PMIC]\t    PMIC_REG_LDO4_VOUT: 0x%02X, %s\r\n", buff, bin8(buff));
     else
-        debug("[PMIC]\t    ERROR READING PMIC_REG_LDO4_VOUT");
+        debug("[PMIC]\t    ERROR READING PMIC_REG_LDO4_VOUT\r\n");
     
         
     if (pmic_read_reg(PMIC_REG_POWER_UP_STATUS, &buff))
