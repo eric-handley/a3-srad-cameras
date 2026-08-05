@@ -62,8 +62,8 @@ static bool soc_start(void) {
     for (int attempt = 0; attempt < SOC_START_RETRIES; attempt++) {
         soc_enable();
         if (!pmic_scan_interrupts()) {
-            return true;
             LED_STATUS = LED_NOMINAL;
+            return true;
         }
         LED_STATUS = LED_ERROR;
         soc_disable();
