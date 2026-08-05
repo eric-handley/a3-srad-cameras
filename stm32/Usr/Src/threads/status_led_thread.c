@@ -30,6 +30,12 @@ VOID status_led_thread(ULONG thread_input) {
                 tx_thread_sleep(MS_TO_TICKS(100));
                 blink(100);
                 break;
+                
+            case LED_RECORDING:
+                tx_thread_sleep(MS_TO_TICKS(100));
+                blink(50);
+                blink(50);
+                break;
             
             default:
                 break;

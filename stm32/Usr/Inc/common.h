@@ -30,7 +30,8 @@ extern I2C_HandleTypeDef hi2c3;
 
 typedef enum LED_Status_T {
     LED_NOMINAL,
-    LED_ERROR
+    LED_ERROR,
+    LED_RECORDING
 } LED_Status_T;
 
 extern LED_Status_T LED_STATUS;
