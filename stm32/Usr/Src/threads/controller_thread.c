@@ -132,8 +132,8 @@ VOID controller_thread(ULONG thread_input) {
                 case CMD_START_CAM:
                 case CMD_IDLE_CAM:
                     // soc_start() power-cycles the PMIC, so either command recovers
-                    // from any state; the only difference is what we then tell the
-                    // SoC to do via the mode byte in the IMU stream.
+                    // from any state; the only difference is whether we then stream
+                    // IMU frames (RECORD) or stay silent (IDLE).
                     soc_mode = (fc_cmd == CMD_IDLE_CAM) ? SOC_MODE_IDLE : SOC_MODE_RECORD;
                     heartbeat_seen = false;
                     cached_heartbeat = SOC_INIT;
@@ -163,7 +163,14 @@ VOID controller_thread(ULONG thread_input) {
             }
         }
 
-        LED_STATUS = (current_status() == REPLY_ERROR || fc_reply == REPLY_ERROR) ? LED_ERROR : LED_NOMINAL;
+        status_t led_status = current_status();
+        if (led_status == REPLY_ERROR || (send_fc_reply && fc_reply == REPLY_ERROR)) {
+            LED_STATUS = LED_ERROR;
+        } else if (led_status == REPLY_RECORDING) {
+            LED_STATUS = LED_RECORDING;
+        } else {
+            LED_STATUS = LED_NOMINAL;
+        }
 
         #ifdef EN_FC_COMMS
         // Streaming IS the record signal: in IDLE we stay silent so the SoC

@@ -5,9 +5,9 @@
 
 static void blink(int duration) {
     HAL_GPIO_WritePin(STATUS_LED_PORT, STATUS_LED_PIN, 1);
-    HAL_Delay(duration);
+    tx_thread_sleep(MS_TO_TICKS(duration));
     HAL_GPIO_WritePin(STATUS_LED_PORT, STATUS_LED_PIN, 0);
-    HAL_Delay(duration);
+    tx_thread_sleep(MS_TO_TICKS(duration));
 }
 
 VOID status_led_thread(ULONG thread_input) {
@@ -32,8 +32,7 @@ VOID status_led_thread(ULONG thread_input) {
                 break;
                 
             case LED_RECORDING:
-                HAL_GPIO_WritePin(STATUS_LED_PORT, STATUS_LED_PIN, 1);
-                tx_thread_sleep(MS_TO_TICKS(100));
+                blink(800);
                 break;
             
             default:
