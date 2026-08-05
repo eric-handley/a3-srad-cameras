@@ -166,8 +166,9 @@ VOID controller_thread(ULONG thread_input) {
         LED_STATUS = (current_status() == REPLY_ERROR || fc_reply == REPLY_ERROR) ? LED_ERROR : LED_NOMINAL;
 
         #ifdef EN_FC_COMMS
-        if (soc_powered && new_imu_data) {
-            imu_frame.mode = soc_mode;
+        // Streaming IS the record signal: in IDLE we stay silent so the SoC
+        // boots serviceable (no recording, no heartbeat expected).
+        if (soc_powered && soc_mode == SOC_MODE_RECORD && new_imu_data) {
             imu_frame.imu = imu_data;
             for (int i = 0; i < UART_TX_RETRIES; i++) {
                 last_soc_tx = HAL_UART_Transmit(&SOC_UART, (uint8_t*)&imu_frame, sizeof(imu_frame_t), UART_TX_TIMEOUT_MS);

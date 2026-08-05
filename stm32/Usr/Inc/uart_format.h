@@ -23,9 +23,9 @@ typedef enum __attribute__((packed)) {
 
 #define IMU_FRAME_SOF 0xAA
 
-// What the stm32 wants the SoC doing. Carried in every IMU frame, but the SoC
-// only acts on the value in the first frame it receives; if it never receives
-// one it records anyway. Values start at 1 so a stray 0x00 is never valid.
+// What the stm32 wants the SoC doing. stm32-internal only: it is no longer put
+// on the wire. The stream itself is the signal -- the stm32 streams IMU frames
+// in RECORD and stays silent in IDLE, and the SoC records iff frames arrive.
 typedef enum __attribute__((packed)) {
     SOC_MODE_RECORD = 1,
     SOC_MODE_IDLE   = 2
@@ -35,7 +35,6 @@ typedef enum __attribute__((packed)) {
 // byte lets the SoC realign to a frame boundary after any dropped byte.
 typedef struct __attribute__((packed)) {
     uint8_t    sof;   // IMU_FRAME_SOF
-    uint8_t    mode;  // soc_mode_t
     imu_data_t imu;
 } imu_frame_t;
 
