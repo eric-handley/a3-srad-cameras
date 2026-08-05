@@ -1,4 +1,5 @@
 #include "pmic.h"
+#include "main.h"
 
 #define I2C_TIMEOUT_MS  100
 
@@ -8,7 +9,7 @@ void soc_enable(void)
     pmic_disable();
     pmic_clear_interrupts();
 
-    HAL_Delay(100);
+    HAL_Delay(500);
 
     // pmic_configure(false); // Already configured and saved to NVM
 
@@ -16,6 +17,9 @@ void soc_enable(void)
     HAL_Delay(15);  // Wait for PMIC power-up sequence
 
     soc_reset_high();
+
+    // Reinitialize UART1, disabled by pmic_disable()
+    soc_uart_reinit();
 
     #ifdef EN_DEBUG_PRINT
     pmic_print_info();
@@ -39,6 +43,17 @@ void pmic_disable(void)
 {
     debug("[PMIC]\tPMIC_EN pin disabled\r\n");
     HAL_GPIO_WritePin(GPIOB, PMIC_EN_PIN, 0);
+
+    // Drive UART1 pins low (connected to SoC) to drain residual voltage
+    // otherwise backfeed through uart1->soc->LDO1 causes PMIC error
+    HAL_UART_DeInit(&SOC_UART);
+    GPIO_InitTypeDef gpio = {0};
+    gpio.Pin = GPIO_PIN_9 | GPIO_PIN_10;  // UART1 TX/RX pins (PA9/PA10)
+    gpio.Mode = GPIO_MODE_OUTPUT_PP;
+    gpio.Pull = GPIO_NOPULL;
+    gpio.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOA, &gpio);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
 }
 
 void soc_reset_high(void) {
@@ -47,7 +62,7 @@ void soc_reset_high(void) {
 }
 
 void soc_reset_low(void) {
-    debug("[SOC]\tSOC RESETn pin disabled\r\n");
+    debug("[[SOC]\tSOC RESETn pin disabled\r\n");
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, 0);
 }
 
@@ -383,6 +398,9 @@ void pmic_print_info(void)
         
     if (pmic_read_reg(PMIC_REG_POWER_UP_STATUS, &buff))
         debug("[PMIC]\t  Power-Up Status: 0x%02X, %s\r\n", buff, bin8(buff));
+
+    if (pmic_read_reg(PMIC_DISCHARGE_CONFIG, &buff))
+        debug("[PMIC]\t  DISCHARGE_CONFIG: 0x%02X, %s\r\n", buff, bin8(buff));
         
     if (pmic_read_reg(PMIC_MFP_CONFIG_1, &buff))
         debug("[PMIC]\t  MFP_CONFIG_1: 0x%02X, %s\r\n", buff, bin8(buff));

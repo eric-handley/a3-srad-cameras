@@ -1,6 +1,6 @@
 #pragma once
 
-// #define EN_DEBUG_PRINT 1
+#define EN_DEBUG_PRINT 1
 // #define EN_IMU_DEBUG 1
 #define EN_THREADS 1
 #define EN_FC_COMMS 1

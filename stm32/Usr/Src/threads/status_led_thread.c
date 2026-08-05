@@ -22,19 +22,18 @@ VOID status_led_thread(ULONG thread_input) {
     while(true) {
         switch (LED_STATUS) {
             case LED_NOMINAL:
-                tx_thread_sleep(MS_TO_TICKS(5000));
                 blink(200);
+                tx_thread_sleep(MS_TO_TICKS(5000));
                 break;
                 
             case LED_ERROR:
-                tx_thread_sleep(MS_TO_TICKS(100));
                 blink(100);
+                tx_thread_sleep(MS_TO_TICKS(100));
                 break;
                 
             case LED_RECORDING:
+                HAL_GPIO_WritePin(STATUS_LED_PORT, STATUS_LED_PIN, 1);
                 tx_thread_sleep(MS_TO_TICKS(100));
-                blink(50);
-                blink(50);
                 break;
             
             default:

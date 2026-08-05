@@ -70,6 +70,11 @@ static void MX_USART2_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+/* Wrapper so other modules pmic.c can re-init UART1 to solve residual voltage issue */
+void soc_uart_reinit(void)
+{
+    MX_USART1_UART_Init();
+}
 
 /* USER CODE END 0 */
 
