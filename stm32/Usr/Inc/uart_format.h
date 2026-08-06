@@ -18,7 +18,8 @@ typedef enum __attribute__((packed)) {
     REPLY_ERROR       = 2,
     REPLY_BUSY        = 3,
     REPLY_STARTING    = 4,   // powered on, SoC still booting / not yet recording
-    REPLY_INVALID_CMD = 5
+    REPLY_STOPPING    = 5,   // stop requested, SoC finalizing/unmounting the card
+    REPLY_INVALID_CMD = 6
 } status_t;
 
 #define IMU_FRAME_SOF 0xAA
@@ -46,9 +47,13 @@ typedef enum __attribute__((packed)) {
     SOC_RECORDING = 2,
     SOC_STOPPED   = 3,
     SOC_ERROR     = 4,
-    // Sent once, as the SoC supervisor's last act: the recording is finished and
-    // everything is flushed to the SD card, so the rails can be cut safely.
-    SOC_COMPLETE  = 5
+    // The IMU stream stopped (FC requested a stop, or the recording ran to its
+    // frame limit): the SoC is saving the partial file and unmounting the card.
+    SOC_STOPPING  = 5,
+    // Sent once that is done, as the supervisor's last act: everything is flushed
+    // to the SD card, so the rails can be cut safely. Highest value, so a range
+    // check up to it accepts every state.
+    SOC_COMPLETE  = 6
 } soc_status_t;
 
 _Static_assert(sizeof(command_t)    == 1, "command_t must be 1 byte");

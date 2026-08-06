@@ -1,3 +1,5 @@
+// v2, 2026-08-05
+
 #include "camera_driver.h"
 
 static UART_HandleTypeDef *__camera_e_to_huart(camera_e cam)

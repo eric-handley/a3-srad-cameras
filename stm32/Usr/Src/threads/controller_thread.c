@@ -15,12 +15,20 @@
 // Max gap between heartbeats once the SoC is up; must exceed the supervisor's
 // heartbeat interval.
 #define SOC_HEARTBEAT_TIMEOUT_MS 3000
+// Upper bound on a graceful stop: we normally cut power when the SoC reports
+// SOC_COMPLETE, but if that never comes (some wedged edge case) we cut it anyway
+// rather than wait forever.
+#define SOC_STOP_TIMEOUT_MS 60000
 
 static bool soc_powered = false;
 static soc_mode_t soc_mode = SOC_MODE_RECORD;
 static bool heartbeat_seen = false;
 static soc_status_t cached_heartbeat = SOC_STOPPED;
 static ULONG last_heartbeat_time = 0;
+// Set while a graceful stop is in progress: we have stopped streaming IMU frames
+// and are waiting for the SoC to finish saving and report SOC_COMPLETE.
+static bool soc_stopping = false;
+static ULONG stop_request_time = 0;
 
 static volatile HAL_StatusTypeDef last_soc_tx = HAL_OK;
 static volatile HAL_StatusTypeDef last_fc_tx  = HAL_OK;
@@ -28,6 +36,13 @@ static volatile HAL_StatusTypeDef last_fc_tx  = HAL_OK;
 static status_t current_status(void) {
     if (!soc_powered) {
         return REPLY_STOPPED;
+    }
+
+    if (soc_stopping) {
+        // We asked the SoC to stop and are letting it finalize the card. Report
+        // STOPPING regardless of the last heartbeat, unless it faulted; the
+        // heartbeat timeout doesn't apply here (SOC_STOP_TIMEOUT_MS bounds it).
+        return (cached_heartbeat == SOC_ERROR) ? REPLY_ERROR : REPLY_STOPPING;
     }
 
     if (soc_mode == SOC_MODE_IDLE) {
@@ -49,6 +64,7 @@ static status_t current_status(void) {
 
     switch (cached_heartbeat) {
         case SOC_RECORDING: return REPLY_RECORDING;
+        case SOC_STOPPING:  return REPLY_STOPPING;
         case SOC_STOPPED:   return REPLY_STOPPED;
         case SOC_ERROR:     return REPLY_ERROR;
         case SOC_INIT:
@@ -73,18 +89,16 @@ static bool soc_start(void) {
 }
 
 VOID controller_thread(ULONG thread_input) {
-    imu_data_t   imu_data;
+    imu_data_t   imu_data = {0};
     command_t    fc_cmd;
     soc_status_t soc_hb;
 
     imu_frame_t  imu_frame = { .sof = IMU_FRAME_SOF };
 
     while (true) {
-        bool new_imu_data = false;
-
-        // Drain queue to get latest IMU sample only, even if there are multiple
+        // Drain queue to get latest IMU sample only, even if there are multiple.
+        // imu_data keeps its previous value if none arrived this loop.
         while (tx_queue_receive(&imu_data_queue_handle, &imu_data, TX_NO_WAIT) == TX_SUCCESS) {
-            new_imu_data = true;
         }
 
         // Clear any stale error flags so a prior overrun/framing glitch cannot wedge
@@ -117,9 +131,20 @@ VOID controller_thread(ULONG thread_input) {
                 // (which would look like a fault). Back to baseline state.
                 soc_disable();
                 soc_powered = false;
+                soc_stopping = false;
                 heartbeat_seen = false;
                 cached_heartbeat = SOC_STOPPED;
             }
+        }
+
+        // Bound the graceful stop: if the SoC never reports COMPLETE, cut power
+        // once we've waited long enough rather than hang in STOPPING forever.
+        if (soc_stopping && (tx_time_get() - stop_request_time) > MS_TO_TICKS(SOC_STOP_TIMEOUT_MS)) {
+            soc_disable();
+            soc_powered = false;
+            soc_stopping = false;
+            heartbeat_seen = false;
+            cached_heartbeat = SOC_STOPPED;
         }
 
         status_t fc_reply;
@@ -136,6 +161,7 @@ VOID controller_thread(ULONG thread_input) {
                     // IMU frames (RECORD) or stay silent (IDLE).
                     soc_mode = (fc_cmd == CMD_IDLE_CAM) ? SOC_MODE_IDLE : SOC_MODE_RECORD;
                     heartbeat_seen = false;
+                    soc_stopping = false;
                     cached_heartbeat = SOC_INIT;
                     soc_powered = soc_start();
                     if (soc_powered) {
@@ -145,12 +171,30 @@ VOID controller_thread(ULONG thread_input) {
                     break;
 
                 case CMD_STOP_CAM:
-                    // Fully disable the PMIC and reset all state to baseline
-                    soc_disable();
-                    soc_powered = false;
-                    heartbeat_seen = false;
-                    cached_heartbeat = SOC_STOPPED;
-                    fc_reply = REPLY_STOPPED;
+                    if (!soc_powered) {
+                        // Nothing to stop.
+                        fc_reply = REPLY_STOPPED;
+                    } else if (soc_mode == SOC_MODE_RECORD) {
+                        // Graceful stop: stop streaming IMU frames so the SoC sees
+                        // the stream go quiet, saves the partial recording and
+                        // unmounts the card, then reports COMPLETE (where we cut
+                        // power).
+                        if (!soc_stopping) {
+                            soc_stopping = true;
+                            stop_request_time = tx_time_get();
+                        }
+                        fc_reply = REPLY_STOPPING;
+                    } else {
+                        // Idle: not recording, and the supervisor already exited at
+                        // boot, so nothing will ever send COMPLETE. Cut power now
+                        // instead of waiting out the graceful-stop timeout.
+                        soc_disable();
+                        soc_powered = false;
+                        soc_stopping = false;
+                        heartbeat_seen = false;
+                        cached_heartbeat = SOC_STOPPED;
+                        fc_reply = REPLY_STOPPED;
+                    }
                     break;
 
                 case CMD_GET_STATUS:
@@ -173,9 +217,11 @@ VOID controller_thread(ULONG thread_input) {
         }
 
         #ifdef EN_FC_COMMS
-        // Streaming IS the record signal: in IDLE we stay silent so the SoC
-        // boots serviceable (no recording, no heartbeat expected).
-        if (soc_powered && soc_mode == SOC_MODE_RECORD && new_imu_data) {
+        // Streaming IS the record signal, and its absence is the stop signal: we
+        // send a frame every loop while recording (even reusing the last sample
+        // if none arrived this loop), stay silent in IDLE, and stop entirely once
+        // a graceful stop begins so the SoC detects the quiet and finalizes.
+        if (soc_powered && soc_mode == SOC_MODE_RECORD && !soc_stopping) {
             imu_frame.imu = imu_data;
             for (int i = 0; i < UART_TX_RETRIES; i++) {
                 last_soc_tx = HAL_UART_Transmit(&SOC_UART, (uint8_t*)&imu_frame, sizeof(imu_frame_t), UART_TX_TIMEOUT_MS);
