@@ -18,7 +18,7 @@
 // Upper bound on a graceful stop: we normally cut power when the SoC reports
 // SOC_COMPLETE, but if that never comes (some wedged edge case) we cut it anyway
 // rather than wait forever.
-#define SOC_STOP_TIMEOUT_MS 60000
+#define SOC_STOP_TIMEOUT_MS 30000
 
 static bool soc_powered = false;
 static soc_mode_t soc_mode = SOC_MODE_RECORD;

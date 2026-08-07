@@ -46,8 +46,8 @@ typedef enum {
 } camera_e;
 
 // Double check that packets have the correct size so they can be decoded by cameras
-_Static_assert(sizeof(cam_command_t)    == 1, "cam_command_t must be 1 byte");
-_Static_assert(sizeof(cam_status_t)     == 1, "cam_status_t must be 1 byte");
+_Static_assert(sizeof(cam_command_t) == 1, "cam_command_t must be 1 byte");
+_Static_assert(sizeof(cam_status_t)  == 1, "cam_status_t must be 1 byte");
 
 // Start camera c. Should return cam_status_t::REPLY_STARTING
 // Should then check status periodically until cam_status_t::REPLY_RECORDING is seen

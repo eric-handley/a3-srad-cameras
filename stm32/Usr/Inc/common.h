@@ -46,7 +46,7 @@ extern LED_Status_T LED_STATUS;
 /*
     @brief Error catching macro. Returns stdbool::false if expected value is not returned (exits function)
 */
-#define ASSERT(expected, call) \
+#define assert_eq(expected, call) \
     do { \
         int32_t ret = (call); \
         if (ret != (expected)) { \

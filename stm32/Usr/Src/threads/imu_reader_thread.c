@@ -56,7 +56,7 @@ bool imu_init(void) {
     dev_ctx.handle = &IMU_I2C;
 
     // Check device ID
-    ASSERT(0, lsm6dsr_device_id_get(&dev_ctx, &whoami));
+    assert_eq(0, lsm6dsr_device_id_get(&dev_ctx, &whoami));
 
     if (whoami != LSM6DSR_ID) {
         debug("[IMU]\tWrong device ID\r\n");
@@ -66,26 +66,26 @@ bool imu_init(void) {
     debug("[IMU]\tLSM6DSR detected\r\n");
 
     // Restore default configuration
-    ASSERT(0, lsm6dsr_reset_set(&dev_ctx, PROPERTY_ENABLE));
+    assert_eq(0, lsm6dsr_reset_set(&dev_ctx, PROPERTY_ENABLE));
     
     do {
         lsm6dsr_reset_get(&dev_ctx, &whoami);
     } while (whoami);
 
     // Enable Block Data Update
-    ASSERT(0, lsm6dsr_block_data_update_set(&dev_ctx, PROPERTY_ENABLE));
+    assert_eq(0, lsm6dsr_block_data_update_set(&dev_ctx, PROPERTY_ENABLE));
 
     // Set accelerometer full scale to ±2g
-    ASSERT(0, lsm6dsr_xl_full_scale_set(&dev_ctx, LSM6DSR_2g));
+    assert_eq(0, lsm6dsr_xl_full_scale_set(&dev_ctx, LSM6DSR_2g));
 
     // Set gyroscope full scale to ±2000dps
-    ASSERT(0, lsm6dsr_gy_full_scale_set(&dev_ctx, LSM6DSR_2000dps));
+    assert_eq(0, lsm6dsr_gy_full_scale_set(&dev_ctx, LSM6DSR_2000dps));
 
     // Set accelerometer output data rate to 104 Hz
-    ASSERT(0, lsm6dsr_xl_data_rate_set(&dev_ctx, LSM6DSR_XL_ODR_104Hz));
+    assert_eq(0, lsm6dsr_xl_data_rate_set(&dev_ctx, LSM6DSR_XL_ODR_104Hz));
 
     // Set gyroscope output data rate to 104 Hz
-    ASSERT(0, lsm6dsr_gy_data_rate_set(&dev_ctx, LSM6DSR_GY_ODR_104Hz));
+    assert_eq(0, lsm6dsr_gy_data_rate_set(&dev_ctx, LSM6DSR_GY_ODR_104Hz));
 
     debug("[IMU]\tInitialization complete\r\n");
     return true;
