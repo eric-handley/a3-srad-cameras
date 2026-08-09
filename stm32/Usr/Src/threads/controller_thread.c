@@ -29,6 +29,10 @@ static ULONG last_heartbeat_time = 0;
 // and are waiting for the SoC to finish saving and report SOC_COMPLETE.
 static bool soc_stopping = false;
 static ULONG stop_request_time = 0;
+// Set once the SoC reports SOC_IDLE: it has parked with /data read-only, so we
+// stop streaming IDLE frames and just keep watching the heartbeat until power
+// is cut. Reset on each new start/idle command.
+static bool soc_idle_acked = false;
 
 static volatile HAL_StatusTypeDef last_soc_tx = HAL_OK;
 static volatile HAL_StatusTypeDef last_fc_tx  = HAL_OK;
@@ -43,12 +47,6 @@ static status_t current_status(void) {
         // STOPPING regardless of the last heartbeat, unless it faulted; the
         // heartbeat timeout doesn't apply here (SOC_STOP_TIMEOUT_MS bounds it).
         return (cached_heartbeat == SOC_ERROR) ? REPLY_ERROR : REPLY_STOPPING;
-    }
-
-    if (soc_mode == SOC_MODE_IDLE) {
-        // The supervisor exits immediately in idle mode, so there is no
-        // heartbeat to wait for or time out. Powered but not recording.
-        return REPLY_STOPPED;
     }
 
     ULONG elapsed = tx_time_get() - last_heartbeat_time;
@@ -66,6 +64,7 @@ static status_t current_status(void) {
         case SOC_RECORDING: return REPLY_RECORDING;
         case SOC_STOPPING:  return REPLY_STOPPING;
         case SOC_STOPPED:   return REPLY_STOPPED;
+        case SOC_IDLE:      return REPLY_STOPPED;
         case SOC_ERROR:     return REPLY_ERROR;
         case SOC_INIT:
         default:            return REPLY_STARTING;
@@ -120,10 +119,17 @@ VOID controller_thread(ULONG thread_input) {
         }
         #endif
 
-        if (new_heartbeat && soc_hb >= SOC_INIT && soc_hb <= SOC_COMPLETE) {
+        if (new_heartbeat && soc_hb >= SOC_INIT && soc_hb <= SOC_IDLE) {
             cached_heartbeat = soc_hb;
             last_heartbeat_time = tx_time_get();
             heartbeat_seen = true;
+
+            if (soc_hb == SOC_IDLE) {
+                // SoC has parked in idle (/data read-only). Stop streaming IDLE
+                // frames; stay powered and keep watching the heartbeat until a
+                // CMD_STOP cuts power.
+                soc_idle_acked = true;
+            }
 
             if (soc_hb == SOC_COMPLETE) {
                 // The SoC is done recording and has synced the card, so cut the
@@ -162,6 +168,7 @@ VOID controller_thread(ULONG thread_input) {
                     soc_mode = (fc_cmd == CMD_IDLE_CAM) ? SOC_MODE_IDLE : SOC_MODE_RECORD;
                     heartbeat_seen = false;
                     soc_stopping = false;
+                    soc_idle_acked = false;
                     cached_heartbeat = SOC_INIT;
                     soc_powered = soc_start();
                     if (soc_powered) {
@@ -217,15 +224,29 @@ VOID controller_thread(ULONG thread_input) {
         }
 
         #ifdef EN_FC_COMMS
-        // Streaming IS the record signal, and its absence is the stop signal: we
-        // send a frame every loop while recording (even reusing the last sample
-        // if none arrived this loop), stay silent in IDLE, and stop entirely once
-        // a graceful stop begins so the SoC detects the quiet and finalizes.
-        if (soc_powered && soc_mode == SOC_MODE_RECORD && !soc_stopping) {
-            imu_frame.imu = imu_data;
-            for (int i = 0; i < UART_TX_RETRIES; i++) {
-                last_soc_tx = HAL_UART_Transmit(&SOC_UART, (uint8_t*)&imu_frame, sizeof(imu_frame_t), UART_TX_TIMEOUT_MS);
-                if (last_soc_tx == HAL_OK) break;
+        // We stream a tagged IMU frame every loop while powered (reusing the last
+        // sample if none arrived this loop). The tag is the record/idle/stop
+        // signal: STOP while a graceful stop is in progress, IDLE in idle mode
+        // until the SoC acks (SOC_IDLE), otherwise RECORD. In idle we go quiet
+        // once acked -- the SoC stays parked and we just watch the heartbeat.
+        if (soc_powered) {
+            frame_cmd_t tag;
+            bool send_frame = true;
+            if (soc_stopping) {
+                tag = FRAME_CMD_STOP;
+            } else if (soc_mode == SOC_MODE_IDLE) {
+                tag = FRAME_CMD_IDLE;
+                send_frame = !soc_idle_acked;
+            } else {
+                tag = FRAME_CMD_RECORD;
+            }
+            if (send_frame) {
+                imu_frame.cmd = tag;
+                imu_frame.imu = imu_data;
+                for (int i = 0; i < UART_TX_RETRIES; i++) {
+                    last_soc_tx = HAL_UART_Transmit(&SOC_UART, (uint8_t*)&imu_frame, sizeof(imu_frame_t), UART_TX_TIMEOUT_MS);
+                    if (last_soc_tx == HAL_OK) break;
+                }
             }
         }
 

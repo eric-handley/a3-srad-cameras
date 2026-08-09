@@ -24,18 +24,27 @@ typedef enum __attribute__((packed)) {
 
 #define IMU_FRAME_SOF 0xAA
 
-// What the stm32 wants the SoC doing. stm32-internal only: it is no longer put
-// on the wire. The stream itself is the signal -- the stm32 streams IMU frames
-// in RECORD and stays silent in IDLE, and the SoC records iff frames arrive.
+// stm32-internal record/idle state; drives which command tag the frames carry.
 typedef enum __attribute__((packed)) {
     SOC_MODE_RECORD = 1,
     SOC_MODE_IDLE   = 2
 } soc_mode_t;
 
+// stm32 -> SoC: per-frame command carried in every IMU frame. The stream is
+// continuous now; this tag is the record/idle/stop signal. The SoC treats no
+// frames or an unrecognized tag as RECORD (fail toward capturing).
+typedef enum __attribute__((packed)) {
+    FRAME_CMD_RECORD = 1,
+    FRAME_CMD_IDLE   = 2,
+    FRAME_CMD_STOP   = 3
+} frame_cmd_t;
+
 // stm32 -> SoC: continuous IMU stream, one frame per controller loop. The sync
-// byte lets the SoC realign to a frame boundary after any dropped byte.
+// byte lets the SoC realign to a frame boundary after any dropped byte; cmd
+// carries the current frame_cmd_t.
 typedef struct __attribute__((packed)) {
     uint8_t    sof;   // IMU_FRAME_SOF
+    uint8_t    cmd;   // frame_cmd_t
     imu_data_t imu;
 } imu_frame_t;
 
@@ -51,11 +60,15 @@ typedef enum __attribute__((packed)) {
     // frame limit): the SoC is saving the partial file and unmounting the card.
     SOC_STOPPING  = 5,
     // Sent once that is done, as the supervisor's last act: everything is flushed
-    // to the SD card, so the rails can be cut safely. Highest value, so a range
-    // check up to it accepts every state.
-    SOC_COMPLETE  = 6
+    // to the SD card, so the rails can be cut safely.
+    SOC_COMPLETE  = 6,
+    // Idle mode is active: /data is remounted read-only and the SoC is parked,
+    // safe to cut power at any time. The stm32 stops streaming once it sees this.
+    // Highest value, so a range check up to it accepts every state.
+    SOC_IDLE      = 7
 } soc_status_t;
 
 _Static_assert(sizeof(command_t)    == 1, "command_t must be 1 byte");
 _Static_assert(sizeof(status_t)     == 1, "status_t must be 1 byte");
 _Static_assert(sizeof(soc_status_t) == 1, "soc_status_t must be 1 byte");
+_Static_assert(sizeof(frame_cmd_t)  == 1, "frame_cmd_t must be 1 byte");
