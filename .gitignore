@@ -6,3 +6,6 @@ kicad/*.bak
 kicad/production
 
 .ignore/
+
+capture-test*/
+audio-test/
