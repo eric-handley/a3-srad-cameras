@@ -11,14 +11,14 @@
 #define SOC_START_BACKOFF_MS 100
 
 // Grace period after power-on for the SoC to boot and send its first heartbeat.
-#define SOC_BOOT_TIMEOUT_MS 30000
+#define SOC_BOOT_TIMEOUT_MS 40000
 // Max gap between heartbeats once the SoC is up; must exceed the supervisor's
 // heartbeat interval.
 #define SOC_HEARTBEAT_TIMEOUT_MS 3000
 // Upper bound on a graceful stop: we normally cut power when the SoC reports
 // SOC_COMPLETE, but if that never comes (some wedged edge case) we cut it anyway
 // rather than wait forever.
-#define SOC_STOP_TIMEOUT_MS 30000
+#define SOC_STOP_TIMEOUT_MS 20000
 
 static bool soc_powered = false;
 static soc_mode_t soc_mode = SOC_MODE_RECORD;
@@ -33,20 +33,40 @@ static ULONG stop_request_time = 0;
 // stop streaming IDLE frames and just keep watching the heartbeat until power
 // is cut. Reset on each new start/idle command.
 static bool soc_idle_acked = false;
+// A start/idle command received while the SoC is still powered is deferred: we
+// gracefully stop the running session first, then power on in this mode once the
+// rails are cut. pending_start gates it; pending_mode is the mode to start in.
+static bool pending_start = false;
+static soc_mode_t pending_mode = SOC_MODE_RECORD;
 
 static volatile HAL_StatusTypeDef last_soc_tx = HAL_OK;
 static volatile HAL_StatusTypeDef last_fc_tx  = HAL_OK;
 
 static status_t current_status(void) {
+    if (cached_heartbeat == SOC_ERROR) {
+        // The SoC faulted, or a power-on attempt failed (controller_start latches
+        // SOC_ERROR here). Report ERROR until the next start/idle command clears
+        // it, so the direct and deferred-restart paths surface failures the same
+        // way. Checked first so it overrides pending_start/soc_stopping below.
+        return REPLY_ERROR;
+    }
+
+    if (pending_start) {
+        // A restart is in progress: we are gracefully stopping the old session
+        // before powering back up. Report STARTING for the whole operation so
+        // the FC sees its start request as in-flight rather than a stop.
+        return REPLY_STARTING;
+    }
+
     if (!soc_powered) {
         return REPLY_STOPPED;
     }
 
     if (soc_stopping) {
         // We asked the SoC to stop and are letting it finalize the card. Report
-        // STOPPING regardless of the last heartbeat, unless it faulted; the
-        // heartbeat timeout doesn't apply here (SOC_STOP_TIMEOUT_MS bounds it).
-        return (cached_heartbeat == SOC_ERROR) ? REPLY_ERROR : REPLY_STOPPING;
+        // STOPPING regardless of the last heartbeat; the heartbeat timeout
+        // doesn't apply here (SOC_STOP_TIMEOUT_MS bounds it).
+        return REPLY_STOPPING;
     }
 
     ULONG elapsed = tx_time_get() - last_heartbeat_time;
@@ -85,6 +105,49 @@ static bool soc_start(void) {
         tx_thread_sleep(MS_TO_TICKS(SOC_START_BACKOFF_MS << attempt));
     }
     return false;
+}
+
+// Cut the rails and return to the baseline stopped state.
+static void soc_power_off(void) {
+    soc_disable();
+    soc_powered = false;
+    soc_stopping = false;
+    heartbeat_seen = false;
+    cached_heartbeat = SOC_STOPPED;
+}
+
+// Begin a graceful stop of the running session (idempotent). In RECORD mode we
+// tag the frames FRAME_CMD_STOP so the SoC saves the partial recording and
+// unmounts the card, then reports COMPLETE (where we cut power). Otherwise there
+// is nothing to finalize -- IDLE has already parked, and an off/failed SoC has no
+// session at all -- so drop straight to the baseline stopped state (which also
+// clears any latched start-failure error).
+static void soc_begin_stop(void) {
+    if (soc_powered && soc_mode == SOC_MODE_RECORD) {
+        if (!soc_stopping) {
+            soc_stopping = true;
+            stop_request_time = tx_time_get();
+        }
+    } else {
+        soc_power_off();
+    }
+}
+
+// Power on the SoC in the given mode and return the resulting status. On failure
+// we latch SOC_ERROR into cached_heartbeat so current_status() reports the
+// failure whether the caller uses the return value (direct start) or polls later
+// (deferred restart, whose return value is discarded).
+static status_t controller_start(soc_mode_t mode) {
+    soc_mode = mode;
+    heartbeat_seen = false;
+    soc_stopping = false;
+    soc_idle_acked = false;
+    soc_powered = soc_start();
+    cached_heartbeat = soc_powered ? SOC_INIT : SOC_ERROR;
+    if (soc_powered) {
+        last_heartbeat_time = tx_time_get();
+    }
+    return current_status();
 }
 
 VOID controller_thread(ULONG thread_input) {
@@ -135,22 +198,22 @@ VOID controller_thread(ULONG thread_input) {
                 // The SoC is done recording and has synced the card, so cut the
                 // rails ourselves rather than letting its heartbeat time out
                 // (which would look like a fault). Back to baseline state.
-                soc_disable();
-                soc_powered = false;
-                soc_stopping = false;
-                heartbeat_seen = false;
-                cached_heartbeat = SOC_STOPPED;
+                soc_power_off();
             }
         }
 
         // Bound the graceful stop: if the SoC never reports COMPLETE, cut power
         // once we've waited long enough rather than hang in STOPPING forever.
         if (soc_stopping && (tx_time_get() - stop_request_time) > MS_TO_TICKS(SOC_STOP_TIMEOUT_MS)) {
-            soc_disable();
-            soc_powered = false;
-            soc_stopping = false;
-            heartbeat_seen = false;
-            cached_heartbeat = SOC_STOPPED;
+            soc_power_off();
+        }
+
+        // A start/idle command that arrived while the SoC was still powered was
+        // deferred behind a graceful stop. Now that the rails are cut, bring it
+        // back up in the requested mode.
+        if (pending_start && !soc_powered) {
+            pending_start = false;
+            controller_start(pending_mode);
         }
 
         status_t fc_reply;
@@ -161,47 +224,31 @@ VOID controller_thread(ULONG thread_input) {
 
             switch (fc_cmd) {
                 case CMD_START_CAM:
-                case CMD_IDLE_CAM:
-                    // soc_start() power-cycles the PMIC, so either command recovers
-                    // from any state; the only difference is whether we then stream
-                    // IMU frames (RECORD) or stay silent (IDLE).
-                    soc_mode = (fc_cmd == CMD_IDLE_CAM) ? SOC_MODE_IDLE : SOC_MODE_RECORD;
-                    heartbeat_seen = false;
-                    soc_stopping = false;
-                    soc_idle_acked = false;
-                    cached_heartbeat = SOC_INIT;
-                    soc_powered = soc_start();
-                    if (soc_powered) {
-                        last_heartbeat_time = tx_time_get();
+                case CMD_IDLE_CAM: {
+                    soc_mode_t mode = (fc_cmd == CMD_IDLE_CAM) ? SOC_MODE_IDLE : SOC_MODE_RECORD;
+                    if (!soc_powered) {
+                        // Idle rails: power on directly.
+                        fc_reply = controller_start(mode);
+                    } else {
+                        // Already starting/recording/stopping: don't yank power out
+                        // from under an active session. Gracefully stop first, then
+                        // let the pending-start dispatch power back up in this mode
+                        // once the rails are cut.
+                        pending_start = true;
+                        pending_mode = mode;
+                        soc_begin_stop();
+                        fc_reply = current_status();
                     }
-                    fc_reply = soc_powered ? current_status() : REPLY_ERROR;
                     break;
+                }
 
                 case CMD_STOP_CAM:
-                    if (!soc_powered) {
-                        // Nothing to stop.
-                        fc_reply = REPLY_STOPPED;
-                    } else if (soc_mode == SOC_MODE_RECORD) {
-                        // Graceful stop: stop streaming IMU frames so the SoC sees
-                        // the stream go quiet, saves the partial recording and
-                        // unmounts the card, then reports COMPLETE (where we cut
-                        // power).
-                        if (!soc_stopping) {
-                            soc_stopping = true;
-                            stop_request_time = tx_time_get();
-                        }
-                        fc_reply = REPLY_STOPPING;
-                    } else {
-                        // Idle: not recording, and the supervisor already exited at
-                        // boot, so nothing will ever send COMPLETE. Cut power now
-                        // instead of waiting out the graceful-stop timeout.
-                        soc_disable();
-                        soc_powered = false;
-                        soc_stopping = false;
-                        heartbeat_seen = false;
-                        cached_heartbeat = SOC_STOPPED;
-                        fc_reply = REPLY_STOPPED;
-                    }
+                    // A stop cancels any deferred restart. soc_begin_stop cuts
+                    // power immediately in idle, or starts the graceful stop while
+                    // recording; if already stopped it is a no-op.
+                    pending_start = false;
+                    soc_begin_stop();
+                    fc_reply = (soc_powered && soc_mode == SOC_MODE_RECORD) ? REPLY_STOPPING : REPLY_STOPPED;
                     break;
 
                 case CMD_GET_STATUS:
@@ -217,7 +264,7 @@ VOID controller_thread(ULONG thread_input) {
         status_t led_status = current_status();
         if (led_status == REPLY_ERROR || (send_fc_reply && fc_reply == REPLY_ERROR)) {
             LED_STATUS = LED_ERROR;
-        } else if (led_status == REPLY_RECORDING) {
+        } else if (led_status == REPLY_RECORDING || led_status == REPLY_STOPPING) {
             LED_STATUS = LED_RECORDING;
         } else {
             LED_STATUS = LED_NOMINAL;
