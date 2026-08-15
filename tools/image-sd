@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+#
+# image-sd - dd an entire board SD card to a raw binary image file.
+#
+# Read-only clone of the whole device (all partitions, in order) to a single
+# .img file. It NEVER mounts, writes to, or otherwise modifies the card -- the
+# only access is a sequential read via dd -- so imaging cannot affect the data.
+# As a guard against pointing at the wrong disk it refuses any device that is
+# not roughly 32GB.
+#
+# Usage: ./image-sd <device> [output.img]
+
+set -euo pipefail
+
+EXPECT_GB=32            # expected card size, decimal GB (1 GB = 1e9 bytes)
+TOLERANCE_GB=5          # accepted +/- deviation from EXPECT_GB
+BS="4M"                 # dd block size
+
+usage() {
+    cat >&2 <<EOF
+Usage: $(basename "$0") <device> [output.img]
+
+Read-only dd of an entire SD card to a raw image file.
+
+  device       device NAME under /dev to image, e.g. 'mmcblk0' or 'sde'
+  output.img   destination file (default: ./<device>-<YYYYmmdd-HHMMSS>.img)
+
+The device must be ~${EXPECT_GB}GB (+/- ${TOLERANCE_GB}GB) or the script aborts,
+as a guard against imaging the wrong disk.
+EOF
+    exit 1
+}
+
+case "${1:-}" in ""|-h|--help|help) usage ;; esac
+[ "$#" -ge 1 ] && [ "$#" -le 2 ] || usage
+
+dev_name="$1"
+device="/dev/$dev_name"
+out="${2:-./${dev_name}-$(date +%Y%m%d-%H%M%S).img}"
+
+if [ ! -b "$device" ]; then
+    echo "error: $device is not a block device" >&2
+    echo >&2
+    usage
+fi
+
+# Size guard: refuse anything that isn't ~EXPECT_GB. Cheap protection against
+# aiming at the system disk (typically far larger) or a wrong small card.
+size_bytes=$(sudo blockdev --getsize64 "$device")
+min_bytes=$(( (EXPECT_GB - TOLERANCE_GB) * 1000000000 ))
+max_bytes=$(( (EXPECT_GB + TOLERANCE_GB) * 1000000000 ))
+size_gb=$(awk "BEGIN{printf \"%.2f\", $size_bytes/1e9}")
+
+if [ "$size_bytes" -lt "$min_bytes" ] || [ "$size_bytes" -gt "$max_bytes" ]; then
+    echo "error: $device is ${size_gb}GB, expected ~${EXPECT_GB}GB" \
+         "(+/- ${TOLERANCE_GB}GB). Refusing -- wrong device?" >&2
+    exit 1
+fi
+
+echo "Imaging $device (${size_gb}GB, read-only) -> $out"
+# Read-only: 'if=' is the source, output goes to the file. The card is never
+# mounted or written. iflag=direct bypasses the page cache on the read side.
+sudo dd if="$device" of="$out" bs="$BS" status=progress iflag=direct conv=noerror,sync
+sync
+echo "done -> $out"

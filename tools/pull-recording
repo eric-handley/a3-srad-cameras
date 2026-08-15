@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+# pull-recording - fetch a recording directory from the board over scp.
+#
+# Pulls a directory under /data on the board (e.g. 'latest' -> /data/latest)
+# into the local output dir, and always also fetches the two base logs
+# /data/supervisor.log and /data/recordings.log.
+#
+# Usage: ./pull-recording latest
+#        ./pull-recording <dirname>     # fetches /data/<dirname>
+
+set -euo pipefail
+
+# ============================================================================
+# CONFIG
+# ============================================================================
+CAM_IP="172.32.0.1"     # board's IP on the USB-ethernet link
+CAM_USER="root"         # ssh/scp user on the board
+DATA_DIR="/data"        # base data directory on the board
+OUTDIR="."              # local destination directory
+# ============================================================================
+
+usage() {
+    cat >&2 <<EOF
+Usage: $(basename "$0") <dir>
+
+Pull a recording directory from ${CAM_USER}@${CAM_IP}:${DATA_DIR} over scp.
+
+  <dir>   directory under $DATA_DIR to fetch, e.g.
+            latest   -> ${DATA_DIR}/latest (/data/latest is a symlink for the most recent recording)
+            xyz      -> ${DATA_DIR}/xyz
+
+Every run also fetches ${DATA_DIR}/supervisor.log and ${DATA_DIR}/recordings.log.
+Must run ./ssh-cam at least once before this script to register the camera's USB interface properly!
+
+Config:
+  CAM_IP=$CAM_IP
+  CAM_USER=$CAM_USER
+  DATA_DIR=$DATA_DIR
+  OUTDIR=$OUTDIR
+EOF
+    exit 1
+}
+
+[ "$#" -eq 1 ] || usage
+
+dir="$1"
+remote="${CAM_USER}@${CAM_IP}"
+
+mkdir -p "$OUTDIR"
+
+# Suggest bringing up the link before giving up on a failed transfer.
+scp_failed() {
+    echo "error: scp of $1 failed - is the board reachable at ${CAM_IP}?" >&2
+    echo "try running ./ssh-cam first to bring up the camera link." >&2
+    exit 1
+}
+
+# -r so a run directory (or /data/latest, which is a symlink to one) works too
+echo "pulling ${DATA_DIR}/${dir} ..."
+scp -r "${remote}:${DATA_DIR}/${dir}" "$OUTDIR/" || scp_failed "${DATA_DIR}/${dir}"
+
+echo "pulling base logs ..."
+scp "${remote}:${DATA_DIR}/supervisor.log"  "$OUTDIR/" || echo "warning: supervisor.log not fetched" >&2
+scp "${remote}:${DATA_DIR}/recordings.log"  "$OUTDIR/" || echo "warning: recordings.log not fetched" >&2
+
+echo "done -> $OUTDIR"

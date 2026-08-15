@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+#
+# ssh-cam - bring up the camera's USB-ethernet link and ssh into the board.
+#
+# The board runs a fixed RNDIS gadget (host-side MAC is the same on every
+# board), so a single NetworkManager profile ($CAM_CONN) puts this host on the
+# camera network (172.32.0.70/24) and makes the board ($CAM_IP) reachable.
+# The profile is created the first time it's missing, then activated, then ssh'd
+# into. On ssh failure it clears the stale host key and retries once.
+#
+# Usage: ./ssh-cam
+
+set -uo pipefail
+
+# ============================================================================
+# CONFIG
+# ============================================================================
+CAM_IP="172.32.0.1"                 # board's IP on the USB-ethernet link
+CAM_USER="root"                     # ssh user on the board
+CAM_CONN="luckfox"                  # NetworkManager connection profile name
+HOST_ADDR="172.32.0.70/24"          # this host's IP on the cam network
+CAM_MAC="02:11:22:33:44:55"         # board's fixed RNDIS host-side MAC (same on
+                                    # every board) -- the profile is bound to it
+# ============================================================================
+
+usage() {
+    cat >&2 <<EOF
+Usage: $(basename "$0")
+
+Create (if missing) and activate the '$CAM_CONN' NetworkManager profile, then
+ssh into $CAM_USER@$CAM_IP. On connection failure the stale host key is removed
+and one retry is attempted.
+
+Requires: nmcli, ssh/ssh-keygen
+
+Config:
+  CAM_IP=$CAM_IP
+  CAM_USER=$CAM_USER
+  CAM_CONN=$CAM_CONN
+  HOST_ADDR=$HOST_ADDR
+  CAM_MAC=$CAM_MAC
+EOF
+    exit 1
+}
+
+[ "$#" -eq 0 ] || usage
+
+# Bring up the cam-network NM profile. The board appears as a USB ethernet
+# device; the profile is MAC-matched so it only binds when the board is present.
+register_device() {
+    if ! command -v nmcli >/dev/null 2>&1; then
+        echo "warning: nmcli not found, skipping device registration" >&2
+        return 0
+    fi
+    # create the profile the first time (MAC-matched, static host IP) so the
+    # script is self-sufficient on a fresh machine
+    if ! nmcli -t -f NAME con show 2>/dev/null | grep -qx "$CAM_CONN"; then
+        echo "creating NetworkManager profile '$CAM_CONN'..." >&2
+        nmcli con add type ethernet con-name "$CAM_CONN" \
+            802-3-ethernet.mac-address "$CAM_MAC" \
+            ipv4.method manual ipv4.addresses "$HOST_ADDR" >/dev/null 2>&1 || {
+            echo "warning: could not create '$CAM_CONN' (is NetworkManager running?)" >&2
+            return 0
+        }
+    fi
+    # already active -> nothing to do
+    if nmcli -t -f NAME con show --active 2>/dev/null | grep -qx "$CAM_CONN"; then
+        return 0
+    fi
+    echo "registering camera device ($CAM_CONN)..." >&2
+    nmcli con up "$CAM_CONN" >/dev/null 2>&1 || {
+        echo "warning: could not activate '$CAM_CONN' (is the board connected? is NetworkManager running?)" >&2
+    }
+}
+
+register_device
+
+echo "connecting to $CAM_USER@$CAM_IP..." >&2
+ssh "$CAM_USER@$CAM_IP"
+rc=$?
+
+if [ "$rc" -ne 0 ]; then
+    echo "ssh failed (exit $rc); clearing host key and retrying..." >&2
+    ssh-keygen -R "$CAM_IP" >/dev/null 2>&1 || true
+    ssh "$CAM_USER@$CAM_IP"
+    rc=$?
+fi
+
+exit "$rc"

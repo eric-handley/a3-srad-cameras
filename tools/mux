@@ -1,0 +1,137 @@
+#!/usr/bin/env bash
+#
+# mux - mux a captured recording folder (video + audio + pts) into an mp4.
+#
+# Ports the capture-test-logs/capture_test.sh mux_file logic (which differs
+# slightly from the luckfox-sdk justfile 'mux'): it prefers true variable frame
+# timing from vicap's per-frame PTS sidecar via mkvmerge, and falls back to a
+# constant 60fps mux for older captures with no sidecar. Audio is aligned by the
+# SYNC_START_US stamps each stream logs and taken from the LEFT ADC (mono AAC).
+#
+# Usage: ./mux <folder>
+
+set -euo pipefail
+
+# ============================================================================
+# CONFIG
+# ============================================================================
+FPS=60              # assumed rate for the constant-framerate fallback path
+AV_SKEW_MS=190      # fixed residual after stamp alignment (encoder pipeline
+                    # latency + ALSA-open latency). Positive delays the audio.
+# ============================================================================
+
+usage() {
+    cat >&2 <<EOF
+Usage: $(basename "$0") <folder>
+
+Mux a recording folder into an mp4. Within <folder> it looks for:
+  video.h265             raw HEVC elementary stream
+  audio.wav              mic sidecar
+  video.pts              per-frame PTS
+  vicap.log / audio.log  SYNC_START_US stamps for A/V alignment
+The output is written next to the video as <video>.mp4.
+
+Requires: ffmpeg, mkvmerge
+EOF
+    exit 1
+}
+
+[ "$#" -eq 1 ] || usage
+[ -d "$1" ] || { echo "error: '$1' is not a directory" >&2; usage; }
+
+folder="${1%/}"
+
+# Mux one video stream (+ matching audio/pts sidecars) into $dst.
+mux_file() {
+    local src="$1" dst="$2"
+    local dir="${src%/*}"
+    local base="${src##*/}"            # video.h265 or video.1.h265
+    local mid="${base#video}"          # .h265 or .1.h265
+    local tag="${mid%.h265}"           # "" or ".1"
+    local audio="$dir/audio$tag.wav"
+    local pts="$dir/video$tag.pts"     # per-frame PTS sidecar (us/line) from vicap
+
+    # Audio-start alignment vs video start, from the SYNC_START_US=<CLOCK_MONOTONIC
+    # us> stamps each stream logs (vicap at its first encoded frame, the supervisor
+    # at tinycap launch). Sets $ss (trim seconds, audio earlier) or $pre (adelay
+    # filter fragment, audio later). Shared by both timing paths below.
+    local vlog="$dir/vicap$tag.log" alog="$dir/audio$tag.log"
+    local vs as off ss=0 pre="" av_skew_ms=$AV_SKEW_MS
+    vs=$(grep -oE 'SYNC_START_US=[0-9]+' "$vlog" 2>/dev/null | head -1 | cut -d= -f2)
+    as=$(grep -oE 'SYNC_START_US=[0-9]+' "$alog" 2>/dev/null | head -1 | cut -d= -f2)
+    if [ -n "$vs" ] && [ -n "$as" ]; then
+        off=$((as - vs + av_skew_ms*1000))   # audio start vs video start, us
+        if [ "$off" -ge 0 ]; then
+            pre=",adelay=$(awk "BEGIN{print $off/1000}")"   # audio later -> delay (ms)
+        else
+            ss=$(awk "BEGIN{print -($off)/1000000}")        # audio earlier -> trim (s)
+        fi
+    fi
+
+    # Preferred: true variable frame timing from the PTS sidecar. Build v2
+    # timecodes (ms, zero-based) and let mkvmerge place each frame at its real
+    # capture time. mkvmerge writes Matroska only, so repackage to the requested
+    # .mp4 with ffmpeg (-c copy keeps the per-frame timestamps). Mic is on the LEFT
+    # ADC (c0) -> mono AAC, delayed/trimmed to align and padded/capped to the true
+    # video duration (last-first PTS).
+    _vfr_mux() {
+        command -v mkvmerge >/dev/null 2>&1 || return 1
+        [ -f "$pts" ] || return 1
+        local tc mkv atmp dur rc
+        tc=$(mktemp --suffix=.tc); mkv=$(mktemp --suffix=.mkv)
+        awk 'NR==1{b=$1; print "# timestamp format v2"} {printf "%.6f\n", ($1-b)/1000}' "$pts" > "$tc"
+        dur=$(awk 'NR==1{b=$1} {l=$1} END{printf "%.6f", (l-b)/1e6}' "$pts")
+        if [ -f "$audio" ]; then
+            atmp=$(mktemp --suffix=.m4a)
+            if ffmpeg -y -ss "$ss" -i "$audio" -af "pan=mono|c0=c0${pre},apad" \
+                    -c:a aac -t "$dur" "$atmp" \
+                    && mkvmerge -o "$mkv" --timestamps 0:"$tc" "$src" "$atmp"; then :
+            else rm -f "$tc" "$mkv" "$atmp"; return 1; fi
+            rm -f "$atmp"
+        else
+            mkvmerge -o "$mkv" --timestamps 0:"$tc" "$src" \
+                || { rm -f "$tc" "$mkv"; return 1; }
+        fi
+        ffmpeg -y -i "$mkv" -c copy -tag:v hvc1 "$dst"; rc=$?
+        rm -f "$tc" "$mkv"
+        return "$rc"
+    }
+
+    # Fallback for older captures with no sidecar: the raw stream carries no
+    # timing, so assume a constant FPS. video_only also catches an unusable wav.
+    _cfr_mux() {
+        video_only() { ffmpeg -y -r "$FPS" -i "$src" -c copy -r "$FPS" -video_track_timescale $((FPS*1000)) "$dst"; }
+        if [ -f "$audio" ]; then
+            local vpkts
+            vpkts=$(ffprobe -v error -select_streams v:0 -count_packets \
+                -show_entries stream=nb_read_packets -of csv=p=0 "$src" 2>/dev/null || echo "")
+            if [ -n "$vpkts" ]; then
+                ffmpeg -y -r "$FPS" -i "$src" -ss "$ss" -i "$audio" -c:v copy \
+                    -af "pan=mono|c0=c0${pre},apad" -c:a aac -t "$(awk "BEGIN{print $vpkts/$FPS}")" \
+                    -r "$FPS" -video_track_timescale $((FPS*1000)) "$dst" || video_only
+            else
+                ffmpeg -y -r "$FPS" -i "$src" -ss "$ss" -i "$audio" -c:v copy \
+                    -af "pan=mono|c0=c0${pre}" -c:a aac \
+                    -r "$FPS" -video_track_timescale $((FPS*1000)) "$dst" || video_only
+            fi
+        else
+            video_only
+        fi
+    }
+
+    _vfr_mux || _cfr_mux
+}
+
+# Pick the video stream in the folder: primary video.h265, else video.1.h265.
+if [ -f "$folder/video.h265" ]; then
+    src="$folder/video.h265"; dst="$folder/video.mp4"
+elif [ -f "$folder/video.1.h265" ]; then
+    src="$folder/video.1.h265"; dst="$folder/video.1.mp4"
+else
+    echo "error: no video.h265 or video.1.h265 in $folder" >&2
+    exit 1
+fi
+
+echo "muxing $src -> $dst"
+mux_file "$src" "$dst"
+echo "done -> $dst"

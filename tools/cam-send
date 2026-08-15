@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+#
+# cam-send - send a command to the flight computer (STM32) over UART.
+#
+# Ports the stm32/justfile _cam-send recipe: opens the serial port raw at
+# 115200, discards any stale buffered reply, writes the command byte and
+# decodes the single-byte status reply.
+#
+# Usage: ./cam-send <command>
+#   commands: start | stop | status | idle
+
+set -euo pipefail
+
+# ============================================================================
+# CONFIG
+# ============================================================================
+CAM_PORT="/dev/ttyUSB0"     # serial port connected to the STM32 flight computer
+BAUD=115200                 # UART baud rate
+REPLY_TIMEOUT=6             # seconds to wait for a reply (START power-cycles the
+                            # PMIC and can block the firmware for a few seconds)
+# ============================================================================
+
+# command word -> printf byte escape (matches the firmware CMD_* values)
+cmd_byte() {
+    case "$1" in
+        start)  printf '\\x01' ;;
+        stop)   printf '\\x02' ;;
+        status) printf '\\x03' ;;
+        idle)   printf '\\x04' ;;
+        *)      return 1 ;;
+    esac
+}
+
+usage() {
+    cat >&2 <<EOF
+Usage: $(basename "$0") <command>
+
+Send a single command to the flight computer over the UART at $CAM_PORT.
+
+Commands:
+  start    CMD_START_CAM  (\\x01) - power up and begin recording
+  stop     CMD_STOP_CAM   (\\x02) - stop recording
+  status   CMD_GET_STATUS (\\x03) - query current state
+  idle     CMD_IDLE       (\\x04) - drop to idle
+
+Config:
+  CAM_PORT=$CAM_PORT
+  BAUD=$BAUD
+EOF
+    exit 1
+}
+
+[ "$#" -eq 1 ] || usage
+
+byte=$(cmd_byte "$1") || { echo "error: unknown command '$1'" >&2; usage; }
+
+if [ ! -e "$CAM_PORT" ]; then
+    echo "error: serial port $CAM_PORT does not exist" >&2
+    exit 1
+fi
+
+exec 3<>"$CAM_PORT"
+stty -F "$CAM_PORT" "$BAUD" raw -echo
+# discard any stale reply left buffered by a previous (timed-out) command
+timeout 0.2 cat <&3 >/dev/null 2>&1 || true
+# shellcheck disable=SC2059  # byte is a fixed escape, used as printf format
+printf "$byte" >&3
+
+reply=$(timeout "$REPLY_TIMEOUT" head -c 1 <&3 | od -An -tu1 | tr -d ' ') || {
+    echo "no reply (timeout)" >&2
+    exec 3>&- 2>/dev/null || true
+    exit 1
+}
+exec 3>&-
+
+case "$reply" in
+    0) echo "reply: STOPPED (0)" ;;
+    1) echo "reply: RECORDING (1)" ;;
+    2) echo "reply: ERROR (2)";       exit 1 ;;
+    3) echo "reply: BUSY (3)" ;;
+    4) echo "reply: STARTING (4)" ;;
+    5) echo "reply: STOPPING (5)" ;;
+    6) echo "reply: INVALID_CMD (6)"; exit 1 ;;
+    *) echo "reply: unknown ($reply)"; exit 1 ;;
+esac

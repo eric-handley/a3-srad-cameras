@@ -1,0 +1,110 @@
+#!/usr/bin/env bash
+#
+# wipe-sd-data - reformat ONLY the /data partition of a board SD card.
+#
+# Reproduces the /data reformat that luckfox-sdk/justfile 'flash' performs after
+# writing sd_update.img: it does NOT touch env/idblock/uboot/boot/oem/rootfs,
+# only the growup 'data' partition. There is no on-disk partition table
+# (Rockchip defines partitions via the kernel blkdevparts= cmdline), so data is
+# addressed by its byte offset. Before formatting it verifies the ext4 magic at
+# the expected rootfs offset -- if the layout changed, every offset is wrong, so
+# it refuses rather than format blind.
+#
+# Usage: ./wipe-sd-data [device]      # device name only, default mmcblk0
+
+set -euo pipefail
+
+# ============================================================================
+# CONFIG
+# ============================================================================
+DEFAULT_DEVICE="mmcblk0"        # device NAME under /dev (not full path)
+# ============================================================================
+
+# Byte offsets for the current partition layout, from RK_PARTITION_CMD_IN_ENV:
+#   32K env +512K idblock +256K uboot +32M boot +512M oem +6G rootfs = data@
+# Do NOT change these values!
+ROOTFS_OFFSET=571244544         # rootfs partition start (for the safety check)
+DATA_OFFSET=7013695488          # data partition start (the '-' growup partition)
+
+usage() {
+    cat >&2 <<EOF
+Usage: $(basename "$0") [device]
+
+Reformat ONLY the /data partition of a board SD card to a clean ext4, leaving
+env/idblock/uboot/boot/oem/rootfs untouched.
+
+  device   device NAME under /dev to operate on (default: $DEFAULT_DEVICE)
+           e.g. '$(basename "$0") sde' operates on /dev/sde
+
+Requires: losetup/lsblk (util-linux), mkfs.ext4/tune2fs (e2fsprogs)
+
+Config:
+  DEFAULT_DEVICE=$DEFAULT_DEVICE
+EOF
+    exit 1
+}
+
+[ "$#" -le 1 ] || usage
+case "${1:-}" in -h|--help|help) usage ;; esac
+
+dev_name="${1:-$DEFAULT_DEVICE}"
+device="/dev/$dev_name"
+
+if [ ! -b "$device" ]; then
+    echo "error: $device is not a block device" >&2
+    echo >&2
+    usage
+fi
+
+# Show the operator what they're about to reformat.
+echo "About to reformat the /data partition on:"
+echo
+lsblk -o NAME,SIZE,TYPE,MODEL,MOUNTPOINTS "$device" 2>/dev/null || lsblk "$device"
+echo
+cat >&2 <<EOF
+#############################################################################
+
+                               !!!  DANGER  !!!                              
+                                                                            
+            This will DESTROY ALL DATA in the /data partition of:            
+                                                                            
+                 $device  (offset $DATA_OFFSET -> end of card)                 
+                                                                            
+       It runs mkfs.ext4 on that region. If this is NOT the SD card you      
+        think it is (e.g. your system disk or another drive) you will 
+                          irrecoverably lose data!                                                                     
+                                                                            
+       DOUBLE-CHECK the device name and size shown above with 'lsblk'!                
+
+#############################################################################
+EOF
+echo
+read -r -p "Type 'y' to reformat /data on $device [default N]: " reply
+case "${reply:-N}" in
+    y|Y) ;;
+    *) echo "aborted."; exit 1 ;;
+esac
+
+# Safety: the offsets are only valid for the current partition layout. If the
+# ext4 magic isn't where rootfs should be, the layout changed and DATA_OFFSET is
+# wrong too -- refuse rather than format blind at a now-unknown offset.
+rootfs_magic=$(sudo dd if="$device" bs=1 skip=$((ROOTFS_OFFSET + 1080)) count=2 2>/dev/null | od -An -tx1 | tr -d ' \n')
+if [ "$rootfs_magic" != "53ef" ]; then
+    echo "ERROR: no ext4 superblock at expected rootfs offset $ROOTFS_OFFSET" \
+         "(magic=$rootfs_magic) -- partition layout changed or this is not a" \
+         "board SD card. Refusing to format /data at a now-unknown offset." >&2
+    exit 1
+fi
+
+echo "Reformatting /data (ext4 @ $DATA_OFFSET)..."
+LOOP=$(sudo losetup -f --show -o "$DATA_OFFSET" "$device")
+trap 'sudo losetup -d "$LOOP" 2>/dev/null || true' EXIT
+# Match S21uvrdata's on-device format so a host reflash and a from-blank board
+# boot produce the same filesystem (see luckfox-sdk/justfile for the rationale
+# behind ^metadata_csum, ^orphan_file and lazy_*_init=0).
+sudo mkfs.ext4 -F -L data -O ^metadata_csum,^orphan_file -E lazy_itable_init=0,lazy_journal_init=0 "$LOOP"
+sudo tune2fs -c 0 -i 0 "$LOOP"
+sudo losetup -d "$LOOP"
+trap - EXIT
+sync
+echo "/data reformatted clean. Done."
