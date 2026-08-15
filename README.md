@@ -138,12 +138,13 @@ It is also possible to free up space by using [./tools/ssh-cam](./tools/ssh-cam)
 
 ### Post-Flight Operations
 
-Following recovery of the rocket, the following steps should be taken:
+Following recovery of the rocket, the following steps should be taken.
+
+>[!WARNING]
+> Do not mount the MicroSD cards and ensure that the computer used for this task will NOT attempt to automatically mount them! Some distros may be configured to do this when new disks are detected. It's unlikely this would cause issues but the risk should not be taken.
 
 1. Switch off each camera and disconnect from Modular Power Supply
 2. Remove SD cards from camera boards. Use the [./tools/image-sd](./tools/image-sd) utility to image both SD cards and save the raw contents to a file. Ideally label these `cam1.img` and `cam2.img` accordingly.
-    - >[!WARNING]
-      > Do not mount the MicroSD cards and ensure that the computer used for this task will NOT attempt to automatically mount them! Some distros may be configured to do this when new disks are detected. It's unlikely this would cause issues but the risk should not be taken.
     - This is a backup precaution to make sure that (in the event of corruption) we have an exact copy of the disk before the OS attempts to repair it
     - Note: This will take quite a while and requires that your computer have at least 64GiB free
 3. Once each camera's SD card has a `.img` file, you can attempt to pull the recordings using the boards directly (see next subsection). This is a significantly easier process than trying to extract them from the `.img` file manually.
